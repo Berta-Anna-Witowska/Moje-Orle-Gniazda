@@ -5,13 +5,13 @@ export default function Nav() {
   return (
     <nav className="nav ">
       <a className="half-circle-top">
-        <i class="fa-regular fa-image" />
+        <i className="fa-regular fa-image" />
       </a>
       <a className="half-circle-top">
-        <i class="fa-solid fa-user" />
+        <i className="fa-solid fa-user" />
       </a>
       <a className="half-circle-top">
-        <i class="fa-regular fa-envelope" />
+        <i className="fa-regular fa-envelope" />
       </a>
     </nav>
   );
