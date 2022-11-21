@@ -1,0 +1,13 @@
+@import "../settings/colors";
+
+.footer {
+  width: 100vw;
+  position: absolute;
+  left: 10%;
+  bottom: 0;
+  color: $color-lightGrey-transparent-light;
+  .container {
+    display: flex;
+    justify-content: space-between;
+  }
+}

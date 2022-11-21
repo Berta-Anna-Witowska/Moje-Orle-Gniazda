@@ -1,0 +1,44 @@
+:root {
+  background-image: url("./src/assets/background01.JPG");
+  background-position: top;
+  background-size: cover;
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 400;
+}
+body {
+  margin: 0;
+  box-sizing: border-box;
+  min-width: 320px;
+  min-height: 100vh;
+  background: linear-gradient(
+    360deg,
+    #030403d2 10%,
+    #478130a9 32%,
+    hsla(105, 39%, 35%, 0.647) 75%,
+    #2c4857e6 100%,
+    hsla(203, 61%, 68%, 0.729) 100%
+  );
+}
+
+/* color-scheme: light dark; */
+/* color: rgba(255, 255, 255, 0.87); */
+
+/* background-color: #242424; */
+/* 
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%; */
+/* } */
+/* 
+a {
+  font-weight: 500;
+  color: #646cff;
+  text-decoration: inherit;
+}
+a:hover {
+  color: #535bf2;
+} */

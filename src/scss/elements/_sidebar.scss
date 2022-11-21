@@ -1,0 +1,25 @@
+@import "../settings/colors";
+.sidebar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  .half-circle-left {
+    width: 50px;
+    height: 100px;
+    border: 2px solid rgba(206, 217, 230, 0.7);
+    border-top-right-radius: 50px;
+    border-bottom-right-radius: 50px;
+    border-left: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  i {
+    color: rgba(206, 217, 230, 0.7);
+    font-size: 2em;
+  }
+  position: absolute;
+  left: 0;
+  top: calc((50%) - (50px));
+}

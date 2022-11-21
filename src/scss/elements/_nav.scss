@@ -1,0 +1,24 @@
+@import "../settings/colors";
+.nav {
+  display: flex;
+  justify-content: center;
+  align-items: top;
+}
+.half-circle {
+  &-top {
+    width: 100px;
+    height: 50px;
+    margin: 0 20px;
+    border: 2px solid rgba(206, 217, 230, 0.7);
+    border-bottom-left-radius: 50px;
+    border-bottom-right-radius: 50px;
+    border-top: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+i {
+  color: rgba(206, 217, 230, 0.7);
+  font-size: 2em;
+}
