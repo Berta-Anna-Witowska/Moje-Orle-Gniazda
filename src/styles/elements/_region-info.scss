@@ -1,0 +1,22 @@
+@import "../settings/colors";
+.region-info {
+  box-sizing: border-box;
+  max-width: 40vw;
+  max-height: 80vh;
+  border: 2px solid $color-lightGrey-transparent-light;
+  border-radius: 30px;
+  padding: 30px;
+  margin-left: 300px;
+  margin-top: 50px;
+  background-color: $color-lightGrey-transparent-light;
+  color: $color-lightGrey-transparent;
+  text-align: justify;
+  position: absolute;
+  z-index: 1;
+  overflow-y: scroll;
+  h1 {
+    font-size: 1.5em;
+    text-transform: uppercase;
+    margin: 0 10px 10px 10px;
+  }
+}

@@ -1,0 +1,33 @@
+@import "../settings/colors";
+
+.sign-up {
+  height: 60vh;
+  width: 800px;
+
+  padding: 30px;
+  margin-left: 300px;
+  margin-top: 50px;
+
+  // position: absolute;
+  // bottom: 0;
+  // right: 0;
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+
+  &-form {
+    width: 60%;
+    height: 80%;
+
+    border: 2px solid $color-lightGrey-transparent-light;
+    border-radius: 30px;
+    padding: 30px;
+    background-color: $color-lightGrey-transparent-light;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+}

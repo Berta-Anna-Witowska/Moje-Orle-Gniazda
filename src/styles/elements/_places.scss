@@ -1,0 +1,25 @@
+@import "../settings/colors";
+.places {
+  box-sizing: border-box;
+  max-width: 60%;
+  max-height: calc((100vh) - (200px));
+  border: 2px solid $color-lightGrey-transparent-light;
+  border-radius: 30px;
+  padding: 30px;
+  margin-left: 120px;
+  margin-top: 50px;
+  background-color: $color-lightGrey-transparent-light;
+
+  color: $color-lightGrey-transparent;
+  text-align: justify;
+  overflow-y: scroll;
+  &-descriptions {
+    display: flex;
+    flex-direction: column;
+  }
+  h1 {
+    font-size: 1.5em;
+    text-transform: uppercase;
+    margin: 0 10px 10px 10px;
+  }
+}

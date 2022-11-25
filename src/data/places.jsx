@@ -1,4 +1,4 @@
-const places = [
+export const places = [
   {
     ID: "01",
     name: `Sanktuarium na Jasnej Górze`,
@@ -8,10 +8,22 @@ const places = [
     description:
       "Sanktuarium Najświętszej Marii Panny na Jasnej Górze jest najliczniej odwiedzanym polskim sanktuarium maryjnym i jednym z najważniejszych na świecie. W zespole klasztornym ojców paulinów czci się będący bizantyńską ikoną, cudowny wizerunek Marii z Dzieciątkiem, który do Częstochowy został przywieziony w XV wieku. Obecne zabudowania zespołu klasztornego pochodzą głównie z XVII stulecia i reprezentują styl barokowy.",
     links: [
-      "https://jasnagora.pl/",
-      "https://orlegniazda.pl/poi/3686",
-      "https://slaskie.travel/culturalheritage/3686/sanktuarium-nmp-na-jasnej-gorze-w-czestochowie-jasna-gora",
-      "https://pl.wikipedia.org/wiki/Jasna_G%C3%B3ra",
+      {
+        link: "https://jasnagora.pl/",
+        name: "jasnagora.pl",
+      },
+      {
+        link: "https://orlegniazda.pl/poi/3686",
+        name: "orlegniazda.pl",
+      },
+      {
+        link: "https://slaskie.travel/culturalheritage/3686/sanktuarium-nmp-na-jasnej-gorze-w-czestochowie-jasna-gora",
+        name: "slaskie.travel",
+      },
+      {
+        link: "https://pl.wikipedia.org/wiki/Jasna_G%C3%B3ra",
+        name: "wikipedia",
+      },
     ],
   },
   {
@@ -23,10 +35,22 @@ const places = [
     description:
       "Ruiny zamku Olsztyn koło Częstochowy należą do najlepiej rozpoznawalnych warowni jurajskich. Cylindryczna, wysoka na 35 metrów wieża przyciąga wzrok już z daleka. Zbudowana z białego wapienia, a nadbudowana z brunatnej cegły, przypomina maszt okrętu unoszącego się na morskiej kipieli. Rzeczywiście, zamek był świadkiem wielu dramatycznych wydarzeń, w tym zgładzenia Maćka Borkowica. Od połowy XVII wieku zaczął popadać w ruinę. Wreszcie stał się atrakcją turystyczną, leżącą na popularnym Szlaku Orlich Gniazd.",
     links: [
-      "http://zamekolsztyn.pl/pl/strona-glowna/",
-      "https://orlegniazda.pl/poi/15620",
-      "https://www.slaskie.travel/culturalheritage/15620/zamek-olsztyn",
-      "https://pl.wikipedia.org/wiki/Zamek_w_Olsztynie_(wojew%C3%B3dztwo_%C5%9Bl%C4%85skie)",
+      {
+        link: "http://zamekolsztyn.pl/pl/strona-glowna/",
+        name: "zamekolsztyn.pl",
+      },
+      {
+        link: "https://orlegniazda.pl/poi/15620",
+        name: "orlegniazda.pl",
+      },
+      {
+        link: "https://www.slaskie.travel/culturalheritage/15620/zamek-olsztyn",
+        name: "slaskie.travel",
+      },
+      {
+        link: "https://pl.wikipedia.org/wiki/Zamek_w_Olsztynie_(wojew%C3%B3dztwo_%C5%9Bl%C4%85skie)",
+        name: "wikipedia",
+      },
     ],
   },
   {
@@ -38,9 +62,18 @@ const places = [
     description:
       "Pałac w Złotym Potoku został przebudowany w latach 50. XIX wieku, z inicjatywy nowego właściciela tego majątku – gen. Wincentego Krasińskiego. Powstał na miejscu zamku, a wcześniej dworu obronnego z wieżą, stojącego tutaj od końca XIII wieku. W 1857 roku w pałacu przebywał wieszcz Zygmunt Krasiński z rodziną. Ostateczną, neoklasycystyczną formę budynek uzyskał na początku XX wieku, po przebudowie dokonanej przez hrabiego Karola Raczyńskiego. Pałac otacza park krajobrazowy.",
     links: [
-      "https://www.orlegniazda.pl/culturalheritage/3606/palac-raczynskich-w-zlotym-potoku",
-      "https://jura.slaskie.travel/poi/3606/palac-raczynskich-w-zlotym-potoku",
-      "https://pl.wikipedia.org/wiki/Pa%C5%82ac_Raczy%C5%84skich_w_Z%C5%82otym_Potoku",
+      {
+        link: "https://www.orlegniazda.pl/culturalheritage/3606/palac-raczynskich-w-zlotym-potoku",
+        name: "orlegniazda.pl",
+      },
+      {
+        link: "https://jura.slaskie.travel/poi/3606/palac-raczynskich-w-zlotym-potoku",
+        name: "slaskie.travel",
+      },
+      {
+        link: "https://pl.wikipedia.org/wiki/Pa%C5%82ac_Raczy%C5%84skich_w_Z%C5%82otym_Potoku",
+        name: "wikipedia",
+      },
     ],
   },
   {
@@ -52,9 +85,18 @@ const places = [
     description:
       "Leśny rezerwat przyrody „Ostrężnik” położony jest w pobliżu osady o tej samej nazwie. Jego obszar, utworzony w 1960 r., jest niewielki - wynosi 4,1 ha. Tutejsze wapienne wzniesienia kryją kilka jaskiń (m.in. Ostrężnicką, Wierną, Wiercicę), które jednak nie są udostępnione do masowego zwiedzania. Jaskinie te były wykorzystywane przez partyzantów w czasie II wojny. U stóp wzgórza znajdują się także okresowe wywierzyska, czyli źródła krasowe zwane Źródłami Zdarzeń. Las rosnący w rezerwacie tworzą przede wszystkim drzewostany bukowo-grabowe. Tajemnicze i dość nikłe ruiny warowni, pochodzącej najprawdopodobniej z XIV w., to jeden z najsłabiej poznanych obiektów obronnych na Wyżynie Krakowsko-Częstochowskiej. Przypuszcza się, że tutejszy zamek wzniesiony został z inicjatywy Władysława Opolczyka, jako jedno z ogniw zaplanowanego z rozmachem systemu obronnego ówczesnej granicy polskiej. Budowla ta może mieć jednak inną genezę. Zarys murów obiektu zachował się w stanie bardzo słabym. Również słabo czytelny jest obecnie układ zamku, który dzielił się na górny, dolny oraz podzamcze. Od strony południowej dostrzec można resztki baszty, która być może pełniła rolę bramy wjazdowej. Nie wiadomo, kiedy zamek został opuszczony, w każdym razie w wiekach XVIII i XIX coraz bardziej popadający w ruinę obiekt po prostu rozebrano. Przez Ostrężnik przebiega kilka tras turystycznych, m.in. Szlak Orlich Gniazd oraz Szlak Warowni Jurajskich. Teren poznać można dokładniej, przemierzając go ścieżką przyrodniczo-dydaktyczną „Tropem tajemnic” o długości 1,5 km.",
     links: [
-      "https://www.orlegniazda.pl/nature/3887/zamek-ostreznik-w-rezerwacie-przyrody",
-      "https://www.slaskie.travel/poi/3887/zamek-ostreznik-w-rezerwacie-przyrody",
-      "https://pl.wikipedia.org/wiki/Zamek_Ostr%C4%99%C5%BCnik",
+      {
+        link: "https://www.orlegniazda.pl/nature/3887/zamek-ostreznik-w-rezerwacie-przyrody",
+        name: "orlegniazda.pl",
+      },
+      {
+        link: "https://www.slaskie.travel/poi/3887/zamek-ostreznik-w-rezerwacie-przyrody",
+        name: "slaskie.travel",
+      },
+      {
+        link: "https://pl.wikipedia.org/wiki/Zamek_Ostr%C4%99%C5%BCnik",
+        name: "wikipedia",
+      },
     ],
   },
   {
@@ -66,10 +108,22 @@ const places = [
     description:
       "Jest to bez wątpienia jeden z najpiękniejszych obiektów na szlaku Orlich Gniazd. Leżąca na wzniesieniu, monumentalna bryła zamku, przywodząca niektórym na myśl okręt, pomimo pozostawania przez wiele lat w ruinie robi spore wrażenie. Mirowska twierdza stanowi jedną z najstarszych budowli obronnych Wyżyny Krakowsko-Częstochowskiej. Wiemy, iż murowana strażnica powstała tu około połowy XIV wieku, w czasach Kazimierza Wielkiego. ",
     links: [
-      "https://www.zamekbobolice.pl/zamek-mirow.html",
-      "https://orlegniazda.pl/poi/2889",
-      "https://www.slaskie.travel/poi/2889/zamek-mirow",
-      "https://pl.wikipedia.org/wiki/Zamek_w_Mirowie",
+      {
+        link: "https://www.zamekbobolice.pl/zamek-mirow.html",
+        name: "zamekbobolice.pl",
+      },
+      {
+        link: "https://orlegniazda.pl/poi/2889",
+        name: "orlegniazda.pl",
+      },
+      {
+        link: "https://www.slaskie.travel/poi/2889/zamek-mirow",
+        name: "slaskie.travel",
+      },
+      {
+        link: "https://pl.wikipedia.org/wiki/Zamek_w_Mirowie",
+        name: "wikipedia",
+      },
     ],
   },
   {
@@ -81,10 +135,22 @@ const places = [
     description:
       "Położony na malowniczym, skalistym wzgórzu zamek Bobolice to jedna z bardziej znanych warowni leżących na Szlaku Orlich Gniazd, w środkowej części Wyżyny Krakowsko-Częstochowskiej. Dzieli go niespełna pół godziny spaceru od bliźniaczej twierdzy w Mirowie. Sieć szlaków turystycznych umożliwia także dłuższe wędrówki w rejon Skał Kroczyckich i Rzędkowickich oraz w inne atrakcyjne zakątki Jury. Zamek stanowi ciekawy przykład budowli, która po wiekach bycia ruiną została odbudowana w czasach obecnych.",
     links: [
-      "https://www.zamekbobolice.pl/",
-      "https://orlegniazda.pl/poi/2420",
-      "https://www.slaskie.travel/poi/2889/zamek-mirow",
-      "https://pl.wikipedia.org/wiki/Zamek_w_Bobolicach",
+      {
+        link: "https://www.zamekbobolice.pl/",
+        name: "zamekbobolice.pl",
+      },
+      {
+        link: "https://orlegniazda.pl/poi/2420",
+        name: "orlegniazda.pl",
+      },
+      {
+        link: "https://www.slaskie.travel/poi/2889/zamek-mirow",
+        name: "slaskie.travel",
+      },
+      {
+        link: "https://pl.wikipedia.org/wiki/Zamek_w_Bobolicach",
+        name: "wikipedia",
+      },
     ],
   },
   {
@@ -96,9 +162,18 @@ const places = [
     description:
       "Ruiny zamku rycerskiego „Bąkowiec” pochodzącego z XIV–XV w. znajdują się na terenie wypoczynkowego ośrodka „Morsko Plus”. Obok obiektu przechodzą dwie najważniejsze, piesze trasy jurajskie: czerwono znakowany Szlak Orlich Gniazd oraz niebieski Szlak Warowni Jurajskich. Wycieczkę do ruin zamku połączyć można ze zwiedzaniem pobliskich Skał Rzędkowickich i Kroczyckich.",
     links: [
-      "https://www.morsko.com.pl/kategorie/zamek-bakowiec",
-      "https://orlegniazda.pl/poi/2894",
-      "https://pl.wikipedia.org/wiki/Zamek_B%C4%85kowiec",
+      {
+        link: "https://www.morsko.com.pl/kategorie/zamek-bakowiec",
+        name: "morsko.com.pl",
+      },
+      {
+        link: "https://orlegniazda.pl/poi/2894",
+        name: "orlegniazda.pl",
+      },
+      {
+        link: "https://pl.wikipedia.org/wiki/Zamek_B%C4%85kowiec",
+        name: "wikipedia",
+      },
     ],
   },
   {
@@ -110,9 +185,18 @@ const places = [
     description:
       "Góra Birów, wznosząca się 461 m n.p.m., stanowi jedno z charakterystycznych wzniesień na Szlaku Orlich Gniazd w rejonie Podzamcza i Ogrodzieńca. Skaliste, malownicze wzgórze, dające dobry widok na okolicę było już od czasów neolitu miejscem osadnictwa. Szczególnie partie wierzchołkowe wzniesienia, tworzące nieckę otoczoną wapiennymi ostańcami, dodawały temu miejscu istotnych walorów obronnych. Obecnie możemy tu oglądać rekonstrukcję grodziska słowiańskiego.",
     links: [
-      "https://www.zamek-ogrodzieniec.pl/kategorie/grod-na-gorze-birow",
-      "https://orlegniazda.pl/poi/15635/grod-na-gorze-birow-w-podzamczu",
-      "https://pl.wikipedia.org/wiki/Gr%C3%B3d_na_G%C3%B3rze_Bir%C3%B3w",
+      {
+        link: "https://www.zamek-ogrodzieniec.pl/kategorie/grod-na-gorze-birow",
+        name: "zamek-ogrodzieniec.pl",
+      },
+      {
+        link: "https://orlegniazda.pl/poi/15635/grod-na-gorze-birow-w-podzamczu",
+        name: "orlegniazda.pl",
+      },
+      {
+        link: "https://pl.wikipedia.org/wiki/Gr%C3%B3d_na_G%C3%B3rze_Bir%C3%B3w",
+        name: "wikipedia",
+      },
     ],
   },
   {
@@ -124,10 +208,22 @@ const places = [
     description:
       "Zamek Ogrodzieniec to największa warownia Wyżyny Krakowsko-Częstochowskiej, a także, bez wątpienia, jeden najpiękniejszych zamków w Polsce. Znajduje się na Górze Janowskiego w środkowej części Wyżyny. Majestatycznym ruinom malowniczości dodają fantazyjne formy skalne, z wykorzystaniem których postawiono mury budowli. Zamek leży w centralnej części Jury i jest łatwo dostępny komunikacyjnie. Obok przebiega czerwono znakowany Szlak Orlich Gniazd.",
     links: [
-      "https://www.zamek-ogrodzieniec.pl/",
-      "https://orlegniazda.pl/poi/15636",
-      "https://www.slaskie.travel/poi/15636/zamek-ogrodzieniec-w-podzamczu",
-      "https://pl.wikipedia.org/wiki/Zamek_Ogrodzieniec",
+      {
+        link: "https://www.zamek-ogrodzieniec.pl/",
+        name: "zamek-ogrodzieniec.pl",
+      },
+      {
+        link: "https://orlegniazda.pl/poi/15636",
+        name: "orlegniazda.pl",
+      },
+      {
+        link: "https://www.slaskie.travel/poi/15636/zamek-ogrodzieniec-w-podzamczu",
+        name: "slaskie.travel",
+      },
+      {
+        link: "https://pl.wikipedia.org/wiki/Zamek_Ogrodzieniec",
+        name: "wikipedia",
+      },
     ],
   },
   {
@@ -139,9 +235,18 @@ const places = [
     description:
       "Pałac w Pilicy, zwany także zamkiem, to budowla złożona z czterech skrzydeł, okalających dziedziniec, i otoczona bastionowymi fortyfikacjami. Rezydencja, której początki toną w mroku dziejów i która od czasów powstania ulegała wielokrotnym przebudowom, obecnie wraz z bramami, wozownią i oficyną, znajduje się w stanie znacznie zdewastowanym. Obiekt otoczony jest parkiem z okazami drzew, których część uznano za pomniki przyrody.",
     links: [
-      "https://orlegniazda.pl/culturalheritage/3105/palac-w-pilicy",
-      "https://www.slaskie.travel/culturalheritage/3105/palac-w-pilicy",
-      "https://pl.wikipedia.org/wiki/Zamek_w_Pilicy",
+      {
+        link: "https://orlegniazda.pl/culturalheritage/3105/palac-w-pilicy",
+        name: "orlegniazda.pl",
+      },
+      {
+        link: "https://www.slaskie.travel/culturalheritage/3105/palac-w-pilicy",
+        name: "slaskie.travel",
+      },
+      {
+        link: "https://pl.wikipedia.org/wiki/Zamek_w_Pilicy",
+        name: "wikipedia",
+      },
     ],
   },
   {
@@ -153,9 +258,18 @@ const places = [
     description:
       "Miejscowość Smoleń leży na Wyżynie Krakowsko-Częstochowskiej, na wschodnich krańcach województwa śląskiego, niedaleko miasteczka Pilica. Smoleń znany jest przede wszystkim dzięki zamkowi, który - choć znacznie zrujnowany - jest jedną z najbardziej malowniczych i atrakcyjnie położonych warowni na Szlaku Orlich Gniazd. Wyrastająca ponad las wieża jest charakterystycznym punktem w krajobrazie. Zamek znajduje się na terenie rezerwatu przyrody (również o nazwie Smoleń).",
     links: [
-      "https://orlegniazda.pl/poi/15646",
-      "https://www.slaskie.travel/poi/15646",
-      "https://pl.wikipedia.org/wiki/Zamek_w_Pilicy",
+      {
+        link: "https://orlegniazda.pl/poi/15646",
+        name: "orlegniazda.pl",
+      },
+      {
+        link: "https://www.slaskie.travel/poi/15646",
+        name: "slaskie.travel",
+      },
+      {
+        link: "https://pl.wikipedia.org/wiki/Zamek_w_Smoleniu",
+        name: "wikipedia",
+      },
     ],
   },
   {
@@ -167,9 +281,18 @@ const places = [
     description:
       "Na szczycie znajdującego się w Bydlinie wzgórza, w gęstym lesie odnajdziemy duże fragmenty murów budowli, która na przestrzeni wieków przechodziła burzliwe dzieje. Powstała prawdopodobnie w XIV wieku jako strażnica w ramach umacniania granic ze Śląskiem. Składała się z wieży, budynku mieszkalnego i przylegającego do nich dziedzińca. W pierwszej połowie XVI wieku Bydlin przeszedł na własność Bonerów, a budowlę, która utraciła swoje walory obronne, zamieniono na kościół. W dobie reformacji, około roku 1570, nowy właściciel – Jan Firlej, zamienił kościół na zbór ariański. W 1594 roku Mikołaj Firlej, syn Jana, przywrócił poprzedni charakter kościołowi, nadając mu nazwę Świętego Krzyża. W 1655 roku kościół zniszczyli Szwedzi. 80 lat później został odbudowany, ale wciąż ograbiany przez panoszące się po Polsce obce wojska, został definitywnie opuszczony pod koniec XVII wieku. Popadał w ruinę, co przyspieszyła jeszcze rozbiórka muru obwodowego, z którego kamień posłużył jako materiał budowlany. Poza wspomnianymi ruinami na terenie wzgórza znajdziemy liczne ślady okopów, pochodzących z okresu I wojny światowej. Tutaj Legioniści w 1914 roku stoczyli bitwę, która przeszła do historii pod nazwą bitwy pod Krzywopłotami. Na pobliskim cmentarzu znajdują się groby poległych tu żołnierzy.",
     links: [
-      "https://orlegniazda.pl/poi/7981",
-      "https://www.slaskie.travel/poi/7981/zamek-bydlin",
-      "https://pl.wikipedia.org/wiki/Zamek_w_Bydlinie",
+      {
+        link: "https://orlegniazda.pl/poi/7981",
+        name: "orlegniazda.pl",
+      },
+      {
+        link: "https://www.slaskie.travel/poi/7981/zamek-bydlin",
+        name: "slaskie.travel",
+      },
+      {
+        link: "https://pl.wikipedia.org/wiki/Zamek_w_Bydlinie",
+        name: "wikipedia",
+      },
     ],
   },
   {
@@ -181,10 +304,22 @@ const places = [
     description:
       "Rabsztyńskie wzgórze wapienne to idealne miejsce na wzniesienie warowni. Chyba właśnie tak myśleli nasi przodkowie, którzy w połowie XIV wieku na tutejszej skale postawili warownię z wysoką okrągłą wieżą. Średniowieczny zamek rycerski, który powstał w czasach Kazimierza Wielkiego, wielokrotnie zmieniał właścicieli. Byli nimi: Spytko z Melsztyna, rodzina Toporczyków zwana Rabsztyńskimi, później m.in. Bonerowie, aż na początku XVII wieku przeszedł w ręce Zygmunta Myszkowskiego. Jeszcze przed rokiem 1615 powstał tu zamek dolny, przyklejony do skały, na której stała stara twierdza.",
     links: [
-      "https://zamekrabsztyn.pl/",
-      "https://orlegniazda.pl/poi/7992",
-      "https://www.slaskie.travel/culturalheritage/7992/zamek-w-rabsztynie",
-      "https://pl.wikipedia.org/wiki/Zamek_w_Rabsztynie",
+      {
+        link: "https://zamekrabsztyn.pl/",
+        name: "zamekrabsztyn.pl",
+      },
+      {
+        link: "https://orlegniazda.pl/poi/7992",
+        name: "orlegniazda.pl",
+      },
+      {
+        link: "https://www.slaskie.travel/culturalheritage/7992/zamek-w-rabsztynie",
+        name: "slaskie.travel",
+      },
+      {
+        link: "https://pl.wikipedia.org/wiki/Zamek_w_Rabsztynie",
+        name: "wikipedia",
+      },
     ],
   },
   {
@@ -196,10 +331,22 @@ const places = [
     description:
       "Ze Sławkowa asfaltową drogą udajemy się w stronę Krakowa. Mijamy Olkusz, w Sienicznie skręcamy w lewo i udajemy się do Sułoszowej. Kręta droga w pewnym momencie zaczyna biec dołem doliny, która od potoku biorącego tu początek przyjmuje nazwę Doliny Prądnika. Wkrótce pojawiają się pierwsze skały wapienne, które z czasem przybiorą cechę stałego elementu krajobrazu, a na szczycie jednej z nich już z daleka widać zamek. Zamek Pieskowa Skała powstał w czasach Kazimierza Wielkiego jako gotycka strażnica i był usytuowany nieco wyżej na skale zwanej Dorotką. W 1377 roku Ludwik Węgierski nadał zamek rodzinie Szafrańców, której był siedzibą do roku 1608. W tym czasie został rozbudowany i stał się typową renesansową siedzibą magnacką. Nowa budowla powstała w miejscu dawnego podzamcza. W roku 1640 zamek stał się własnością Michała Zebrzydowskiego, który go ufortyfikował. W 1718 roku pożar zniszczył budowlę, która jednak została odbudowana 60 lat później przez Hieronima Wielopolskiego. W II połowie XIX wieku był własnością Mieroszewskich i to oni odremontowali go po kolejnym pożarze w roku 1850. Po 1905 roku zamek wykupiono w celu zorganizowania pensjonatu. Dopiero po II wojnie światowej w latach 1948-64 przeprowadzono dokładne prace badawcze, a następnie budowlane. W ten sposób przywrócono mu wygląd z czasów największej jego świetności. Zamek otoczony jest malowniczym parkiem, u jego podnóża roztaczają się stawy założone jeszcze w XVI wieku. Obecnie jest siedzibą filii Muzeum Zamku Królewskiego na Wawelu. Minąwszy stawy ukazuje się nam najbardziej charakterystyczna skała na terenie całej Jury – Maczuga Herkulesa. A my podążamy dalej krętą drogą w kierunku Ojcowa.",
     links: [
-      "https://pieskowaskala.eu/",
-      "https://orlegniazda.pl/culturalheritage/7994/zamek-pieskowa-skala",
-      "https://www.slaskie.travel/poi/7994/zamek-pieskowa-skala",
-      "https://pl.wikipedia.org/wiki/Zamek_Pieskowa_Ska%C5%82a",
+      {
+        link: "https://pieskowaskala.eu/",
+        name: "pieskowaskala.eu",
+      },
+      {
+        link: "https://orlegniazda.pl/culturalheritage/7994/zamek-pieskowa-skala",
+        name: "orlegniazda.pl",
+      },
+      {
+        link: "https://www.slaskie.travel/poi/7994/zamek-pieskowa-skala",
+        name: "slaskie.travel",
+      },
+      {
+        link: "https://pl.wikipedia.org/wiki/Zamek_Pieskowa_Ska%C5%82a",
+        name: "wikipedia",
+      },
     ],
   },
   {
@@ -211,12 +358,30 @@ const places = [
     description:
       "U podnóża romantycznej góry zamkowej, oraz wzdłuż całej Doliny Prądnika w XIX wieku powstało modne uzdrowisko goszczące wiele znakomitości. Warto zatrzymać się tu na dłużej, aby móc dokładnie przedeptać wszystkie udostępnione turystom ścieżki i zwiedzić inne atrakcje turystyczne, między innymi tutejsze jaskinie. My z kolei udajemy się w kierunku południowym do Prądnika Korzkiewskiego i zamku w Korzkwi. Wjeżdżając do Ojcowa już z daleka widać ruiny zamku położone na wysokiej skale z prawej strony drogi.",
     links: [
-      "http://www.ojcowskiparknarodowy.pl/main/zamek_w_ojcowie.html",
-      "https://ojcow.malopolska.pl/zamek-w-ojcowie/",
-      "https://www.ojcow.pl/informator-turystyczny/zamki-i-grodziska/zamek-w-ojcowie",
-      "https://orlegniazda.pl/culturalheritage/7995/zamek-w-ojcowie",
-      "https://www.slaskie.travel/poi/7995/zamek-w-ojcowie",
-      "https://pl.wikipedia.org/wiki/Zamek_w_Ojcowie",
+      {
+        link: "http://www.ojcowskiparknarodowy.pl/main/zamek_w_ojcowie.html",
+        name: "ojcowskiparknarodowy.pl",
+      },
+      {
+        link: "https://ojcow.malopolska.pl/zamek-w-ojcowie/",
+        name: "ojcow.malopolska.pl",
+      },
+      {
+        link: "https://www.ojcow.pl/informator-turystyczny/zamki-i-grodziska/zamek-w-ojcowie",
+        name: "ojcow.pl",
+      },
+      {
+        link: "https://orlegniazda.pl/culturalheritage/7995/zamek-w-ojcowie",
+        name: "orlegniazda.pl",
+      },
+      {
+        link: "https://www.slaskie.travel/poi/7995/zamek-w-ojcowie",
+        name: "slaskie.travel",
+      },
+      {
+        link: "https://pl.wikipedia.org/wiki/Zamek_w_Ojcowie",
+        name: "wikipedia",
+      },
     ],
   },
   {
@@ -228,10 +393,22 @@ const places = [
     description:
       "Pierwsze dokumenty z 1352 roku mówią o górze Korzkiew, na której znajdował się zamek wzniesiony tu przez ród herbu Syrokomla. W XV wieku był on własnością mieszczanina Piotra Krupka, następnie znalazł się w rękach rodziny Ługowskich. W XVI wieku został przebudowany i zatracił cechy zamku średniowiecznego. Nowo wzniesiona budowla miała kształt murów idealnie dopasowany do form skał. Nieregularny piętrowy budynek, posiadający wykute w skale piwnice, okalał mur z budynkiem bramnym. W czasie „potopu szwedzkiego” zamek zapewne został zniszczony, skoro dokumenty wspominają o jego odbudowie w II połowie XVII wieku. W latach następnych był własnością Wodzickich, Dębowskich i Czackich. Od 1720 roku do końca XIX wieku służył jako rezydencja myśliwska. Po II wojnie światowej zamek był czynny, jednak z czasem popadł w ruinę. Pod koniec lat 90. stał się własnością prywatną. Nowy właściciel rozpoczął odbudowę warowni. Obecnie w częściowo odrestaurowanym obiekcie znajduje się hotel, oraz sale konferencyjne. Dalsze prace trwają. Docelowo planowane jest zagospodarowanie całego wzgórza zamkowego i jego okolicy. ",
     links: [
-      "https://zamek.com.pl/",
-      "https://orlegniazda.pl/culturalheritage/7996/zamek-w-korzkwi",
-      "https://www.slaskie.travel/culturalheritage/7996/zamek-w-korzkwi",
-      "https://pl.wikipedia.org/wiki/Zamek_w_Korzkwi",
+      {
+        link: "https://zamek.com.pl/",
+        name: "zamek.com.pl",
+      },
+      {
+        link: "https://orlegniazda.pl/culturalheritage/7996/zamek-w-korzkwi",
+        name: "orlegniazda.pl",
+      },
+      {
+        link: "https://www.slaskie.travel/culturalheritage/7996/zamek-w-korzkwi",
+        name: "slaskie.travel",
+      },
+      {
+        link: "https://pl.wikipedia.org/wiki/Zamek_w_Korzkwi",
+        name: "wikipedia",
+      },
     ],
   },
   {
@@ -243,19 +420,22 @@ const places = [
     description:
       "Na koniec naszej wędrówki udajemy się do Krakowa. Górujący nad miastem na wzgórzu nieopodal Wisły zamek Wawel jest bez wątpienia najważniejszym z zamków znajdujących się na Wyżynie Krakowsko-Częstochowskiej. Był siedzibą książęcą jeszcze na długo przed powstaniem państwa polskiego, a pierwsi Piastowie osiedlili się tu już na początku X wieku. Początkowo posiadał konstrukcję z drewna. Pierwsze budowle kamienne powstały w XI wieku, jednak dopiero Władysław Łokietek oraz jego syn Kazimierz Wielki stworzyli tu prawdziwą królewską siedzibę. W czasach Zygmunta Starego i królowej Bony zamek nabrał charakteru renesansowej rezydencji. Wraz z przeniesieniem stolicy do Warszawy Wawel stracił swoje znaczenie. Po opanowaniu Krakowa przez Austriaków w połowie XIX wieku zamieniony został na koszary wojskowe. ",
     links: [
-      "https://wawel.krakow.pl/",
-      "https://orlegniazda.pl/poi/13296",
-      "https://www.slaskie.travel/poi/13296/wawel",
-      "https://pl.wikipedia.org/wiki/Zamek_Kr%C3%B3lewski_na_Wawelu",
+      {
+        link: "https://wawel.krakow.pl/",
+        name: "wawel.krakow.pl",
+      },
+      {
+        link: "https://orlegniazda.pl/poi/13296",
+        name: "orlegniazda.pl",
+      },
+      {
+        link: "https://www.slaskie.travel/poi/13296/wawel",
+        name: "slaskie.travel",
+      },
+      {
+        link: "https://pl.wikipedia.org/wiki/Zamek_Kr%C3%B3lewski_na_Wawelu",
+        name: "wikipedia",
+      },
     ],
   },
 ];
-
-/**
- * Nieco później omówimy, czym jest Promise
- */
-export default new Promise((resolve) => {
-  setTimeout(() => {
-    resolve(places);
-  }, Math.floor(Math.random() * 2000 + 3000));
-});

@@ -1,0 +1,23 @@
+@import "../settings/colors";
+.places-list {
+  box-sizing: border-box;
+  max-width: 1000px;
+  max-height: 80vh;
+  border: 2px solid $color-lightGrey-transparent-light;
+  border-radius: 30px;
+  padding: 30px;
+  margin: 20px;
+  margin-left: 300px;
+  margin-top: 100px;
+  background-color: $color-lightGrey-transparent-light;
+
+  color: $color-lightGrey-transparent;
+  text-align: left;
+  // overflow-y: scroll;
+  position: absolute;
+  top: auto;
+  z-index: 1;
+  ul {
+    list-style-type: decimal;
+  }
+}

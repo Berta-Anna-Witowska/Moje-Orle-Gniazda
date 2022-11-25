@@ -1,0 +1,44 @@
+@import "../settings/colors";
+
+.landing-page {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  &-header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 40%;
+    z-index: 1;
+  }
+  &-buttons {
+    margin: 20px;
+
+    .circle {
+      margin: 10px;
+      padding: 0;
+      font-size: 0.9em;
+      box-shadow: 0px 0px 20px 0px $color-secondary-shadow;
+
+      &:hover {
+        box-shadow: 0px 0px 20px 0px rgba(206, 217, 230, 0.7);
+      }
+    }
+  }
+  h1 {
+    font-size: 4em;
+    text-transform: none;
+    color: $color-lightGrey;
+    text-shadow: 0px 0px 20px $color-secondary-shadow;
+  }
+  // .drawing-rock {
+  //   position: absolute;
+  //   bottom: 0;
+  //   right: 0;
+  // }
+}

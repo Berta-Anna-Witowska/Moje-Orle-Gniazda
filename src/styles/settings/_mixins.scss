@@ -1,0 +1,31 @@
+@import "./colors";
+
+@mixin button {
+  width: 100px;
+  height: 100px;
+  border: 2px solid $color-lightGrey-transparent;
+  border-radius: 50%;
+  background-image: url("./src/assets/background02.JPG");
+  color: $color-lightGrey-transparent;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 0.8em;
+}
+
+// @mixin notebook {
+//   @media (max-width: 1352px) {
+//     @content;
+//   }
+// }
+
+// @mixin tablet {
+//   @media (max-width: 1024px) {
+//     @content;
+//   }
+// }
+
+// @mixin mobile {
+//   @media (max-width: 792px) {
+//     @content;
+//   }
+// }

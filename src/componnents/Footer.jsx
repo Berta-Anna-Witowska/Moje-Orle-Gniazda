@@ -1,7 +1,7 @@
 import React from "react";
-import "../scss/elements/_footer.scss";
+import "../styles/elements/_footer.scss";
 
-export default function Nav() {
+export default function Footer() {
   return (
     <footer className="footer">
       <div className="container">

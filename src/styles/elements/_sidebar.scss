@@ -1,7 +1,9 @@
 @import "../settings/colors";
+
 .sidebar {
+  width: 400px;
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
   position: absolute;
   left: 0;
@@ -33,15 +35,6 @@
     // left: -50px;
     color: $color-lightGrey-transparent;
     .circle {
-      width: 100px;
-      height: 100px;
-      border: 2px solid $color-lightGrey-transparent;
-      border-radius: 50%;
-      background-image: url("./src/assets/background02.JPG");
-      color: $color-lightGrey-transparent;
-      text-align: center;
-      text-transform: uppercase;
-      font-size: 0.8em;
       &:hover {
         box-shadow: 0px 0px 20px 0px rgba(206, 217, 230, 0.7);
       }
@@ -68,7 +61,7 @@
       justify-content: center;
       align-items: center;
       position: absolute;
-      bottom: -10px;
+      bottom: -20px;
       right: 0;
     }
   }

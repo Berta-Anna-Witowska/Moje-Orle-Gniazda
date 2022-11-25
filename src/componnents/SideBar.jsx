@@ -1,18 +1,16 @@
 import React, {useState} from "react";
-import "../scss/elements/_sidebar.scss";
-import "../scss/elements/_base.scss";
-import "../scss/settings/_colors.scss";
-// import Places from "./componnents/Places";
+import "../styles/elements/_sidebar.scss";
+import "../styles/elements/_baseView.scss";
+import "../styles/settings/_colors.scss";
 
-function Main() {
-  return <main className="main-container"></main>;
-}
+// import {useRef} from "react";
+import {useNavigate} from "react-router-dom";
 
-function SideBar() {
+export default function SideBar() {
   const [style, setStyle] = useState({
     display: "none",
     position: "",
-    top: "calc((50%) - (100px))",
+    top: "calc((50%) - (50px))",
     left: "",
     textShadow: "",
     boxShadow: "",
@@ -22,7 +20,7 @@ function SideBar() {
       display: "flex",
       position: "relative",
       top: "calc((50%) - (150px))",
-      left: "-200px",
+      left: "-150px",
     });
   };
 
@@ -37,12 +35,18 @@ function SideBar() {
     setStyle({textShadow: "", boxShadow: ""});
   };
 
+  const navigate = useNavigate();
+  // const navigateTo = (e) => {
+  //   navigate("/");
+  // };
+
   const {display, position, top, left, textShadow, boxShadow} = style;
   return (
     <aside
       className="sidebar"
       onMouseEnter={showHighlight}
       onMouseLeave={hideHighlight}
+      // onMouseLeave={() => navigate("/trailbaseview")}
       style={{top}}
     >
       <div className="half-circle-left" style={{boxShadow}}>
@@ -54,23 +58,27 @@ function SideBar() {
         style={{textShadow}}
       />
       <div className="big-circle" style={{display, position, left}}>
-        <div className="circle about-region">O regionie</div>
-        <div className="circle about-trail">O szlaku</div>
-        <div className="circle places-list">
+        <div
+          className="circle about-region"
+          onClick={() => navigate("/trailregioninfo")}
+        >
+          O regionie
+        </div>
+        <div
+          className="circle about-trail"
+          onClick={() => navigate("/trailinfo")}
+        >
+          O szlaku
+        </div>
+        <div
+          className="circle places-list"
+          onClick={() => navigate("/traillistofplaces")}
+        >
           Miejsca
           <br />
           na szlaku
         </div>
       </div>
     </aside>
-  );
-}
-
-export function MainSection() {
-  return (
-    <>
-      <SideBar />
-      <Main />
-    </>
   );
 }

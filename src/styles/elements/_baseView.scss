@@ -1,0 +1,14 @@
+@import "../settings/colors";
+.tail-baseView {
+  max-height: 80vh;
+  max-width: 800px;
+
+  padding: 30px;
+  margin-left: 300px;
+  margin-top: 50px;
+  .drawing-rock {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+  }
+}
