@@ -4,7 +4,6 @@
   height: 60vh;
   width: 800px;
 
-  padding: 30px;
   margin-left: 300px;
   margin-top: 50px;
 
@@ -31,3 +30,11 @@
     justify-content: center;
   }
 }
+// button {
+//   color: rebeccapurple;
+//   &:hover {
+//     color: red;
+//     transition-property: sliding-vertically;
+//     transition-duration: 4s;
+//   }
+// }

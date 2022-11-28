@@ -1,4 +1,5 @@
 @import "../settings/colors";
+@import "../settings/fonts";
 
 .footer {
   height: 20px;
@@ -6,9 +7,17 @@
   position: absolute;
   left: 10%;
   bottom: 0;
-  color: $color-lightGrey-transparent-light;
+  color: $color-lightGrey-transparent;
   padding: 10px 20px;
-
+  .page-name {
+    font-family: $font-island-moments;
+    font-size: 2em;
+  }
+  .copyright {
+    font-family: $font-raleway;
+    font-size: 1.1em;
+    text-shadow: 1px 1px 1px $color-secondary-shadow;
+  }
   .container {
     display: flex;
     justify-content: space-between;

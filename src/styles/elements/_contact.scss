@@ -6,8 +6,6 @@
   height: 70vh;
   width: 800px;
 
-  padding: 30px;
-  padding-left: 50px;
   margin-left: 300px;
   margin-top: 50px;
 
@@ -26,7 +24,14 @@
 
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
+    align-items: center;
     justify-content: center;
+
+    .contact-mail,
+    .contact-message {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
   }
 }

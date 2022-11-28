@@ -36,9 +36,6 @@ export default function SideBar() {
   };
 
   const navigate = useNavigate();
-  // const navigateTo = (e) => {
-  //   navigate("/");
-  // };
 
   const {display, position, top, left, textShadow, boxShadow} = style;
   return (
@@ -46,7 +43,6 @@ export default function SideBar() {
       className="sidebar"
       onMouseEnter={showHighlight}
       onMouseLeave={hideHighlight}
-      // onMouseLeave={() => navigate("/trailbaseview")}
       style={{top}}
     >
       <div className="half-circle-left" style={{boxShadow}}>

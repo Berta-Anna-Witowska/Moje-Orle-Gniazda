@@ -1,5 +1,7 @@
 @import "./settings/colors";
 @import "./settings/mixins";
+@import "./settings/fonts";
+
 :root {
   width: 100%;
   height: 100%;
@@ -7,7 +9,7 @@
   background-position: top;
   background-size: cover;
 
-  font-family: Arial, sans-serif;
+  font-family: $font-raleway;
   font-size: 14px;
   line-height: 1.4em;
   font-weight: 400;
@@ -52,11 +54,54 @@ h2 {
 a {
   text-decoration: none;
   color: $color-lightGreen;
+  text-shadow: 0px 0px 10px $color-secondary-shadow;
 }
 ul {
   list-style-type: disc;
   margin-left: 20px;
   color: $color-lightGreen;
+  li {
+    text-shadow: 0px 0px 10px $color-secondary-shadow;
+  }
+}
+
+input,
+textarea {
+  writing-mode: unset;
+  min-width: 300px;
+  padding: 8px;
+  margin: 10px;
+  background-color: $color-lightGrey-transparent-light;
+  border: 2px solid $color-lightGrey-transparent-light;
+  border-radius: 10px;
+  color: $color-dark1;
+  font-family: $font-open-sans;
+  :-internal-autofill-selected {
+    appearance: menulist-button;
+    background-image: none;
+    background-color: $color-lightGrey-transparent-light;
+    color: red;
+  }
+
+  &:focus {
+    outline: none;
+    box-shadow: 0px 0px 20px 0px $color-blueGrey-dark;
+  }
+  &::placeholder {
+    /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: $color-blueGrey-dark;
+    opacity: 1; /* Firefox */
+  }
+
+  &:-ms-input-placeholder {
+    /* Internet Explorer 10-11 */
+    color: red;
+  }
+
+  &::-ms-input-placeholder {
+    /* Microsoft Edge */
+    color: red;
+  }
 }
 
 .container {
@@ -72,11 +117,16 @@ ul {
 .circle {
   @include button;
 }
+.half-circle-left,
+.half-circle-top {
+  box-shadow: 0px 0px 20px 0px $color-secondary-shadow;
+}
 .drawing-rock {
   position: absolute;
   bottom: 0;
   right: 0;
 }
+
 /* color-scheme: light dark; */
 /* color: rgba(255, 255, 255, 0.87); */
 

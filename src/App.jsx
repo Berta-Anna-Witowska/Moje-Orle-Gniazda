@@ -18,15 +18,17 @@ function App() {
       <Routes>
         <Route path="/" element={<LandingPage />}></Route>
         <Route path="/" element={<Dashboard />}>
-          <Route path="/trailbaseview" element={<TrailBaseView />}></Route>
-          <Route path="/trailregioninfo" element={<RegionInfo />}></Route>
-          <Route path="/trailInfo" element={<TrailInfo />}></Route>
-          <Route path="/traillistofplaces" element={<PlacesList />}></Route>
-          <Route path="/trailplacesdescriptions" element={<Places />}></Route>
-          <Route path="/gallery" element={<Gallery />}></Route>
-          <Route path="/contact" element={<Contact />}></Route>
-          <Route path="/signin" element={<SignIn />}></Route>
-          <Route path="/signup" element={<SignUp />}></Route>
+          <Route path="/trailbaseview" element={<TrailBaseView />} />
+          <Route path="/trailregioninfo" element={<RegionInfo />} />
+          <Route path="/trailInfo" element={<TrailInfo />} />
+          <Route path="/traillistofplaces" element={<PlacesList />} />
+          {/* <Route path="/trailplacesdescriptions" element={<Places />}></Route> */}
+          <Route path="/trailplacesdescriptions/:id2" element={<Places />} />
+
+          <Route path="/gallery" element={<Gallery />} />
+          <Route path="/contact" element={<Contact />} />
+          <Route path="/signin" element={<SignIn />} />
+          <Route path="/signup" element={<SignUp />} />
         </Route>
       </Routes>
     </Router>

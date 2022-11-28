@@ -1,7 +1,7 @@
 @import "../settings/colors";
 
 .sidebar {
-  width: 400px;
+  width: 380px;
   display: flex;
   justify-content: flex-start;
   align-items: center;
@@ -11,7 +11,7 @@
   .half-circle-left {
     width: 50px;
     height: 100px;
-    border: 2px solid $color-lightGrey-transparent;
+    border: 2px solid rgba(206, 217, 230, 0.7);
     border-top-right-radius: 50px;
     border-bottom-right-radius: 50px;
     border-left: none;
@@ -23,6 +23,7 @@
   i {
     color: rgba(206, 217, 230, 0.7);
     font-size: 2em;
+    text-shadow: 0px 0px 10px $color-secondary-shadow;
   }
   .big-circle {
     display: none;

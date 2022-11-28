@@ -1,14 +1,60 @@
 @import "../settings/colors";
-.tail-baseView {
+
+.trail-baseView {
   max-height: 80vh;
   max-width: 800px;
 
   padding: 30px;
-  margin-left: 300px;
+  margin-left: 350px;
   margin-top: 50px;
+
   .drawing-rock {
     position: absolute;
     bottom: 0;
     right: 0;
+  }
+}
+.place-point {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: $color-darkGreen;
+  margin: 15px;
+  color: $color-lightGrey;
+  cursor: pointer;
+}
+
+.place-circle {
+  width: 200px;
+  height: 200px;
+  padding-top: 10px;
+  background-color: $color-lightGrey-transparent-light;
+  border: 2px solid $color-lightGrey-transparent-light;
+  border-radius: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  text-align: center;
+  .half-circle-img {
+    width: 180px;
+    height: 90px;
+    margin-bottom: 10px;
+    background-color: $color-lightGrey-transparent-light;
+    border: 2px solid $color-lightGrey-transparent-light;
+    border-radius: 90px 90px 0 0;
+
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: top right;
+  }
+  h1 {
+    margin-bottom: 5px;
+    font-size: 1.3em;
+  }
+  h2 {
+    cursor: pointer;
+    color: $color-dark1;
+    margin-top: 0;
   }
 }

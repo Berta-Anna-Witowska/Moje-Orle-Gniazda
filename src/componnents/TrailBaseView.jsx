@@ -1,16 +1,63 @@
 import React, {useState} from "react";
 import "../styles/elements/_baseView.scss";
 
+import {places} from "../data/places";
+import {useNavigate, Routes, Route, useParams} from "react-router-dom";
+
 export default function TrailBaseView() {
+  const [id, setId] = useState(null);
+
+  const handleClick = (id) => {
+    setId(id);
+  };
+
   return (
-    <div className="tail-baseView">
-      <div style={{backgroundColor: "green"}}>Rysunek szlaku</div>
+    <div className="trail-baseView">
+      <div style={{position: "relative"}}>
+        <div>
+          {places.map((element) => {
+            return (
+              <div
+                className="place-point"
+                key={element.ID}
+                onClick={() => handleClick(element.ID)}
+              >
+                {element.ID}
+              </div>
+            );
+          })}
+        </div>
+        {id && <PlacePreview id={id} />}
+      </div>
       <img
         className="drawing-rock"
         src=".\src\assets\pics\drawings\01_Skala.png"
         alt="Rysunek skały Okiennik Wielki"
         height="400vh"
       ></img>
+    </div>
+  );
+}
+export function PlacePreview({id}) {
+  const navigate = useNavigate();
+
+  const backgroundImage = places[id - 1].background;
+  return (
+    <div
+      className="place-circle"
+      style={{
+        position: "absolute",
+        top: "0",
+        right: "-600px",
+        height: "200px",
+        width: "200px",
+      }}
+    >
+      <div className="half-circle-img" style={{backgroundImage}}></div>
+      <h1>{places[id - 1].name}</h1>
+      <h2 onClick={() => navigate(`/trailplacesdescriptions/:${id2}`)}>
+        Więcej...
+      </h2>
     </div>
   );
 }

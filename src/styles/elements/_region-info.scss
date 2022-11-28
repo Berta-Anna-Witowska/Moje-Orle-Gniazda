@@ -2,7 +2,7 @@
 .region-info {
   box-sizing: border-box;
   max-width: 40vw;
-  max-height: 80vh;
+  max-height: calc((100vh) - (200px));
   border: 2px solid $color-lightGrey-transparent-light;
   border-radius: 30px;
   padding: 30px;
