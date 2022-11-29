@@ -1,13 +1,11 @@
 import "../styles/elements/_gallery.scss";
 import ButtonBackToTrail from "../utils/ButtonBackToTrail";
 
-export default function Gallery({isUserLogged}) {
+export default function ToVisit() {
   return (
     <div className="gallery">
-      <h1>Galeria zdjęć</h1>
-      <div className="gallery-div">
-        {isUserLogged === true && <h1>Zalogowany</h1>}
-      </div>
+      <h1>Chcę odwiedzić</h1>
+      <div className="gallery-div"></div>
       <ButtonBackToTrail />
     </div>
   );

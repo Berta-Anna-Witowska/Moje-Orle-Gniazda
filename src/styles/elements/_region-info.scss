@@ -1,22 +1,32 @@
 @import "../settings/colors";
-.region-info {
-  box-sizing: border-box;
-  max-width: 40vw;
-  max-height: calc((100vh) - (200px));
-  border: 2px solid $color-lightGrey-transparent-light;
-  border-radius: 30px;
-  padding: 30px;
+
+.region-container {
+  box-sizing: content-box;
+  min-width: 40vw;
+  height: calc((100vh) - (240px));
   margin-left: 300px;
   margin-top: 50px;
+  padding: 30px;
+  border: 2px solid $color-lightGrey-transparent-light;
+  border-radius: 30px;
   background-color: $color-lightGrey-transparent-light;
-  color: $color-lightGrey-transparent;
-  text-align: justify;
-  position: absolute;
-  z-index: 1;
-  overflow-y: scroll;
-  h1 {
-    font-size: 1.5em;
-    text-transform: uppercase;
-    margin: 0 10px 10px 10px;
+
+  .region-info {
+    max-width: 40%;
+    max-height: calc((100vh) - (240px));
+
+    padding-right: 30px;
+
+    color: $color-lightGrey-transparent;
+    text-align: justify;
+    position: absolute;
+    z-index: 1;
+    overflow-y: scroll;
+
+    h1 {
+      font-size: 1.5em;
+      text-transform: uppercase;
+      margin: 0 10px 10px 10px;
+    }
   }
 }

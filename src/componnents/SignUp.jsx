@@ -2,6 +2,7 @@ import "../styles/elements/_sign-up.scss";
 import supabase from "../services/supabase";
 import {useNavigate} from "react-router-dom";
 import {toaster} from "evergreen-ui";
+import ButtonBackToTrail from "../utils/ButtonBackToTrail";
 
 export default function SignUp() {
   const navigate = useNavigate();
@@ -15,21 +16,22 @@ export default function SignUp() {
       toaster.notify("Hasła muszą być takie same!");
       return;
     }
+
     let {
-      data: {user, error},
+      data: {user},
+      error,
     } = await supabase.auth.signUp({
       email: email.value,
       password: password.value,
     });
-    console.log(user);
-    toaster.success("Logowanie powiodło się!");
+
     if (error) {
       toaster.warning("Pojawił się problem. Spróbuj jeszcze raz!");
       return;
     }
-    toaster.success("Logowanie powiodło się!");
-
+    toaster.success("Rejestracja powiodła się! Jesteś teraz zalogowany.");
     navigate("/trailbaseview");
+    return;
   };
   return (
     <div className="sign-up">
@@ -43,9 +45,9 @@ export default function SignUp() {
             alignItems: "center",
           }}
         >
-          <input placeholder="Adres email" />
-          <input placeholder="Hasło" />
-          <input placeholder="Powtórz hasło" />
+          <input type="email" placeholder="Adres email" />
+          <input type="password" placeholder="Hasło" />
+          <input type="password" placeholder="Powtórz hasło" />
           <button
             label="Signup"
             className="circle"
@@ -64,6 +66,7 @@ export default function SignUp() {
           <span style={{textTransform: "uppercase"}}>Zarejestruj</span>
         </form>
       </div>
+      <ButtonBackToTrail />
     </div>
   );
 }

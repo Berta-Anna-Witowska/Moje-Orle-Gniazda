@@ -33,7 +33,6 @@ export default function TrailBaseView() {
         className="drawing-rock"
         src=".\src\assets\pics\drawings\01_Skala.png"
         alt="Rysunek skały Okiennik Wielki"
-        height="400vh"
       ></img>
     </div>
   );

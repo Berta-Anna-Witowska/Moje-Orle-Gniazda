@@ -8,6 +8,8 @@ import TrailInfo from "./componnents/Trail_info";
 import PlacesList from "./componnents/PlacesList";
 import Places from "./componnents/Places";
 import Gallery from "./componnents/Gallery";
+import Trips from "./componnents/Trips";
+import ToVisit from "./componnents/ToVisit";
 import Contact from "./componnents/Contact";
 import SignIn from "./componnents/SignIn";
 import SignUp from "./componnents/SignUp";
@@ -26,9 +28,11 @@ function App() {
           <Route path="/trailplacesdescriptions/:id2" element={<Places />} />
 
           <Route path="/gallery" element={<Gallery />} />
+          <Route path="/trips" element={<Trips />} />
+          <Route path="/tovisit" element={<ToVisit />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/signin" element={<SignIn />} />
-          <Route path="/signup" element={<SignUp />} />
+          <Route path=" /signup" element={<SignUp />} />
         </Route>
       </Routes>
     </Router>
@@ -49,3 +53,7 @@ function App() {
 //                    -want to visit - list
 
 export default App;
+//<i className="fa-solid fa-route"></i>
+//<i className="fa-regular fa-paper-plane"></i>
+//<i className="fa-solid fa-reply"></i>
+//

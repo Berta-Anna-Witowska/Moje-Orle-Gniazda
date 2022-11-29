@@ -1,30 +1,32 @@
 import "../styles/elements/_sign-in.scss";
+import React, {useState, useEffect} from "react";
 import {useNavigate} from "react-router-dom";
 import supabase from "../services/supabase";
 import {toaster} from "evergreen-ui";
-// const notification = toaster.notify("oops...");
-// const error = toaster.warning("no!");
-// const danger = toaster.danger("Look out!");
-// const success = toaster.success("Great!");
-export default function SignIn(isLogged) {
+import ButtonBackToTrail from "../utils/ButtonBackToTrail";
+// toaster.notify("oops...");
+// toaster.warning("no!");
+// toaster.danger("Look out!");
+// toaster.success("Great!");
+export default function SignIn() {
   const navigate = useNavigate();
 
-  const signinUser = async (e) => {
+  const loginUser = async (e) => {
     e.preventDefault();
+
     const [email, password] = e.target.elements;
+
     let {
-      data: {user, error},
+      data: {user},
+      error,
     } = await supabase.auth.signInWithPassword({
       email: email.value,
       password: password.value,
     });
-
     if (error) {
       toaster.warning("Pojawił się problem. Spróbuj jeszcze raz!");
       return;
     }
-    // localStorage.setItem("userData", JSON.stringify(user));
-
     toaster.success("Logowanie powiodło się!");
     navigate("/trailbaseview");
   };
@@ -33,13 +35,15 @@ export default function SignIn(isLogged) {
     let {error} = await supabase.auth.signOut();
     if (!error) {
       console.log("wylogowany");
-      navigate("/signin");
+      toaster.notify("Zostałeś wylogowany.");
+      navigate("/trailbaseview");
     }
+    return;
   };
 
   return (
     <>
-      {isLogged === true && (
+      {/* {isLogged === true && (
         <div className="sign-in">
           <h1>Logowanie</h1>
           <div
@@ -70,84 +74,102 @@ export default function SignIn(isLogged) {
             <span style={{textTransform: "uppercase"}}> Wyloguj</span>
           </div>
         </div>
-      )}
-      {isLogged !== true && (
-        <div className="sign-in">
-          <h1>Logowanie</h1>
-          <div
-            className="sign-in-form"
+      )} */}
+
+      <div className="sign-in">
+        <h1>Logowanie</h1>
+        <div
+          className="sign-in-form"
+          style={{
+            display: "flex",
+            flexDirection: "column",
+            alignItems: "center",
+          }}
+        >
+          <button
+            label="Logout"
+            className="circle"
             style={{
+              width: 50,
+              height: 50,
               display: "flex",
               flexDirection: "column",
               alignItems: "center",
+              justifyContent: "center",
+              margin: "10px",
+              marginBottom: "5px",
             }}
+            onClick={(e) => logoutUser(e)}
           >
-            <div>
-              <form
-                onSubmit={(e) => signinUser(e)}
+            <i className="fa-solid fa-right-from-bracket"></i>
+          </button>
+          <span style={{textTransform: "uppercase"}}> Wyloguj</span>
+          <div>
+            <form
+              onSubmit={(e) => loginUser(e)}
+              style={{
+                display: "flex",
+                flexDirection: "column",
+                alignItems: "center",
+              }}
+            >
+              <input type="email" placeholder="Adres email" />
+              <input type="password" placeholder="Hasło" />
+              <div
                 style={{
                   display: "flex",
                   flexDirection: "column",
                   alignItems: "center",
                 }}
               >
-                <input type="email" placeholder="Adres email" />
-                <input type="password" placeholder="Hasło" />
-                <div
+                <button
+                  label="Signin"
+                  className="circle"
                   style={{
+                    width: 50,
+                    height: 50,
                     display: "flex",
                     flexDirection: "column",
                     alignItems: "center",
+                    justifyContent: "center",
+                    margin: "10px",
+                    marginBottom: "5px",
                   }}
                 >
-                  <button
-                    label="Signin"
-                    className="circle"
-                    style={{
-                      width: 50,
-                      height: 50,
-                      display: "flex",
-                      flexDirection: "column",
-                      alignItems: "center",
-                      justifyContent: "center",
-                      margin: "10px",
-                      marginBottom: "5px",
-                    }}
-                  >
-                    <i className="fa-solid fa-right-to-bracket"></i>
-                  </button>
-                  <span style={{textTransform: "uppercase"}}> Zaloguj</span>
-                </div>
-              </form>
-            </div>
-            <div
+                  <i className="fa-solid fa-right-to-bracket"></i>
+                </button>
+                <span style={{textTransform: "uppercase"}}> Zaloguj</span>
+              </div>
+            </form>
+          </div>
+          <div
+            style={{
+              display: "flex",
+              flexDirection: "column",
+              alignItems: "center",
+              justifyContent: "center",
+            }}
+          >
+            <h2>Nie masz jeszcze konta? Zarejestruj się:</h2>
+            <button
+              className="circle"
               style={{
+                width: 50,
+                height: 50,
                 display: "flex",
                 flexDirection: "column",
                 alignItems: "center",
                 justifyContent: "center",
               }}
+              onClick={() => navigate("/signup")}
+              label="Create account"
             >
-              <h2>Nie masz jeszcze konta? Zarejestruj się:</h2>
-              <button
-                className="circle"
-                style={{
-                  width: 50,
-                  height: 50,
-                  display: "flex",
-                  flexDirection: "column",
-                  alignItems: "center",
-                  justifyContent: "center",
-                }}
-                onClick={() => navigate("/signup")}
-                label="Create account"
-              >
-                <i className="fa-regular fa-address-card"></i>
-              </button>
-            </div>
+              <i className="fa-regular fa-address-card"></i>
+            </button>
           </div>
         </div>
-      )}
+      </div>
+      <ButtonBackToTrail />
     </>
   );
 }

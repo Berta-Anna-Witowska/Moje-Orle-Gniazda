@@ -2,6 +2,8 @@ import React, {useState} from "react";
 import "../styles/elements/_places-list.scss";
 import "../styles/settings/_colors.scss";
 
+import ButtonBackToTrail from "../utils/ButtonBackToTrail";
+
 import {places} from "../data/places";
 import TrailBaseView from "./TrailBaseView";
 import {useNavigate} from "react-router-dom";
@@ -45,11 +47,11 @@ export default function PlacesList() {
           {/* {id && <View id={id} />} */}
         </ol>
       </div>
+      <ButtonBackToTrail />
       <img
         className="drawing-rock"
         src=".\src\assets\pics\drawings\01_Skala.png"
         alt="Rysunek skały Okiennik Wielki"
-        height="40%"
       ></img>
     </>
   );

@@ -1,8 +1,9 @@
-import React from "react";
+import React, {useState, useEffect} from "react";
 import "../styles/elements/_nav.scss";
 import {useNavigate} from "react-router-dom";
+import supabase from "../services/supabase";
 
-export default function Nav(isLogged) {
+export default function Nav({isUserLogged}) {
   const navigate = useNavigate();
 
   return (
@@ -11,23 +12,17 @@ export default function Nav(isLogged) {
         <div className="half-circle-top" onClick={() => navigate("/gallery")}>
           <i className="fa-regular fa-image" />
         </div>
-        {isLogged === true && (
-          <div
-            className="half-circle-top"
-            onClick={() => navigate("/trailbaseview")}
-          >
-            <i class="fa-regular fa-pen-to-square" />
+        {isUserLogged === true && (
+          <div className="half-circle-top" onClick={() => navigate("/trips")}>
+            <i className="fa-regular fa-pen-to-square" />
           </div>
         )}
         <div className="half-circle-top" onClick={() => navigate("/signin")}>
           <i className="fa-solid fa-user" />
         </div>
-        {isLogged === true && (
-          <div
-            className="half-circle-top"
-            onClick={() => navigate("/trailbaseview")}
-          >
-            <i class="fa-regular fa-star" />
+        {isUserLogged === true && (
+          <div className="half-circle-top" onClick={() => navigate("/tovisit")}>
+            <i className="fa-regular fa-star" />
           </div>
         )}
         <div className="half-circle-top" onClick={() => navigate("/contact")}>

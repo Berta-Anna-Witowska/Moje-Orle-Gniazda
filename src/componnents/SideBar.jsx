@@ -50,7 +50,7 @@ export default function SideBar() {
       </div>
       <i
         className="fa-solid fa-chevron-right"
-        onClick={showSideMenu}
+        onMouseEnter={showSideMenu}
         style={{textShadow}}
       />
       <div className="big-circle" style={{display, position, left}}>
