@@ -36,11 +36,26 @@ export default function SignIn() {
     if (!error) {
       console.log("wylogowany");
       toaster.notify("Zostałeś wylogowany.");
-      navigate("/trailbaseview");
+      navigate("/");
     }
     return;
   };
 
+  const [isLogged, setIsLogged] = useState(false);
+
+  useEffect(() => {
+    const isUserLogged = async () => {
+      const {
+        data: {user},
+      } = await supabase.auth.getUser();
+      if (!user) {
+        setIsLogged(false);
+        return;
+      }
+      setIsLogged(true);
+    };
+    isUserLogged();
+  }, []);
   return (
     <>
       {/* {isLogged === true && (
@@ -78,6 +93,7 @@ export default function SignIn() {
 
       <div className="sign-in">
         <h1>Logowanie</h1>
+
         <div
           className="sign-in-form"
           style={{
@@ -86,44 +102,80 @@ export default function SignIn() {
             alignItems: "center",
           }}
         >
-          <button
-            label="Logout"
-            className="circle"
-            style={{
-              width: 50,
-              height: 50,
-              display: "flex",
-              flexDirection: "column",
-              alignItems: "center",
-              justifyContent: "center",
-              margin: "10px",
-              marginBottom: "5px",
-            }}
-            onClick={(e) => logoutUser(e)}
-          >
-            <i className="fa-solid fa-right-from-bracket"></i>
-          </button>
-          <span style={{textTransform: "uppercase"}}> Wyloguj</span>
-          <div>
-            <form
-              onSubmit={(e) => loginUser(e)}
-              style={{
-                display: "flex",
-                flexDirection: "column",
-                alignItems: "center",
-              }}
-            >
-              <input type="email" placeholder="Adres email" />
-              <input type="password" placeholder="Hasło" />
+          {isLogged && (
+            <>
+              <button
+                label="Logout"
+                className="circle"
+                style={{
+                  width: 50,
+                  height: 50,
+                  display: "flex",
+                  flexDirection: "column",
+                  alignItems: "center",
+                  justifyContent: "center",
+                  margin: "10px",
+                  marginBottom: "5px",
+                }}
+                onClick={(e) => logoutUser(e)}
+              >
+                <i className="fa-solid fa-right-from-bracket"></i>
+              </button>
+              <span style={{textTransform: "uppercase"}}> Wyloguj</span>
+              <ButtonBackToTrail />
+            </>
+          )}
+
+          {!isLogged && (
+            <>
+              <div>
+                <form
+                  onSubmit={(e) => loginUser(e)}
+                  style={{
+                    display: "flex",
+                    flexDirection: "column",
+                    alignItems: "center",
+                  }}
+                >
+                  <input type="email" placeholder="Adres email" />
+                  <input type="password" placeholder="Hasło" />
+                  <div
+                    style={{
+                      display: "flex",
+                      flexDirection: "column",
+                      alignItems: "center",
+                    }}
+                  >
+                    <button
+                      label="Signin"
+                      className="circle"
+                      style={{
+                        width: 50,
+                        height: 50,
+                        display: "flex",
+                        flexDirection: "column",
+                        alignItems: "center",
+                        justifyContent: "center",
+                        margin: "10px",
+                        marginBottom: "5px",
+                      }}
+                    >
+                      <i className="fa-solid fa-right-to-bracket"></i>
+                    </button>
+                    <span style={{textTransform: "uppercase"}}> Zaloguj</span>
+                  </div>
+                </form>
+              </div>
               <div
                 style={{
                   display: "flex",
                   flexDirection: "column",
                   alignItems: "center",
+                  justifyContent: "center",
                 }}
               >
+                <h2>Nie masz jeszcze konta? Zarejestruj się:</h2>
                 <button
-                  label="Signin"
                   className="circle"
                   style={{
                     width: 50,
@@ -132,44 +184,18 @@ export default function SignIn() {
                     flexDirection: "column",
                     alignItems: "center",
                     justifyContent: "center",
-                    margin: "10px",
-                    marginBottom: "5px",
                   }}
+                  onClick={() => navigate("/signup")}
+                  label="Create account"
                 >
-                  <i className="fa-solid fa-right-to-bracket"></i>
+                  <i className="fa-regular fa-address-card"></i>
                 </button>
-                <span style={{textTransform: "uppercase"}}> Zaloguj</span>
               </div>
-            </form>
-          </div>
-          <div
-            style={{
-              display: "flex",
-              flexDirection: "column",
-              alignItems: "center",
-              justifyContent: "center",
-            }}
-          >
-            <h2>Nie masz jeszcze konta? Zarejestruj się:</h2>
-            <button
-              className="circle"
-              style={{
-                width: 50,
-                height: 50,
-                display: "flex",
-                flexDirection: "column",
-                alignItems: "center",
-                justifyContent: "center",
-              }}
-              onClick={() => navigate("/signup")}
-              label="Create account"
-            >
-              <i className="fa-regular fa-address-card"></i>
-            </button>
-          </div>
+            </>
+          )}
         </div>
+        <ButtonBackToTrail />
       </div>
-      <ButtonBackToTrail />
     </>
   );
 }

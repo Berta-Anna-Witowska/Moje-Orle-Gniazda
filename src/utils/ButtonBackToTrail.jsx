@@ -32,9 +32,7 @@ export default function ButtonBackToTrail() {
         <i className="fa-solid fa-route"></i>
       </button>
       <span style={{textTransform: "uppercase", textAlign: "center"}}>
-        Wróć
-        <br />
-        na szlak
+        >> Do szlaku
       </span>
     </div>
   );

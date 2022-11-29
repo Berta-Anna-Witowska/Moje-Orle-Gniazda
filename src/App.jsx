@@ -13,6 +13,7 @@ import ToVisit from "./componnents/ToVisit";
 import Contact from "./componnents/Contact";
 import SignIn from "./componnents/SignIn";
 import SignUp from "./componnents/SignUp";
+import SignOut from "./componnents/SignOut";
 
 function App() {
   return (
@@ -31,9 +32,10 @@ function App() {
           <Route path="/trips" element={<Trips />} />
           <Route path="/tovisit" element={<ToVisit />} />
           <Route path="/contact" element={<Contact />} />
-          <Route path="/signin" element={<SignIn />} />
-          <Route path=" /signup" element={<SignUp />} />
         </Route>
+        <Route path="/signin" element={<SignIn />} />
+        <Route path="/signup" element={<SignUp />} />
+        <Route path="/signout" element={<SignOut />} />
       </Routes>
     </Router>
   );

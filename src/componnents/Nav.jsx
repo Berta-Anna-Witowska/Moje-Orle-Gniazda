@@ -17,7 +17,14 @@ export default function Nav({isUserLogged}) {
             <i className="fa-regular fa-pen-to-square" />
           </div>
         )}
-        <div className="half-circle-top" onClick={() => navigate("/signin")}>
+        <div
+          className="half-circle-top"
+          onClick={
+            isUserLogged
+              ? () => navigate("/signout")
+              : () => navigate("/signin")
+          }
+        >
           <i className="fa-solid fa-user" />
         </div>
         {isUserLogged === true && (
