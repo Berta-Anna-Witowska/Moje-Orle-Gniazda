@@ -28,8 +28,13 @@
         margin: 0 10px 10px 10px;
       }
     }
-    .drawing-place {
-      height: 300px;
-    }
   }
+}
+.drawing-place {
+  height: 50%;
+  background-position: contain;
+  background-repeat: no-repeat;
+  position: absolute;
+  bottom: 0;
+  right: 0;
 }

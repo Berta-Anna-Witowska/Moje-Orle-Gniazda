@@ -27,6 +27,7 @@ export default function LandingPage() {
         alt="Rysunek skały Okiennik Wielki"
         height="50%"
       ></img>
+
       <Outlet />
     </div>
   );

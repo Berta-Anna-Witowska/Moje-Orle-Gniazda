@@ -6,9 +6,8 @@ import ButtonBackToTrail from "../utils/ButtonBackToTrail";
 
 export default function Places() {
   const {id} = useParams();
-  console.log(id);
-  const backgroundImage = places[id - 1].background;
-  console.log(backgroundImage);
+
+  const img = places[id - 1].img;
   return (
     <>
       <div className="places-descriptions">
@@ -26,24 +25,12 @@ export default function Places() {
             </ul>
           </div>
         </div>
-        {/* <div
-          style={{
-            height: 500,
-            width: 700,
-            backgroundImage,
-            backgroundPosition: "contain",
-            backgroundRepeat: "no-repeat",
-            backgroundColor: "wheat",
-            position: "absolute",
-            bottom: 0,
-            right: 0,
-          }}
-        ></div> */}
         <img
-          className="drawing-rock"
-          src=".\src\assets\pics\drawings\01_Skala.png"
+          className="drawing-place"
+          src={img}
           alt="Rysunek skały Okiennik Wielki"
-        ></img>
+          height="50%"
+        ></img>{" "}
         <ButtonBackToTrail />
       </div>
     </>

@@ -31,10 +31,10 @@ export default function ButtonBackToTrail() {
       >
         <i className="fa-solid fa-route"></i>
       </button>
-      <span style={{textTransform: "uppercase", textAlign: "center"}}>
+      {/* <span style={{textTransform: "uppercase", textAlign: "center"}}>
         Zobacz
         <br /> szlak
-      </span>
+      </span> */}
     </div>
   );
 }
