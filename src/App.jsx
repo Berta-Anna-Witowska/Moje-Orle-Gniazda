@@ -26,7 +26,7 @@ function App() {
           <Route path="/trailInfo" element={<TrailInfo />} />
           <Route path="/traillistofplaces" element={<PlacesList />} />
           {/* <Route path="/trailplacesdescriptions" element={<Places />}></Route> */}
-          <Route path="/trailplacesdescriptions/:id2" element={<Places />} />
+          <Route path="/trailplacesdescriptions/:id" element={<Places />} />
 
           <Route path="/gallery" element={<Gallery />} />
           <Route path="/trips" element={<Trips />} />

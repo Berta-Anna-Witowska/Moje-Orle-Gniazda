@@ -25,9 +25,9 @@
 }
 
 .place-circle {
-  width: 200px;
+  width: 210px;
   height: 200px;
-  padding-top: 10px;
+  padding-top: 5px;
   background-color: $color-lightGrey-transparent-light;
   border: 2px solid $color-lightGrey-transparent-light;
   border-radius: 50%;
@@ -37,16 +37,16 @@
   justify-content: flex-start;
   text-align: center;
   .half-circle-img {
-    width: 180px;
-    height: 90px;
+    width: 186px;
+    height: 95px;
     margin-bottom: 10px;
     background-color: $color-lightGrey-transparent-light;
     border: 2px solid $color-lightGrey-transparent-light;
-    border-radius: 90px 90px 0 0;
+    border-radius: 95px 95px 0 0;
 
     background-size: 100%;
     background-repeat: no-repeat;
-    background-position: bottom -20px right;
+    background-position: bottom -15px right;
   }
   h1 {
     margin-bottom: 5px;

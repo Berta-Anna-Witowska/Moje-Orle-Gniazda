@@ -111,6 +111,7 @@ textarea:-webkit-autofill:focus,
 select:-webkit-autofill,
 select:-webkit-autofill:hover,
 select:-webkit-autofill:focus {
+  box-shadow: none;
   background-color: $color-lightGrey-transparent-light;
   border: 2px solid $color-lightGrey-transparent-light;
   -webkit-text-fill-color: $color-darkGreen;
@@ -138,7 +139,8 @@ select:-webkit-autofill:focus {
   position: absolute;
   bottom: 0;
   right: 0;
-  width: 30%;
+  width: auto;
+  height: 50%;
 }
 
 ::-webkit-scrollbar {

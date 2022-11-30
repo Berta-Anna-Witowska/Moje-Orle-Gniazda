@@ -25,7 +25,7 @@ export default function LandingPage() {
         className="drawing-rock"
         src=".\src\assets\pics\drawings\01_Skala.png"
         alt="Rysunek skały Okiennik Wielki"
-        height="40%"
+        height="50%"
       ></img>
       <Outlet />
     </div>

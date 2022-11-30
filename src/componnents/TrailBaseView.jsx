@@ -41,6 +41,7 @@ export function PlacePreview({id}) {
   const navigate = useNavigate();
 
   const backgroundImage = places[id - 1].background;
+  console.log(backgroundImage);
   return (
     <div
       className="place-circle"
@@ -54,7 +55,7 @@ export function PlacePreview({id}) {
     >
       <div className="half-circle-img" style={{backgroundImage}}></div>
       <h1>{places[id - 1].name}</h1>
-      <h2 onClick={() => navigate(`/trailplacesdescriptions/:${id2}`)}>
+      <h2 onClick={() => navigate(`/trailplacesdescriptions/${id}`)}>
         Więcej...
       </h2>
     </div>
