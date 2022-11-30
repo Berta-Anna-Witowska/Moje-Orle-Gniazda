@@ -101,7 +101,7 @@ export const places = [
         name: "wikipedia",
       },
     ],
-    background: `url("src/assets/pics/drawings/01_Skala.png")`,
+    background: `url("src/assets/pics/drawings/places/04_Ostreznik.png")`,
   },
   {
     ID: 5,
@@ -129,7 +129,7 @@ export const places = [
         name: "wikipedia",
       },
     ],
-    background: `url("src/assets/pics/drawings/01_Skala.png")`,
+    background: `url("src/assets/pics/drawings/places/05_Mirow.png")`,
   },
   {
     ID: 6,
@@ -157,7 +157,7 @@ export const places = [
         name: "wikipedia",
       },
     ],
-    background: `url("src/assets/pics/drawings/01_Skala.png")`,
+    background: `url("src/assets/pics/drawings/places/06_Bobolice.png")`,
   },
   {
     ID: 7,
@@ -181,7 +181,7 @@ export const places = [
         name: "wikipedia",
       },
     ],
-    background: `url("src/assets/pics/drawings/01_Skala.png")`,
+    background: `url("src/assets/pics/drawings/places/07_Bakowiec.PNG")`,
   },
   {
     ID: 8,
@@ -205,7 +205,7 @@ export const places = [
         name: "wikipedia",
       },
     ],
-    background: `url("src/assets/pics/drawings/01_Skala.png")`,
+    background: `url("src/assets/pics/drawings/places/08_Birow.PNG")`,
   },
   {
     ID: 9,
@@ -233,7 +233,7 @@ export const places = [
         name: "wikipedia",
       },
     ],
-    background: `url("src/assets/pics/drawings/01_Skala.png")`,
+    background: `url("src/assets/pics/drawings/places/09_Ogrodzieniec.PNG")`,
   },
   {
     ID: 10,
@@ -257,7 +257,7 @@ export const places = [
         name: "wikipedia",
       },
     ],
-    background: `url("src/assets/pics/drawings/01_Skala.png")`,
+    background: `url("src/assets/pics/drawings/places/10_Palac_Padniewskich.PNG")`,
   },
   {
     ID: 11,
@@ -281,7 +281,7 @@ export const places = [
         name: "wikipedia",
       },
     ],
-    background: `url("src/assets/pics/drawings/01_Skala.png")`,
+    background: `url("src/assets/pics/drawings/places/11_Pilcza.PNG")`,
   },
   {
     ID: 12,
@@ -305,7 +305,7 @@ export const places = [
         name: "wikipedia",
       },
     ],
-    background: `url("src/assets/pics/drawings/01_Skala.png")`,
+    background: `url("src/assets/pics/drawings/places/12_Bydlin.PNG")`,
   },
   {
     ID: 13,
@@ -333,7 +333,7 @@ export const places = [
         name: "wikipedia",
       },
     ],
-    background: `url("src/assets/pics/drawings/01_Skala.png")`,
+    background: `url("src/assets/pics/drawings/places/13_Rabsztyn.PNG")`,
   },
   {
     ID: 14,
@@ -361,7 +361,7 @@ export const places = [
         name: "wikipedia",
       },
     ],
-    background: `url("src/assets/pics/drawings/01_Skala.png")`,
+    background: `url("src/assets/pics/drawings/places/14_Pieskowa_Skala.PNG")`,
   },
   {
     ID: 15,
@@ -397,7 +397,7 @@ export const places = [
         name: "wikipedia",
       },
     ],
-    background: `url("src/assets/pics/drawings/01_Skala.png")`,
+    background: `url("src/assets/pics/drawings/places/15_Ojcow.PNG")`,
   },
   {
     ID: 16,
@@ -425,7 +425,7 @@ export const places = [
         name: "wikipedia",
       },
     ],
-    background: `url("src/assets/pics/drawings/01_Skala.png")`,
+    background: `url("src/assets/pics/drawings/places/16_Korzkiew.PNG")`,
   },
   {
     ID: 17,
@@ -453,6 +453,6 @@ export const places = [
         name: "wikipedia",
       },
     ],
-    background: `url("src/assets/pics/drawings/01_Skala.png")`,
+    background: `url("src/assets/pics/drawings/places/17_Wawel.PNG")`,
   },
 ];

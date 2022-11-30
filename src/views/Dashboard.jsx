@@ -40,7 +40,7 @@ export default function Dashboard() {
           <Nav isUserLogged={isLogged} />
           <div className="wrapper">
             <SideBar />
-            <Outlet isUserLogged={isLogged} />
+            <Outlet />
           </div>
           <Footer />
         </div>

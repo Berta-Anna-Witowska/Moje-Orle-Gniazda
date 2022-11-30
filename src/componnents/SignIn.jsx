@@ -34,7 +34,6 @@ export default function SignIn() {
   const logoutUser = async () => {
     let {error} = await supabase.auth.signOut();
     if (!error) {
-      console.log("wylogowany");
       toaster.notify("Zostałeś wylogowany.");
       navigate("/");
     }

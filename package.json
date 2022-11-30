@@ -9,6 +9,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@emailjs/browser": "^3.10.0",
     "@supabase/supabase-js": "^2.1.1",
     "evergreen-ui": "^6.13.1",
     "primeicons": "^6.0.1",

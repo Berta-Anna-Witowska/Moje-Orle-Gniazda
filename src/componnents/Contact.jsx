@@ -1,20 +1,29 @@
-import React, {useState} from "react";
+import React, {useState, useRef} from "react";
 import "../styles/elements/_contact.scss";
 import "../styles/settings/_colors.scss";
 import ButtonBackToTrail from "../utils/ButtonBackToTrail";
+import emailjs from "@emailjs/browser";
+import {publicKEY} from "../services/emailjs";
+import {emailJS_serviceKEY} from "../services/emailjs";
+import {template} from "../services/emailjs";
 
 export default function Contact() {
-  const [formStatus, setFormStatus] = useState("Send");
-  const sendMail = (e) => {
+  const form = useRef();
+
+  const sendEmail = (e) => {
     e.preventDefault();
-    setFormStatus("Submitting...");
-    const {name, email, message} = e.target.elements;
-    let conFom = {
-      // name: name.value,
-      email: email.value,
-      message: message.value,
-    };
-    console.log(conFom);
+
+    emailjs
+      .sendForm(emailJS_serviceKEY, template, form.current, publicKEY)
+      .then(
+        (result) => {
+          console.log(result.text);
+        },
+        (error) => {
+          console.log(error.text);
+        }
+      );
+    e.target.reset();
   };
 
   return (
@@ -57,17 +66,29 @@ export default function Contact() {
               flexDirection: "column",
               alignItems: "center",
             }}
-            onSubmit={sendMail}
+            ref={form}
+            onSubmit={sendEmail}
           >
-            <input type="email" placeholder="Podaj nam swój adres e-mail" />
-            <input type="name" placeholder="Jak masz na imię?" />
+            <input
+              type="email"
+              name="user_email"
+              placeholder="Podaj nam swój adres e-mail"
+            />
+            <input
+              type="name"
+              name="user_name"
+              placeholder="Jak masz na imię?"
+            />
             <textarea
               type="text"
+              name="message"
               placeholder="Co chciałbyś mi powiedzieć...?"
               rows="4"
             />
             <button
               className="circle"
+              type="submit"
+              value="Send"
               style={{
                 width: 50,
                 height: 50,
