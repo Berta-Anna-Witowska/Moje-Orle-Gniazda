@@ -57,39 +57,6 @@ export default function SignIn() {
   }, []);
   return (
     <>
-      {/* {isLogged === true && (
-        <div className="sign-in">
-          <h1>Logowanie</h1>
-          <div
-            className="sign-in-form"
-            style={{
-              display: "flex",
-              flexDirection: "column",
-              alignItems: "center",
-            }}
-          >
-            <button
-              label="Signout"
-              className="circle"
-              style={{
-                width: 50,
-                height: 50,
-                display: "flex",
-                flexDirection: "column",
-                alignItems: "center",
-                justifyContent: "center",
-                margin: "10px",
-                marginBottom: "5px",
-              }}
-              onClick={logoutUser}
-            >
-              <i className="fa-solid fa-right-from-bracket"></i>
-            </button>
-            <span style={{textTransform: "uppercase"}}> Wyloguj</span>
-          </div>
-        </div>
-      )} */}
-
       <div className="sign-in">
         <h1>Logowanie</h1>
 

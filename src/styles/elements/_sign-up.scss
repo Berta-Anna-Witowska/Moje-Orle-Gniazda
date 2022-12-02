@@ -1,23 +1,17 @@
 @import "../settings/colors";
 
 .sign-up {
-  height: 60vh;
-  width: 800px;
-
-  margin-left: 300px;
-  margin-top: 50px;
-
-  // position: absolute;
-  // bottom: 0;
-  // right: 0;
+  height: 100vh;
+  width: 100vw;
 
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
+  align-items: center;
+  justify-content: center;
 
   &-form {
-    width: 60%;
-    height: 80%;
+    width: 40%;
+    height: 40%;
 
     border: 2px solid $color-lightGrey-transparent-light;
     border-radius: 30px;
@@ -29,12 +23,7 @@
     align-items: center;
     justify-content: center;
   }
+  h2:hover {
+    cursor: pointer;
+  }
 }
-// button {
-//   color: rebeccapurple;
-//   &:hover {
-//     color: red;
-//     transition-property: sliding-vertically;
-//     transition-duration: 4s;
-//   }
-// }

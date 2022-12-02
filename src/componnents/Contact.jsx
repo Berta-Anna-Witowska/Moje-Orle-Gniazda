@@ -1,6 +1,5 @@
-import React, {useState, useRef} from "react";
+import React, {useRef} from "react";
 import "../styles/elements/_contact.scss";
-import "../styles/settings/_colors.scss";
 import ButtonBackToTrail from "../utils/ButtonBackToTrail";
 import emailjs from "@emailjs/browser";
 import {publicKEY} from "../services/emailjs";

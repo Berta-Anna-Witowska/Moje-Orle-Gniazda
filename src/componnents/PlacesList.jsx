@@ -17,8 +17,6 @@ export default function PlacesList() {
     navigate(`/trailplacesdescriptions/${id}`);
   };
 
-  // navigate(`/trailplacesdescriptions/${id}`);
-
   return (
     <>
       <div className="places-list">

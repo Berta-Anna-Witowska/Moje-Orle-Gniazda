@@ -65,6 +65,7 @@ export default function SignUp() {
           </button>
           <span style={{textTransform: "uppercase"}}>Zarejestruj</span>
         </form>
+        <h2 onClick={() => navigate("/signin")}>Wróć do logowania</h2>
       </div>
       <ButtonBackToTrail />
     </div>

@@ -131,6 +131,9 @@ select:-webkit-autofill:focus {
 .circle {
   @include button;
 }
+.circle-small {
+  @include buttonSmall;
+}
 .half-circle-left,
 .half-circle-top {
   box-shadow: 0px 0px 20px 0px $color-secondary-shadow;

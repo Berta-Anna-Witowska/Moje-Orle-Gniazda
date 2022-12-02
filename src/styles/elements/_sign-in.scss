@@ -1,19 +1,17 @@
 @import "../settings/colors";
 
 .sign-in {
-  min-height: 60vh;
-  width: 800px;
-
-  margin-left: 300px;
-  margin-top: 50px;
+  height: 100vh;
+  width: 100vw;
 
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
+  align-items: center;
+  justify-content: center;
 
   &-form {
-    width: 60%;
-    height: 80%;
+    width: 40%;
+    height: 40%;
 
     border: 2px solid $color-lightGrey-transparent-light;
     border-radius: 30px;

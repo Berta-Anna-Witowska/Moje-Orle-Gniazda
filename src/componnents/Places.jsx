@@ -11,28 +11,26 @@ export default function Places() {
   return (
     <>
       <div className="places-descriptions">
-        <div className="places-wrapper">
-          <div className="places">
-            <h1>{places[id - 1].name}</h1>
-            <p>{places[id - 1].description}</p>
-            <ul>
-              <h2>Więcej</h2>
-              {places[id - 1].links.map((el, idx) => (
-                <li key={idx}>
-                  <a href={el.link}>{el.name}</a>
-                </li>
-              ))}
-            </ul>
-          </div>
+        <div className="places-info scroll">
+          <h1>{places[id - 1].name}</h1>
+          <p>{places[id - 1].description}</p>
+          <ul>
+            <h2>Więcej</h2>
+            {places[id - 1].links.map((el, idx) => (
+              <li key={idx}>
+                <a href={el.link}>{el.name}</a>
+              </li>
+            ))}
+          </ul>
         </div>
-        <img
-          className="drawing-place"
-          src={img}
-          alt="Rysunek skały Okiennik Wielki"
-          height="50%"
-        ></img>{" "}
-        <ButtonBackToTrail />
       </div>
+      <ButtonBackToTrail />
+      <img
+        className="drawing-place"
+        src={img}
+        alt="Rysunek miejsca"
+        height="30%"
+      ></img>
     </>
   );
 }

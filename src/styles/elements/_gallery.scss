@@ -11,18 +11,85 @@
   flex-direction: column;
   align-items: flex-start;
 
-  &-div {
+  &-container {
     width: calc((100%) - (300px));
     height: 80%;
 
     border: 2px solid $color-lightGrey-transparent-light;
     border-radius: 30px;
-    padding: 30px;
+    padding: 30px 0;
+
     background-color: $color-lightGrey-transparent-light;
 
     display: flex;
-    flex-direction: column;
     align-items: center;
     justify-content: center;
+  }
+}
+.carousel-container {
+  flex-grow: 4;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .carousel-wrapper {
+    width: 75%;
+    display: flex;
+    flex-wrap: nowrap;
+    overflow: hidden;
+  }
+  .carousel-item {
+    height: 30rem;
+    min-width: 100%;
+    width: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 1s cubic-bezier(0.39, 0.575, 0.565, 1);
+    background-size: contain;
+    // background-position: 40%;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+    .photo-name {
+      position: absolute;
+      bottom: 10px;
+      right: 25%;
+    }
+  }
+}
+.prev {
+  margin-left: 10px;
+}
+
+.sidebar-carousel-wrapper {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-wrap: nowrap;
+  overflow: hidden;
+  .sidebar-carousel-item {
+    width: 100px;
+    height: 100px;
+    border: 2px solid $color-lightGrey-transparent-light;
+    border-radius: 50%;
+    box-shadow: 0px 0px 10px 0px $color-secondary-shadow;
+
+    color: $color-lightGrey-transparent;
+    text-align: center;
+    text-transform: uppercase;
+    // font-weight: 500;
+    margin: 10;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 0.8em;
+    transition: 1s cubic-bezier(0.39, 0.575, 0.565, 1);
+
+    &:hover {
+      box-shadow: 0px 0px 20px 0px $color-lightGrey-transparent;
+      cursor: pointer;
+    }
   }
 }

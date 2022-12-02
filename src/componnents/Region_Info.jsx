@@ -21,7 +21,6 @@ export default function RegionInfo() {
         </div>
       </div>
       <ButtonBackToTrail />
-
       <img
         className="drawing-rock"
         src=".\src\assets\pics\drawings\01_Skala.png"

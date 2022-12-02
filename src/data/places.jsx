@@ -84,7 +84,7 @@ export const places = [
   },
   {
     ID: 4,
-    name: `Ruiny zamku Osrężnik`,
+    name: `Ruiny zamku Ostrężnik`,
     localization: `Osada leśna Ostrężnik`,
     coordinates: "50°40′30″N 19°24′00″E",
     mapLink: "https://goo.gl/maps/SP8AethjWY6z5JgV6",
@@ -105,7 +105,7 @@ export const places = [
       },
     ],
     background: `url("src/assets/pics/drawings/places/04_Ostreznik.png")`,
-    img: `../src/assets/pics/drawings/places/03_Ostreznik.PNG`,
+    img: `../src/assets/pics/drawings/places/04_Ostreznik.PNG`,
   },
   {
     ID: 5,

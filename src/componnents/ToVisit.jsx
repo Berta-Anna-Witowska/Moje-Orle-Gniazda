@@ -26,10 +26,32 @@ export default function ToVisit() {
     isUserLogged();
   }, []);
   return (
-    <div className="gallery">
-      <h1>Chcę odwiedzić</h1>
-      <div className="gallery-div"></div>
+    <>
+      <div className="places-toVisit">
+        <h1>Chcę odwiedzić</h1>
+        <ul>
+          <li>1</li>
+          <li>2</li>
+          <li>3</li>
+          <li>4</li>
+          <li>5</li>
+          <li>6</li>
+
+          {/* {places.map((el) => {
+          return (
+            <li key={el.ID} onClick={() => handleClick(el.ID)}>
+              {el.name}
+            </li>
+          );
+        })} */}
+        </ul>
+      </div>
       <ButtonBackToTrail />
-    </div>
+      <img
+        className="drawing-rock"
+        src=".\src\assets\pics\drawings\01_Skala.png"
+        alt="Rysunek skały Okiennik Wielki"
+      ></img>
+    </>
   );
 }

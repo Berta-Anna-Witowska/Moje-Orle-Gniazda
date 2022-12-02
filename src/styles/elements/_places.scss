@@ -1,32 +1,35 @@
 @import "../settings/colors";
 
 .places-descriptions {
-  margin-left: 300px;
-  width: 100%;
-  .places-wrapper {
-    display: flex;
-    .places {
-      box-sizing: border-box;
-      max-width: 60%;
-      max-height: calc((100vh) - (200px));
-      border: 2px solid $color-lightGrey-transparent-light;
-      border-radius: 30px;
-      padding: 30px;
-      margin-top: 50px;
-      background-color: $color-lightGrey-transparent-light;
+  box-sizing: content-box;
+  min-width: 40vw;
+  height: calc((100vh) - (240px));
 
-      color: $color-lightGrey-transparent;
-      text-align: justify;
-      overflow-y: scroll;
-      &-descriptions {
-        display: flex;
-        flex-direction: column;
-      }
-      h1 {
-        font-size: 1.5em;
-        text-transform: uppercase;
-        margin: 0 10px 10px 10px;
-      }
+  margin-left: 300px;
+  margin-top: 50px;
+  padding-right: 30px;
+
+  border: 2px solid $color-lightGrey-transparent-light;
+  border-radius: 30px;
+  background-color: $color-lightGrey-transparent-light;
+
+  .places-info {
+    max-width: 38%;
+    max-height: calc((100vh) - (300px));
+    margin: 30px 0;
+    padding: 0 30px;
+    padding-top: 4px;
+
+    color: $color-lightGrey-transparent;
+    text-align: justify;
+    position: absolute;
+    z-index: 1;
+    overflow-y: scroll;
+
+    h1 {
+      font-size: 1.5em;
+      text-transform: uppercase;
+      margin: 0 10px 10px 10px;
     }
   }
 }
