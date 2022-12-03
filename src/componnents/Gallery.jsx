@@ -5,7 +5,7 @@ import {photos} from "../data/gallery_info";
 
 export default function Gallery() {
   const [currentIndex, setCurrentIndex] = useState(null);
-  const [idx, setIdx] = useState(0);
+  const [idx, setIdx] = useState(1);
 
   const carouselNext = () => {
     if (currentIndex === photos.length - 1) {
@@ -32,31 +32,24 @@ export default function Gallery() {
         <div
           className="gallery-sidebar"
           style={{
-            height: "100%",
-            flexGrow: 1,
+            flexGrow: 0,
             borderRight: "1px solid rgba(181, 181, 198, 0.25)",
             display: "flex",
             flexDirection: "column",
             alignItems: "center",
+            // overflow: "hidden",
           }}
         >
           <button className="prev circle-small" onClick={carouselPrev}>
             <i className="fa-solid fa-chevron-up"></i>
           </button>
-          <div
-            className="sidebar-carousel-wrapper"
-            style={{
-              display: "flex",
-              flexDirection: "column",
-              alignItems: "center",
-            }}
-          >
+          <div className="sidebar-carousel-wrapper">
             {photos.map((el) => (
               <div
                 className="sidebar-carousel-item"
                 key={el.ID}
                 style={{
-                  transform: `translate(-${currentIndex * 100}%)`,
+                  transform: `translateY(-${currentIndex * 100}%)`,
                 }}
                 onClick={() => showAlbum(el.ID)}
               >
@@ -77,6 +70,10 @@ export default function Gallery() {
 function Gallery_Carousel({idx}) {
   const [currentIndex, setCurrentIndex] = useState(0);
 
+  useEffect(() => {
+    setCurrentIndex(0);
+  }, [idx]);
+
   const carouselNext = () => {
     if (currentIndex === photos[idx - 1].img.length - 1) {
       return setCurrentIndex(0);
@@ -92,9 +89,9 @@ function Gallery_Carousel({idx}) {
   useEffect(() => {
     const interval = setInterval(() => {
       carouselNext();
-    }, 4000);
+    }, 3000);
     return () => clearInterval(interval);
-  }, []);
+  });
 
   const backgroundImage = photos[idx - 1].img[currentIndex];
 

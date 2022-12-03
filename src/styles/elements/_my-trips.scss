@@ -1,0 +1,47 @@
+@import "../settings/colors";
+
+.my-trips {
+  height: 100vh;
+  width: 100vw;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  &-list {
+    border: 2px solid $color-lightGrey-transparent-light;
+    border-radius: 30px;
+    padding: 30px;
+    background-color: $color-lightGrey-transparent-light;
+  }
+  &-sescription {
+    border: 2px solid $color-lightGrey-transparent-light;
+    border-radius: 30px;
+    padding: 30px;
+    background-color: $color-lightGrey-transparent-light;
+  }
+
+  &-container {
+    border: 2px solid $color-lightGrey-transparent-light;
+    border-radius: 30px;
+    padding: 30px;
+    background-color: $color-lightGrey-transparent-light;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+  &-form {
+    border: 2px solid $color-lightGrey-transparent-light;
+    border-radius: 30px;
+    padding: 30px;
+    background-color: $color-lightGrey-transparent-light;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  //   h2:hover {
+  //     cursor: pointer;
+  //   }
+}

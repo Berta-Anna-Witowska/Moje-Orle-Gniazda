@@ -8,12 +8,12 @@ import TrailInfo from "./componnents/Trail_info";
 import PlacesList from "./componnents/PlacesList";
 import Places from "./componnents/Places";
 import Gallery from "./componnents/Gallery";
-import Trips from "./componnents/Trips";
+import MyTrips from "./views/MyTrips";
 import ToVisit from "./componnents/ToVisit";
 import Contact from "./componnents/Contact";
-import SignIn from "./componnents/SignIn";
-import SignUp from "./componnents/SignUp";
-import SignOut from "./componnents/SignOut";
+import SignIn from "./views/SignIn";
+import SignUp from "./views/SignUp";
+import SignOut from "./views/SignOut";
 
 function App() {
   return (
@@ -29,13 +29,13 @@ function App() {
           <Route path="/trailplacesdescriptions/:id" element={<Places />} />
 
           <Route path="/gallery" element={<Gallery />} />
-          <Route path="/trips" element={<Trips />} />
           <Route path="/tovisit" element={<ToVisit />} />
           <Route path="/contact" element={<Contact />} />
         </Route>
         <Route path="/signin" element={<SignIn />} />
         <Route path="/signup" element={<SignUp />} />
         <Route path="/signout" element={<SignOut />} />
+        <Route path="/mytrips" element={<MyTrips />} />
       </Routes>
     </Router>
   );
@@ -55,7 +55,3 @@ function App() {
 //                    -want to visit - list
 
 export default App;
-//<i className="fa-solid fa-route"></i>
-//<i className="fa-regular fa-paper-plane"></i>
-//<i className="fa-solid fa-reply"></i>
-//

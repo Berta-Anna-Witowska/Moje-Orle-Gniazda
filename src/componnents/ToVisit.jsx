@@ -1,4 +1,4 @@
-import "../styles/elements/_gallery.scss";
+import "../styles/elements/_to-visit.scss";
 import ButtonBackToTrail from "../utils/ButtonBackToTrail";
 import {useNavigate} from "react-router-dom";
 import React, {useState, useEffect} from "react";
@@ -36,14 +36,6 @@ export default function ToVisit() {
           <li>4</li>
           <li>5</li>
           <li>6</li>
-
-          {/* {places.map((el) => {
-          return (
-            <li key={el.ID} onClick={() => handleClick(el.ID)}>
-              {el.name}
-            </li>
-          );
-        })} */}
         </ul>
       </div>
       <ButtonBackToTrail />

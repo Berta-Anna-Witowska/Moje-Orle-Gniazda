@@ -27,7 +27,7 @@
   }
 }
 .carousel-container {
-  flex-grow: 4;
+  flex-grow: 3;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -39,7 +39,7 @@
     overflow: hidden;
   }
   .carousel-item {
-    height: 30rem;
+    height: 30em;
     min-width: 100%;
     width: auto;
     display: flex;
@@ -63,7 +63,9 @@
 }
 
 .sidebar-carousel-wrapper {
-  height: 100%;
+  height: 8.85em;
+  margin: 2em;
+
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -71,24 +73,28 @@
   overflow: hidden;
   .sidebar-carousel-item {
     width: 100px;
-    height: 100px;
+    min-height: 100px;
+    // margin: 5px 0 0 0;
+    padding: 10px;
     border: 2px solid $color-lightGrey-transparent-light;
     border-radius: 50%;
-    box-shadow: 0px 0px 10px 0px $color-secondary-shadow;
+    // box-shadow: 0px 0px 10px 0px $color-secondary-shadow;
+
+    // background-image: url("./src/assets/background02.PNG");
 
     color: $color-lightGrey-transparent;
     text-align: center;
     text-transform: uppercase;
     // font-weight: 500;
-    margin: 10;
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 0.8em;
+    font-size: 0.9em;
+    font-weight: 500;
     transition: 1s cubic-bezier(0.39, 0.575, 0.565, 1);
 
     &:hover {
-      box-shadow: 0px 0px 20px 0px $color-lightGrey-transparent;
+      // box-shadow: 0px 0px 20px 0px $color-lightGrey-transparent;
       cursor: pointer;
     }
   }

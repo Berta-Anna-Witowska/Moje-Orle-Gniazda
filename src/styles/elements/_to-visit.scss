@@ -1,5 +1,6 @@
 @import "../settings/colors";
-.places-list {
+
+.places-toVisit {
   box-sizing: border-box;
   max-width: 1200px;
   max-height: 80vh;
@@ -17,7 +18,6 @@
   position: absolute;
   top: auto;
   z-index: 1;
-
   li {
     cursor: pointer;
     &:hover {
