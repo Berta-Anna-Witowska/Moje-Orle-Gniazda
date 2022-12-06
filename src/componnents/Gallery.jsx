@@ -89,7 +89,7 @@ function Gallery_Carousel({idx}) {
   useEffect(() => {
     const interval = setInterval(() => {
       carouselNext();
-    }, 3000);
+    }, 5000);
     return () => clearInterval(interval);
   });
 
@@ -110,19 +110,7 @@ function Gallery_Carousel({idx}) {
               backgroundImage,
             }}
           >
-            <span
-              className="photo-name"
-              style={{
-                backgroundColor: "#273539af",
-                // border: "2px solid rgba(181, 181, 198, 0.25)",
-                padding: "5px 10px ",
-                borderRadius: "10px",
-                textShadow: "0px 0px 5px #091008",
-                textTransform: "uppercase",
-              }}
-            >
-              {photos[idx - 1].name} - Zdjęcie {currentIndex + 1}
-            </span>
+            <span className="photo-name">{photos[idx - 1].name}</span>
           </div>
         ))}
       </div>

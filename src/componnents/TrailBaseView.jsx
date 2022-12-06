@@ -14,7 +14,12 @@ export default function TrailBaseView() {
   return (
     <div className="trail-baseView">
       <div style={{position: "relative"}}>
-        <div>
+        <div className="trail-map-container">
+          <img
+            className="trail-map"
+            src=".\src\assets\pics\Mapa_2.svg"
+            alt="Rysunek skały Okiennik Wielki"
+          ></img>
           {places.map((element) => {
             return (
               <div

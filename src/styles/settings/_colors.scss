@@ -1,23 +1,24 @@
 $color-blue: #78bade;
-$color-primary-shadow: rgba(7, 172, 230, 0.16);
-$color-secondary-shadow: #273539f6;
-$color-lightGrey-transparent: rgba(206, 217, 230, 0.9);
-// $color-lightGrey-transparent-light: rgba(206, 217, 230, 0.2);
-$color-lightGrey-transparent-light: rgba(181, 181, 198, 0.25);
+$color-primary-shadow: #07ace629;
+$color-secondary-shadow: #27363af6;
+$color-lightGrey-transparent: #ced9e6e6;
+$color-lightGrey-transparent-medium: #ced9e666;
+$color-lightGrey-transparent-light: #b5b5c64d;
+$color-blueGrey-transparent: #7993a0c0;
 
 $color-lightGrey: #ced9df; //r 206 g 217 b 223
 $color-blueGrey: #7993a0;
 $color-blueGrey-dark: #386293;
-$color-lightGreen: #8ea584;
+$color-lightGreen: #aebd9f;
 $color-darkGreen: #3e563e;
 $color-dark1: #1f2f22;
 $color-dark2: #091008;
 
 $background-gradient: linear-gradient(
   360deg,
-  hsla(112, 67%, 13%, 1) 0%,
-  hsla(112, 76%, 25%, 1) 32%,
-  hsla(112, 78%, 27%, 1) 42%,
-  hsla(191, 18%, 57%, 1) 76%,
-  hsla(214, 73%, 78%, 1) 100%
+  #11370b 0%,
+  #1c700f 32%,
+  #1d7b0f 42%,
+  #7e9ea5 76%,
+  #9ec1f0 100%
 );

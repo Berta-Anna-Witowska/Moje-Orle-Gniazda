@@ -13,7 +13,10 @@ export default function Nav({isUserLogged}) {
           <i className="fa-regular fa-image" />
         </div>
         {isUserLogged === true && (
-          <div className="half-circle-top" onClick={() => navigate("/mytrips")}>
+          <div
+            className="half-circle-top"
+            onClick={() => navigate("/mytrips/info")}
+          >
             <i className="fa-regular fa-pen-to-square" />
           </div>
         )}

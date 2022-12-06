@@ -15,7 +15,7 @@ export const photos = [
   },
   {
     ID: 2,
-    name: `Zamek Ostrężnik`,
+    name: `Ruiny zamku Ostrężnik`,
     localization: `xxx`,
     img: [
       `url("src/assets/photos/04_Ostreznik/001.jpg")`,

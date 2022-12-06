@@ -74,7 +74,7 @@ export default function Contact() {
               placeholder="Podaj nam swój adres e-mail"
             />
             <input
-              type="name"
+              type="text"
               name="user_name"
               placeholder="Jak masz na imię?"
             />

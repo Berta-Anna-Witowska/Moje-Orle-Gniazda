@@ -1,9 +1,14 @@
-import "../styles/elements/_my-trips.scss";
-import ButtonBackToTrail from "../utils/ButtonBackToTrail";
-import {useNavigate} from "react-router-dom";
 import React, {useState, useEffect} from "react";
+import {Outlet, useNavigate} from "react-router-dom";
 import supabase from "../services/supabase";
+
+import ButtonBackToTrail from "../utils/ButtonBackToTrail";
+import MyTripsInfoPage from "../componnents/MyTripsInfoPage";
+import MyTripsAddNew from "../componnents/MyTripsAddNew";
+import Footer from "../componnents/Footer";
+
 import {toaster} from "evergreen-ui";
+import "../styles/elements/_my-trips.scss";
 
 export default function MyTrips() {
   const navigate = useNavigate();
@@ -26,49 +31,64 @@ export default function MyTrips() {
     isUserLogged();
   }, []);
 
-  return (
-    <div className="my-trips">
-      <h1>Moje Orle Gniazda</h1>
-      <div className="my-trips-container">
-        <button className="add-new-description">Nowy post</button>
-        <section className="my-trips-list">
-          <ul>
-            Moje teksty
-            <li>trip1</li> <li>trip2</li>
-            <li>trip3</li>
-            <li>trip4</li>
-          </ul>
-        </section>
-        <section className="my-trips-sescription">
-          <h2>Tytuł</h2>
-          <h3>Miejsce</h3>
-          <p>
-            Opis miejsca. Lorem ipsum dolor sit amet consectetur, adipisicing
-            elit. Unde accusantium earum possimus nihil accusamus, veritatis
-            fugit autem hic illum officia iste magnam numquam, commodi
-            voluptates! Quod earum esse iste nihil repellendus aut perferendis
-            doloremque ducimus error maiores. Nemo voluptas, voluptatum ab
-            officia iure illum aliquam eaque omnis enim. Debitis ratione eius
-            assumenda accusamus nihil aut vel cum, exercitationem et maiores sit
-            eos ullam laboriosam quam suscipit, dolor autem perspiciatis tenetur
-            cumque iure voluptate consequuntur perferendis consequatur! Illum
-            beatae accusamus eaque reiciendis soluta. Sunt unde eum odit aliquid
-            laudantium obcaecati necessitatibus corporis quod voluptatem, amet
-            pariatur, error ullam aspernatur earum. Suscipit!
-          </p>
-        </section>
+  const [post, setPost] = useState(null);
 
-        <form className="my-trips-form">
-          <input placeholder="tytuł"></input>
-          <input placeholder="miejsce"></input>
-          <textarea
-            placeholder="Miejsce na twoje notatki..."
-            rows="8"
-          ></textarea>
-          <button>Dodaj wpis</button>
-        </form>
+  useEffect(() => {
+    const fetchPost = async () => {
+      let {data: post, error} = await supabase.from("post").select("*");
+
+      if (!error) {
+        setPost(post);
+      }
+    };
+
+    fetchPost();
+  }, []);
+
+  // const {currID, setCurrID} = useState(null)
+
+  const showPost = () => {
+    navigate(`/mytrips/post/${el.id}`);
+    location.reload();
+    return;
+  };
+
+  return (
+    <>
+      <div className="my-trips-app">
+        <h1 className="app-name">Moje Orle Gniazda</h1>
+        <div className="my-trips">
+          <section className="my-trips-sidebar">
+            <button
+              className="add-new-description circle"
+              onClick={() => navigate("/mytrips/addnew")}
+            >
+              <i className="fa-solid fa-plus"></i>
+            </button>
+
+            <ul className="my-trips-list" style={{marginBottom: 30}}>
+              <h1>Moje teksty</h1>
+
+              {post &&
+                post.map((el) => (
+                  <li
+                    key={el.id}
+                    title={`Post#${el.id}`}
+                    onClick={() => navigate(`/mytrips/post/${el.id}`)}
+                  >
+                    {el.title}
+                  </li>
+                ))}
+            </ul>
+          </section>
+          <section className="mi-trips-container">
+            <Outlet />
+          </section>
+
+          <ButtonBackToTrail />
+        </div>
       </div>
-      <ButtonBackToTrail />
-    </div>
+      <Footer />
+    </>
   );
 }

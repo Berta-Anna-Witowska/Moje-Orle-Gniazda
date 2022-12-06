@@ -4,10 +4,7 @@ import {useNavigate} from "react-router-dom";
 import supabase from "../services/supabase";
 import {toaster} from "evergreen-ui";
 import ButtonBackToTrail from "../utils/ButtonBackToTrail";
-// toaster.notify("oops...");
-// toaster.warning("no!");
-// toaster.danger("Look out!");
-// toaster.success("Great!");
+
 export default function SignIn() {
   const navigate = useNavigate();
 

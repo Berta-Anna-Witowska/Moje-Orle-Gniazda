@@ -4,6 +4,12 @@ import {useNavigate} from "react-router-dom";
 import React, {useState, useEffect} from "react";
 import supabase from "../services/supabase";
 import {toaster} from "evergreen-ui";
+import {places} from "../data/places";
+
+// toaster.notify("oops...");
+// toaster.warning("no!");
+// toaster.danger("Look out!");
+// toaster.success("Great!");
 
 export default function ToVisit() {
   const navigate = useNavigate();
@@ -25,17 +31,36 @@ export default function ToVisit() {
     };
     isUserLogged();
   }, []);
+
+  // let { data: placesToVisit, error } = await supabase
+  // .from('placesToVisit')
+  // .select('*')
+
+  const [placesList, setPlacesList] = useState(null);
+
+  useEffect(() => {
+    const fetchPost = async () => {
+      let {data: placesToVisit, error} = await supabase
+        .from("placesToVisit")
+        .select("*");
+
+      if (!error) {
+        setPlacesList(placesToVisit);
+      }
+    };
+
+    fetchPost();
+  }, []);
+
   return (
     <>
       <div className="places-toVisit">
         <h1>Chcę odwiedzić</h1>
         <ul>
-          <li>1</li>
-          <li>2</li>
-          <li>3</li>
-          <li>4</li>
-          <li>5</li>
-          <li>6</li>
+          {placesList &&
+            placesList.map((e) => (
+              <li onClick={() => navigate("/traillistofplaces")}> {e.name}</li>
+            ))}
         </ul>
       </div>
       <ButtonBackToTrail />

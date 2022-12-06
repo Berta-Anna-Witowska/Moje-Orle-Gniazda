@@ -14,6 +14,9 @@ import Contact from "./componnents/Contact";
 import SignIn from "./views/SignIn";
 import SignUp from "./views/SignUp";
 import SignOut from "./views/SignOut";
+import MyTripsInfoPage from "./componnents/MyTripsInfoPage";
+import MyTripsAddNew from "./componnents/MyTripsAddNew";
+import MyTripsShowTrip from "./componnents/MayTripsShowTrip";
 
 function App() {
   return (
@@ -25,7 +28,6 @@ function App() {
           <Route path="/trailregioninfo" element={<RegionInfo />} />
           <Route path="/trailInfo" element={<TrailInfo />} />
           <Route path="/traillistofplaces" element={<PlacesList />} />
-          {/* <Route path="/trailplacesdescriptions" element={<Places />}></Route> */}
           <Route path="/trailplacesdescriptions/:id" element={<Places />} />
 
           <Route path="/gallery" element={<Gallery />} />
@@ -35,13 +37,17 @@ function App() {
         <Route path="/signin" element={<SignIn />} />
         <Route path="/signup" element={<SignUp />} />
         <Route path="/signout" element={<SignOut />} />
-        <Route path="/mytrips" element={<MyTrips />} />
+        <Route path="/mytrips" element={<MyTrips />}>
+          <Route path="/mytrips/info" element={<MyTripsInfoPage />}></Route>
+          <Route path="/mytrips/addnew" element={<MyTripsAddNew />}></Route>
+          <Route path="/mytrips/post/:id" element={<MyTripsShowTrip />}></Route>
+        </Route>
       </Routes>
     </Router>
   );
 }
 // / landing page
-// / dashboard-Main view
+// / dashboard-
 //       -trail -base view
 //       -trail -region info
 //       -trail -trail info
@@ -49,9 +55,13 @@ function App() {
 //       -trail -single place
 //       -gallery
 //       -contact
-//       -SignIn
-//       -SignUp
+
 //       opcjonalnie: -my trips descriptions // dodać Route
 //                    -want to visit - list
-
+//  / SignIn
+//  / SignOut
+//  / SignUp
+//  / MyTrips   - mainview
+//              - add new
+//              -  show trip
 export default App;
