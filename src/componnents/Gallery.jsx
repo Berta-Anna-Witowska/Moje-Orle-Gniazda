@@ -22,7 +22,6 @@ export default function Gallery() {
 
   const showAlbum = (idx) => {
     setIdx(idx);
-    console.log(idx);
   };
 
   return (
@@ -37,7 +36,6 @@ export default function Gallery() {
             display: "flex",
             flexDirection: "column",
             alignItems: "center",
-            // overflow: "hidden",
           }}
         >
           <button className="prev circle-small" onClick={carouselPrev}>

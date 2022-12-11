@@ -1,15 +1,17 @@
 import React, {useState, useEffect} from "react";
+import {useParams} from "react-router-dom";
+
+import supabase from "../services/supabase";
 import "../styles/elements/_places.scss";
 import {places} from "../data/places";
-import {useParams} from "react-router-dom";
 import ButtonBackToTrail from "../utils/ButtonBackToTrail";
-import supabase from "../services/supabase";
-import {toaster} from "evergreen-ui";
+import {toaster, Tooltip, Position, Paragraph} from "evergreen-ui";
 
 export default function Places() {
-  const {id} = useParams();
+  const {id} = useParams(); //id dla konkretnego miejsca
 
   const [isLogged, setIsLogged] = useState(false);
+  const [userId, setUserId] = useState("");
 
   useEffect(() => {
     const isUserLogged = async () => {
@@ -21,71 +23,76 @@ export default function Places() {
         return;
       }
       setIsLogged(true);
+      setUserId(user.id);
     };
     isUserLogged();
   }, []);
 
-  const [isChecked, setIsChecked] = useState("fa-regular fa-star");
+  //Dodawanie do listy 'to visit'
+  const [isChecked, setIsChecked] = useState("");
 
-  // sprawdzić czy miejsce jest w bazie danych, jęśli nie to ustawić na   useState("fa-regular fa-star"), hjęsli nie to na fa-solid
-  // useEffect(() => {
-  //   setCurrentIndex(0);
-  // }, [idx]);
+  const name = places[id - 1].name;
+  const place_id = places[id - 1].ID;
 
-  const addToPlacesToVisit = async () => {
-    const name = places[id - 1].name;
-    if (isChecked === "fa-regular fa-star") {
-      setIsChecked("fa-solid fa-star");
-      console.log(name);
-
+  useEffect(() => {
+    const isPlaceAdded = async () => {
       const {data, error} = await supabase
         .from("placesToVisit")
-        .insert([{name: name}]);
+        .select()
+        .eq("user_id", userId)
+        .eq("name", name);
+      if (!data[0]) {
+        setIsChecked("fa-regular fa-star");
+        return;
+      } else if (data[0].name && data[0].name === name) {
+        setIsChecked("fa-solid fa-star");
+        return;
+      }
+    };
+    isPlaceAdded();
+  }, [userId]);
+
+  const addToPlacesToVisit = async () => {
+    if (isChecked === "fa-regular fa-star") {
+      const {data, error} = await supabase
+        .from("placesToVisit")
+        .insert([{user_id: userId, name: name, place_id: place_id}]);
+      setIsChecked("fa-solid fa-star");
+      toaster.success("Dodano do listy!");
       return;
     }
-    setIsChecked("fa-regular fa-star");
 
     const {data, error} = await supabase
       .from("placesToVisit")
       .delete()
+      .eq("user_id", userId)
       .eq("name", name);
-    console.log("usunięto");
+    setIsChecked("fa-regular fa-star");
+    toaster.notify("Usunięto z listy!");
 
     if (error) {
-      console.log(error);
-      toaster.warning("Dodawanie nie powiodło się!");
+      toaster.danger("Coś poszło nie tak!");
     }
-    toaster.success("Zmiany zostały zapisane!");
   };
-  // const addPost = async (e) => {
-  //   const [title, localization, description] = e.target.elements;
-
-  //   const {data, error} = await supabase.from("post").insert([
-  //     {
-  //       title: title.value,
-  //       localization: localization.value,
-  //       description: description.value,
-  //     },
-  //   ]);
-  //   if (error) {
-  //     console.log(error);
-  //     toaster.warning("Dodawanie nie powiodło się!");
-  //   }
-  //   toaster.success("Zmiany zostały zapisane!");
-  //   e.target.reset();
-  // };
 
   const img = places[id - 1].img;
+
   return (
     <>
       <div className="places-descriptions">
         <div className="places-info scroll">
           <h1>{places[id - 1].name}</h1>
           {isLogged && (
-            <span>
-              <i className={isChecked} onClick={addToPlacesToVisit}></i>
-              {/* <i className="fa-regular fa-star"></i> */}
-            </span>
+            <Tooltip
+              content="Chcesz odwiedzić?"
+              // {<Paragraph margin={1}>Chcesz odwiedzić?</Paragraph>}
+              // appearance="card"
+              position={Position.RIGHT}
+            >
+              <span>
+                <i className={isChecked} onClick={addToPlacesToVisit}></i>
+              </span>
+            </Tooltip>
           )}
           <p>{places[id - 1].description}</p>
           <ul>

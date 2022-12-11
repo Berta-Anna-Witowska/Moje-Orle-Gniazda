@@ -3,8 +3,8 @@ import "../styles/elements/_sidebar.scss";
 import "../styles/elements/_baseView.scss";
 import "../styles/settings/_colors.scss";
 
-// import {useRef} from "react";
 import {useNavigate} from "react-router-dom";
+import {Tooltip} from "evergreen-ui";
 
 export default function SideBar() {
   const [style, setStyle] = useState({
@@ -45,9 +45,11 @@ export default function SideBar() {
       onMouseLeave={hideHighlight}
       style={{top}}
     >
-      <div className="half-circle-left" style={{boxShadow}}>
-        <i className="fa-solid fa-info" />
-      </div>
+      <Tooltip content="Informacje o szlaku">
+        <div className="half-circle-left" style={{boxShadow}}>
+          <i className="fa-solid fa-info" />
+        </div>
+      </Tooltip>
       <i
         className="fa-solid fa-chevron-right"
         onMouseEnter={showSideMenu}

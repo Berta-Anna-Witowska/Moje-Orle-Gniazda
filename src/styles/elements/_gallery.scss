@@ -82,32 +82,27 @@
   .sidebar-carousel-item {
     width: 100px;
     min-height: 100px;
-    // margin: 5px 0 0 0;
     padding: 10px;
     border: 2px solid $color-lightGrey-transparent-medium;
     border-radius: 50%;
-    // box-shadow: 0px 0px 10px 0px $color-secondary-shadow;
-    // box-shadow: inset 0 0 20px $color-lightGrey-transparent;
 
     background-image: url("./src/assets/background02.PNG");
 
     color: $color-lightGrey-transparent;
     text-align: center;
     text-transform: uppercase;
-    // font-weight: 500;
     display: flex;
     justify-content: center;
     align-items: center;
     font-size: 1em;
     font-weight: 500;
     transition: 1s cubic-bezier(0.39, 0.575, 0.565, 1);
+    box-shadow: inset 0 0 10px 0 $color-blueGrey-dark;
+    text-shadow: 0 0 5px $color-dark1;
 
-    // &:hover {
-    //   box-shadow: inset 0 0 10px $color-lightGrey-transparent;
-    //   cursor: pointer;
-    // }
-    &:active {
-      box-shadow: inset 0 0 50px $color-secondary-shadow;
+    &:hover {
+      box-shadow: inset 0 0 10px 0 $color-lightGrey-transparent;
+      cursor: pointer;
     }
   }
 }

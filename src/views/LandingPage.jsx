@@ -13,9 +13,6 @@ export default function LandingPage() {
           <button className="circle" onClick={() => navigate("/signin")}>
             Zaloguj
           </button>
-          {/* <button className="circle" onClick={() => navigate("/signup")}>
-            Rejestracja
-          </button> */}
           <button className="circle" onClick={() => navigate("/trailbaseview")}>
             Eksploruj
           </button>

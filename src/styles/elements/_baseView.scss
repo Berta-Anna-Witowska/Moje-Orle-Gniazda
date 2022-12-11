@@ -17,33 +17,103 @@
   .trail-map-container {
     position: relative;
     .trail-map {
-      height: 80vh;
+      height: 570px;
+      max-height: 570px;
       position: absolute;
       top: 0;
       left: 0;
       z-index: -1;
     }
     .place-point {
-      width: 10px;
-      height: 10px;
+      width: 8px;
+      height: 8px;
       border-radius: 50%;
-      background-color: $color-darkGreen;
+      background-color: $color-blueGrey-dark;
       margin: 15px;
-      // position: absolute;
-      // top: 0;
-      // left: 0;
-      // z-index: 1;
+      position: absolute;
+      z-index: 2;
       font-weight: 600;
+      font-size: 1em;
       color: $color-lightGrey-transparent;
-      box-shadow: 0px 0px 20px 0px $color-secondary-shadow;
+      box-shadow: 0 0 10px 0 $color-dark1;
 
-      cursor: pointer;
       &:hover {
-        color: $color-lightGrey;
+        cursor: pointer;
+
+        background-color: $color-blue;
         box-shadow: 0px 0px 20px 0px $color-lightGrey;
-        text-shadow: 0px 0px 10px $color-secondary-shadow;
       }
     }
+  }
+}
+.point {
+  &-1 {
+    top: 12px;
+    left: 28px;
+  }
+  &-2 {
+    top: 55px;
+    left: 88px;
+  }
+  &-3 {
+    top: 68px;
+    left: 150px;
+  }
+  &-4 {
+    top: 95px;
+    left: 140px;
+  }
+  &-5 {
+    top: 130px;
+    left: 160px;
+  }
+  &-6 {
+    top: 132px;
+    left: 173px;
+  }
+  &-7 {
+    top: 170px;
+    left: 183px;
+  }
+  &-8 {
+    top: 215px;
+    left: 187px;
+  }
+  &-9 {
+    top: 228px;
+    left: 195px;
+  }
+  &-10 {
+    top: 215px;
+    left: 230px;
+  }
+  &-11 {
+    top: 232px;
+    left: 243px;
+  }
+  &-12 {
+    top: 265px;
+    left: 230px;
+  }
+  &-13 {
+    top: 312px;
+    left: 212px;
+  }
+  &-14 {
+    top: 346px;
+    left: 278px;
+  }
+  &-15 {
+    top: 363px;
+    left: 297px;
+  }
+  &-16 {
+    top: 387px;
+    left: 320px;
+  }
+  &-17 {
+    top: 438px;
+    left: 345px;
   }
 }
 

@@ -18,10 +18,13 @@
   position: absolute;
   top: auto;
   z-index: 1;
-  li {
-    cursor: pointer;
-    &:hover {
-      color: $color-blueGrey-dark;
+  ul {
+    margin: 0;
+    .to-visit-place {
+      &:hover {
+        color: $color-blueGrey-dark;
+        cursor: pointer;
+      }
     }
   }
 }

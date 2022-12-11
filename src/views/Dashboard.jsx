@@ -12,9 +12,21 @@ export default function Dashboard() {
   useEffect(() => {
     const isUserLogged = async () => {
       const {
-        data: {user},
-      } = await supabase.auth.getUser();
-      if (!user) {
+        data: {session},
+        error,
+      } = await supabase.auth.getSession();
+      console.log(session);
+      if (error) {
+        console.log(error);
+      }
+      // const {
+      //   data: {user},
+      // } = await supabase.auth.getUser();
+      // if (!user) {
+      //   setIsLogged(false);
+      //   return;
+      // }
+      if (!session) {
         setIsLogged(false);
         return;
       }
@@ -30,7 +42,7 @@ export default function Dashboard() {
           <Nav isUserLogged={isLogged} />
           <div className="wrapper">
             <SideBar />
-            <Outlet isUserLogged={isLogged} />
+            <Outlet />
           </div>
           <Footer />
         </div>

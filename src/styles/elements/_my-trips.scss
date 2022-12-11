@@ -1,6 +1,7 @@
 @import "../settings/colors";
 @import "../settings/fonts";
 @import "../settings/mixins";
+
 .my-trips {
   &-app {
     display: flex;
@@ -37,21 +38,42 @@
   }
 
   &-description {
-    // border: 2px solid $color-lightGrey-transparent-light;
-    // border-radius: 30px;
-    // padding: 30px;
-    // background-color: $color-lightGrey-transparent-light;
+    p {
+      max-height: 60%;
+      padding-right: 20px;
+      overflow-y: scroll;
+    }
+    button {
+      margin-top: 10px;
+      align-self: center;
+    }
   }
   &-info {
-    // border: 2px solid $color-lightGrey-transparent-light;
-    // border-radius: 30px;
-    // padding: 30px;
-    // background-color: $color-lightGrey-transparent-light;
+    align-items: center;
+    justify-content: flex-start;
+    padding-top: 5em;
+    h2 {
+      margin: 2em 0 5em 0;
+    }
+    p {
+      max-height: 60%;
+      padding-right: 20px;
+      overflow-y: scroll;
+    }
+    button {
+      margin-top: 10px;
+      align-self: center;
+    }
   }
   &-list {
     height: 30vh;
     margin-top: 10;
     overflow-y: scroll;
+    li {
+      &:hover {
+        cursor: pointer;
+      }
+    }
   }
 
   &-sidebar {
@@ -81,11 +103,11 @@
     button {
       @include buttonMedium;
       align-self: center;
+      margin-top: 2em;
+      &:hover {
+        cursor: pointer;
+      }
     }
-  }
-
-  h1:hover {
-    cursor: pointer;
   }
 }
 .app-name {

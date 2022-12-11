@@ -1,19 +1,17 @@
 import "../styles/elements/_my-trips.scss";
-import ButtonBackToTrail from "../utils/ButtonBackToTrail";
-import {useNavigate} from "react-router-dom";
 import React, {useState, useEffect} from "react";
-import supabase from "../services/supabase";
-import {toaster} from "evergreen-ui";
 
 export default function MyTripsInfoPage() {
   return (
     <section className="my-trips-info">
+      <h1>Zapiski z podróży</h1>
       <h2>Witaj w aplikacji Moje Orle Gniazda</h2>
       <p>
         Tu możesz dodawać opisy swoich wycieczek, wędrówek po szlaku, notatki z
-        wypraw. Żeby dodać nową kliknij przycisk +.
+        wypraw. <br /> Żeby dodać nową notatkę kliknij przycisk&nbsp;
+        <i className="fa-solid fa-plus" style={{fontSize: "1em"}}></i>
         <br />
-        Dodane opisy będą dostępne w zakładce "moje teksty".
+        Dodane opisy będą dostępne w zakładce "Moje notatki".
       </p>
     </section>
   );

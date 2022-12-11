@@ -61,7 +61,11 @@ function App() {
 //  / SignIn
 //  / SignOut
 //  / SignUp
-//  / MyTrips   - mainview
+//  / MyTrips   - mainview/info
 //              - add new
 //              -  show trip
 export default App;
+// toaster.notify("oops...");
+// toaster.warning("no!");
+// toaster.danger("Look out!");
+// toaster.success("Great!");

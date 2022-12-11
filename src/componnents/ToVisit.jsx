@@ -1,19 +1,16 @@
 import "../styles/elements/_to-visit.scss";
-import ButtonBackToTrail from "../utils/ButtonBackToTrail";
-import {useNavigate} from "react-router-dom";
-import React, {useState, useEffect} from "react";
-import supabase from "../services/supabase";
-import {toaster} from "evergreen-ui";
-import {places} from "../data/places";
 
-// toaster.notify("oops...");
-// toaster.warning("no!");
-// toaster.danger("Look out!");
-// toaster.success("Great!");
+import React, {useState, useEffect} from "react";
+import {useNavigate} from "react-router-dom";
+import supabase from "../services/supabase";
+
+import ButtonBackToTrail from "../utils/ButtonBackToTrail";
+import {toaster} from "evergreen-ui";
 
 export default function ToVisit() {
   const navigate = useNavigate();
   const [isLogged, setIsLogged] = useState(false);
+  const [userId, setUserId] = useState("");
 
   useEffect(() => {
     const isUserLogged = async () => {
@@ -27,14 +24,12 @@ export default function ToVisit() {
         navigate("/");
         return;
       }
+      setUserId(user.id);
       setIsLogged(true);
+      console.log(user.id);
     };
     isUserLogged();
   }, []);
-
-  // let { data: placesToVisit, error } = await supabase
-  // .from('placesToVisit')
-  // .select('*')
 
   const [placesList, setPlacesList] = useState(null);
 
@@ -42,24 +37,33 @@ export default function ToVisit() {
     const fetchPost = async () => {
       let {data: placesToVisit, error} = await supabase
         .from("placesToVisit")
-        .select("*");
+        .select("*")
+        .eq("user_id", userId);
 
       if (!error) {
         setPlacesList(placesToVisit);
       }
+      console.log(placesToVisit);
     };
 
     fetchPost();
-  }, []);
-
+  }, [userId]);
   return (
     <>
       <div className="places-toVisit">
         <h1>Chcę odwiedzić</h1>
         <ul>
           {placesList &&
-            placesList.map((e) => (
-              <li onClick={() => navigate("/traillistofplaces")}> {e.name}</li>
+            placesList.map((el) => (
+              <li
+                className="to-visit-place"
+                key={el.place_id}
+                onClick={() =>
+                  navigate(`/trailplacesdescriptions/${el.place_id}`)
+                }
+              >
+                {el.name}
+              </li>
             ))}
         </ul>
       </div>

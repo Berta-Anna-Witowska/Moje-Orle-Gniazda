@@ -8,15 +8,12 @@
   background-image: url("./src/assets/background01.JPG");
   background-position: top;
   background-size: cover;
-
+  background-color: $color-background;
   font-family: $font-raleway;
   font-size: 14px;
   line-height: 1.4em;
   font-weight: 400;
   color: $color-lightGrey-transparent;
-
-  // height: 100vh;
-  // max-width: 100vmax;
 }
 
 body {
@@ -147,6 +144,19 @@ select:-webkit-autofill:focus {
   right: 0;
   width: auto;
   height: 50%;
+}
+.trail-name {
+  position: absolute;
+  top: 1.3em;
+  left: 1.3em;
+
+  font-family: $font-island-moments;
+  text-transform: none;
+  text-align: center;
+  line-height: 0.8em;
+  font-size: 4em;
+  color: #bad2dda2;
+  text-shadow: -3px 3px 10px $color-dark1;
 }
 
 ::-webkit-scrollbar {

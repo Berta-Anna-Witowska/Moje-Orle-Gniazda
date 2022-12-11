@@ -29,11 +29,8 @@
     display: none;
     width: 300px;
     height: 300px;
-    border: 2px solid $color-lightGrey-transparent;
+    border: 2px solid $color-lightGrey-transparent-light;
     border-radius: 50%;
-    // position: absolute;
-    // top: calc((50%) - (150px));
-    // left: -50px;
     color: $color-lightGrey-transparent;
     .circle {
       &:hover {

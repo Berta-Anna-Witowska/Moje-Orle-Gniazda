@@ -8,6 +8,8 @@
   box-shadow: 0px 0px 20px 0px $color-secondary-shadow;
 
   background-image: url("./src/assets/background02.PNG");
+  background-color: $color-background;
+
   color: $color-lightGrey-transparent;
   text-align: center;
   text-transform: uppercase;
@@ -34,6 +36,11 @@
   box-shadow: 0px 0px 20px 0px $color-secondary-shadow;
 
   background-image: url("./src/assets/background02.PNG");
+  background-color: $color-background;
+
+  &:hover {
+    cursor: pointer;
+  }
 }
 
 @mixin buttonSmall {
@@ -41,9 +48,7 @@
   height: 30px;
   margin: 10px;
   border: 2px solid $color-lightGrey-transparent-light;
-  // border: none;
   border-radius: 50%;
-  // box-shadow: 0px 0px 20px 0px $color-blueGrey-dark;
 
   background-color: transparent;
   color: $color-lightGrey-transparent;

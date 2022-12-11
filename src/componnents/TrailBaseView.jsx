@@ -1,8 +1,11 @@
-import React, {useState} from "react";
 import "../styles/elements/_baseView.scss";
 
+import React, {useState} from "react";
+import {useNavigate} from "react-router-dom";
 import {places} from "../data/places";
-import {useNavigate, Routes, Route, useParams} from "react-router-dom";
+
+import TrailName from "../utils/TrailName";
+import {Tooltip, Position} from "evergreen-ui";
 
 export default function TrailBaseView() {
   const [id, setId] = useState(null);
@@ -13,22 +16,26 @@ export default function TrailBaseView() {
 
   return (
     <div className="trail-baseView">
+      <TrailName />
       <div style={{position: "relative"}}>
         <div className="trail-map-container">
           <img
             className="trail-map"
-            src=".\src\assets\pics\Mapa_2.svg"
-            alt="Rysunek skały Okiennik Wielki"
+            src=".\src\assets\pics\Mapa_3.svg"
+            alt="Rysunek szlaku"
           ></img>
           {places.map((element) => {
             return (
-              <div
-                className="place-point"
+              <Tooltip
+                content={`${element.name}`}
+                position={Position.RIGHT}
                 key={element.ID}
-                onClick={() => handleClick(element.ID)}
               >
-                {element.ID}
-              </div>
+                <div
+                  className={`place-point point-${element.ID}`}
+                  onClick={() => handleClick(element.ID)}
+                ></div>
+              </Tooltip>
             );
           })}
         </div>
@@ -46,7 +53,6 @@ export function PlacePreview({id}) {
   const navigate = useNavigate();
 
   const backgroundImage = places[id - 1].background;
-  console.log(backgroundImage);
   return (
     <div
       className="place-circle"

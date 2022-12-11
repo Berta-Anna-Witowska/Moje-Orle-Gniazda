@@ -1,7 +1,7 @@
 import "../styles/elements/_sign-up.scss";
 import supabase from "../services/supabase";
 import {useNavigate} from "react-router-dom";
-import {toaster} from "evergreen-ui";
+import {toaster, Tooltip, Position} from "evergreen-ui";
 import ButtonBackToTrail from "../utils/ButtonBackToTrail";
 
 export default function SignUp() {
@@ -48,22 +48,24 @@ export default function SignUp() {
           <input type="email" placeholder="Adres email" />
           <input type="password" placeholder="Hasło" />
           <input type="password" placeholder="Powtórz hasło" />
-          <button
-            label="Signup"
-            className="circle"
-            style={{
-              width: 50,
-              height: 50,
-              display: "flex",
-              flexDirection: "column",
-              alignItems: "center",
-              justifyContent: "center",
-              marginBottom: "5px",
-            }}
-          >
-            <i className="fa-regular fa-address-card"></i>
-          </button>
-          <span style={{textTransform: "uppercase"}}>Zarejestruj</span>
+          <Tooltip content="Zarejestruj użytkownika" position={Position.RIGHT}>
+            <button
+              label="Signup"
+              className="circle"
+              style={{
+                width: 50,
+                height: 50,
+                display: "flex",
+                flexDirection: "column",
+                alignItems: "center",
+                justifyContent: "center",
+                marginBottom: "5px",
+              }}
+            >
+              <i className="fa-regular fa-address-card"></i>
+            </button>
+          </Tooltip>
+          {/* <span style={{textTransform: "uppercase"}}>Zarejestruj</span> */}
         </form>
         <h2 onClick={() => navigate("/signin")}>Wróć do logowania</h2>
       </div>

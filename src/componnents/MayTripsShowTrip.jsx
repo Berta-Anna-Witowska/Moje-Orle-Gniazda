@@ -1,12 +1,15 @@
 import "../styles/elements/_my-trips.scss";
-import {useNavigate, useParams} from "react-router-dom";
+
 import React, {useState, useEffect} from "react";
+import {useNavigate, useParams} from "react-router-dom";
 import supabase from "../services/supabase";
-import {toaster} from "evergreen-ui";
+
+import {toaster, Tooltip, Position} from "evergreen-ui";
 
 export default function MyTripsShowTrip() {
   const {id} = useParams();
   const [post, setPost] = useState(null);
+  const navigate = useNavigate();
 
   useEffect(() => {
     const fetchPost = async () => {
@@ -18,22 +21,13 @@ export default function MyTripsShowTrip() {
       if (!error) {
         setPost(post);
       }
+      if (error) {
+        toaster.danger("Coś poszło nie tak!");
+      }
     };
 
     fetchPost();
-  }, []);
-
-  useEffect(() => {
-    // document.location.reload(false);
-    console.log(id);
   }, [id]);
-
-  //   const removePost = async (title) => {
-  //     const {data, error} = await supabase
-  //       .from("post")
-  //       .delete()
-  //       .eq("title", title);
-  // };
 
   const removePost = async (title) => {
     try {
@@ -41,26 +35,14 @@ export default function MyTripsShowTrip() {
         .from("post")
         .delete()
         .eq("title", title);
+
       setPost(post.filter((post) => post.title != title));
+      toaster.notify("Wpis usunięto!");
+      navigate("/mytrips/info");
     } catch (error) {
-      console.log("error", error);
+      toaster.danger("Coś poszło nie tak!");
     }
   };
-
-  // const deleteCountry = async (countryId) => {
-  //   try {
-  //     await supabase.from('countries').delete().eq('id', countryId);
-  //     setCountries(countries.filter((country) => country.id != countryId));
-  //   } catch (error) {
-  //     console.log('error', error);
-  //   }
-  // };
-
-  // usuwanie wiersza
-  // const { data, error } = await supabase
-  // .from('post')
-  // .delete()
-  // .eq('some_column', 'someValue')
 
   return (
     <>
@@ -70,15 +52,17 @@ export default function MyTripsShowTrip() {
             <h2>{el.title}</h2>
             <h3>{el.localization}</h3>
             <p>{el.description}</p>
-            <button
-              className="circle-medium"
-              type="remove"
-              value="Remove"
-              label="Remove"
-              onClick={() => removePost(el.title)}
-            >
-              <i className="fa-solid fa-minus"></i>
-            </button>
+            <Tooltip content="Usuń wpis" position={Position.RIGHT}>
+              <button
+                className="circle-medium"
+                type="remove"
+                value="Remove"
+                label="Remove"
+                onClick={() => removePost(el.title)}
+              >
+                <i className="fa-solid fa-minus"></i>
+              </button>
+            </Tooltip>
           </section>
         ))}
     </>

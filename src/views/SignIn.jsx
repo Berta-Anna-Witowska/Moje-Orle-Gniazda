@@ -2,7 +2,7 @@ import "../styles/elements/_sign-in.scss";
 import React, {useState, useEffect} from "react";
 import {useNavigate} from "react-router-dom";
 import supabase from "../services/supabase";
-import {toaster} from "evergreen-ui";
+import {toaster, Tooltip, Position} from "evergreen-ui";
 import ButtonBackToTrail from "../utils/ButtonBackToTrail";
 
 export default function SignIn() {
@@ -49,6 +49,7 @@ export default function SignIn() {
         return;
       }
       setIsLogged(true);
+      navigate("/signout");
     };
     isUserLogged();
   }, []);
@@ -65,30 +66,6 @@ export default function SignIn() {
             alignItems: "center",
           }}
         >
-          {isLogged && (
-            <>
-              <button
-                label="Logout"
-                className="circle"
-                style={{
-                  width: 50,
-                  height: 50,
-                  display: "flex",
-                  flexDirection: "column",
-                  alignItems: "center",
-                  justifyContent: "center",
-                  margin: "10px",
-                  marginBottom: "5px",
-                }}
-                onClick={(e) => logoutUser(e)}
-              >
-                <i className="fa-solid fa-right-from-bracket"></i>
-              </button>
-              <span style={{textTransform: "uppercase"}}> Wyloguj</span>
-              <ButtonBackToTrail />
-            </>
-          )}
-
           {!isLogged && (
             <>
               <div>
@@ -109,23 +86,24 @@ export default function SignIn() {
                       alignItems: "center",
                     }}
                   >
-                    <button
-                      label="Signin"
-                      className="circle"
-                      style={{
-                        width: 50,
-                        height: 50,
-                        display: "flex",
-                        flexDirection: "column",
-                        alignItems: "center",
-                        justifyContent: "center",
-                        margin: "10px",
-                        marginBottom: "5px",
-                      }}
-                    >
-                      <i className="fa-solid fa-right-to-bracket"></i>
-                    </button>
-                    <span style={{textTransform: "uppercase"}}> Zaloguj</span>
+                    <Tooltip content="Zaloguj" position={Position.RIGHT}>
+                      <button
+                        label="Signin"
+                        className="circle"
+                        style={{
+                          width: 50,
+                          height: 50,
+                          display: "flex",
+                          flexDirection: "column",
+                          alignItems: "center",
+                          justifyContent: "center",
+                          margin: "10px",
+                          marginBottom: "5px",
+                        }}
+                      >
+                        <i className="fa-solid fa-right-to-bracket"></i>
+                      </button>
+                    </Tooltip>
                   </div>
                 </form>
               </div>

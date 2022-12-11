@@ -5,6 +5,7 @@ import emailjs from "@emailjs/browser";
 import {publicKEY} from "../services/emailjs";
 import {emailJS_serviceKEY} from "../services/emailjs";
 import {template} from "../services/emailjs";
+import {toaster, Tooltip, Position} from "evergreen-ui";
 
 export default function Contact() {
   const form = useRef();
@@ -16,10 +17,10 @@ export default function Contact() {
       .sendForm(emailJS_serviceKEY, template, form.current, publicKEY)
       .then(
         (result) => {
-          console.log(result.text);
+          toaster.success("Wiadomość wysłana!");
         },
         (error) => {
-          console.log(error.text);
+          toaster.danger("Wysyłanie nie powiodło się !");
         }
       );
     e.target.reset();
@@ -45,7 +46,6 @@ export default function Contact() {
           }}
         >
           <h2>Dane kontaktowe</h2>
-          {/* <i class="fa-regular fa-message"></i> */}
           <a style={{color: "rgba(206, 217, 230, 0.9)"}}>
             moje.orle.gniazda@gmail.com
           </a>
@@ -71,7 +71,7 @@ export default function Contact() {
             <input
               type="email"
               name="user_email"
-              placeholder="Podaj nam swój adres e-mail"
+              placeholder="Podaj swój adres e-mail"
             />
             <input
               type="text"
@@ -84,23 +84,24 @@ export default function Contact() {
               placeholder="Co chciałbyś mi powiedzieć...?"
               rows="4"
             />
-            <button
-              className="circle"
-              type="submit"
-              value="Send"
-              style={{
-                width: 50,
-                height: 50,
-                display: "flex",
-                flexDirection: "column",
-                alignItems: "center",
-                justifyContent: "center",
-                marginBottom: "5px",
-              }}
-            >
-              <i className="fa-solid fa-envelope-open-text"></i>
-            </button>
-            <span style={{textTransform: "uppercase"}}>Wyślij</span>
+            <Tooltip content="Wyślij" position={Position.RIGHT}>
+              <button
+                className="circle"
+                type="submit"
+                value="Send"
+                style={{
+                  width: 50,
+                  height: 50,
+                  display: "flex",
+                  flexDirection: "column",
+                  alignItems: "center",
+                  justifyContent: "center",
+                  marginBottom: "5px",
+                }}
+              >
+                <i className="fa-solid fa-envelope-open-text"></i>
+              </button>
+            </Tooltip>
           </form>
         </div>
       </div>
