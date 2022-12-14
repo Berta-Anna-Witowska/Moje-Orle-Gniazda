@@ -26,10 +26,12 @@ npm install
 npm install -D sass
 ```
 ### emailJS
+https://www.emailjs.com/
 ```bash
 npm i emailjs-com
 ```
 ### supabase
+https://app.supabase.com/projects
 ```bash
 npm i @supabase/supabase-js
 ```
