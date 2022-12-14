@@ -12,7 +12,7 @@ Aplikacja będzie rozwijana o nowe funkcjonalności.
 Projekt zbudowany w oparciu o vite.
 creating vite project
 ```bash
-npm create vite@latest projekt_koncowy --template react
+npm create vite@latest moje-orle-gniazda --template react
 ```
 ###installation
 ```bash
@@ -42,12 +42,46 @@ npm install evergreen-ui
 ---
 
 # OPIS PROJEKTU
----
-## *Logowanie*
-### 
+
 ---
 
-## *Contact form*
+## *Logowanie*
+### 
+//screenshot
+ 
+
+ 
+ 
+#### Fragment kodu - **SignIn**
+
+```javascript
+
+  const loginUser = async (e) => {
+    e.preventDefault();
+
+    const [email, password] = e.target.elements;
+
+    let {
+      data: {user},
+      error,
+    } = await supabase.auth.signInWithPassword({
+      email: email.value,
+      password: password.value,
+    });
+    if (error) {
+      toaster.warning("Pojawił się problem. Spróbuj jeszcze raz!");
+      return;
+    }
+    toaster.success("Logowanie powiodło się!");
+    navigate("/trailbaseview");
+  };
+
+```
+
+
+---
+
+## *Contact*
 
 #### Możliwość wysyłania wiadomości bezpośrednio na skrzynkę pocztową za pomocą emailJS, dostępne dla wszystkich użytkowników.
 //screenshot
@@ -81,7 +115,8 @@ https://dashboard.emailjs.com/admin
 | `Service ID` | `string` | **Required**.|
 
 ---
-#### Fragment kodu - **Contact form**
+
+#### Fragment kodu - **Contact**
 
 ```javascript
  emailjs
@@ -103,7 +138,9 @@ https://dashboard.emailjs.com/admin
     e.target.reset();
   };
 ```
+
 ---
+
 ## *Widok szlaku*
 #### Podgląd całego szlaku z możliwością przeniesienia się do opisu konkretnego miejsca.
 //screenshot
@@ -118,6 +155,53 @@ https://dashboard.emailjs.com/admin
 
 ---
 
+## *Zapiski z podróży*
+### Dodawanie notatek 
+//screenshot
+
+ 
+ ## SUPABASE API Reference
+
+
+```http
+  https://app.supabase.com/projects
+```
+
+| Parameter | Type     | Description                |
+| :-------- | :------- | :------------------------- |
+| `Supabase url` | `string` | **Required**.|
+
+
+| Parameter | Type     | Description                       |
+| :-------- | :------- | :-------------------------------- |
+| `Supabase api key`      | `string` | **Required**.  |
+---
+
+
+#### Fragment kodu - **MyTripsAddNew**
+```javascript
+const addPost = async (e) => {
+    e.preventDefault();
+
+    const [title, localization, description] = e.target.elements;
+
+    const {data, error} = await supabase.from("post").insert([
+      {
+        user_id: userId,
+        title: title.value,
+        localization: localization.value,
+        description: description.value,
+      },
+    ]);
+    if (error) {
+      toaster.danger("Dodawanie nie powiodło się!");
+    }
+    toaster.success("Zmiany zostały zapisane!");
+    e.target.reset();
+  };
+```
+
+---
 ##Fonts and icons
 
  - [Fontawesome](https://fontawesome.com/icons)
@@ -125,7 +209,6 @@ https://dashboard.emailjs.com/admin
 ---
 ##Deployment
 #### Project is now live at *Netlify*
-// Link do projektu
 ```https
 // Link do projektu
 ```
