@@ -2,9 +2,12 @@
 **Final project from the JavaScript Developer course**
 
 ## MOJE ORLE GNIAZDA
+
 Jest to projekt prostej aplikacji, która dostarcza podstawowe informacje o Jurze Krakowsko-Częstochowskiej, Szlaku Orlich gniazd, oraz wybranych miejscach na szlaku.
 Można tu także obejrzeć galerię zdjęć, a po zalogowaniu również dodawać wybrane pozycje do listy miejsc, które chcielibyśmy odwiedzić, oraz w sekcji "Moje zapiski" dodawać swoje notatki z podróży.
+
 Aplikacja będzie rozwijana o nowe funkcjonalności.
+
 ---
 
 ### Install:
