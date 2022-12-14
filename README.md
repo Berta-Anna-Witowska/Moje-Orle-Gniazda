@@ -1,40 +1,40 @@
 # Moje-Orle-Gniazda
 **Final project from the JavaScript Developer course**
 
-##MOJE ORLE GNIAZDA
+## MOJE ORLE GNIAZDA
 Jest to projekt prostej aplikacji, która dostarcza podstawowe informacje o Jurze Krakowsko-Częstochowskiej, Szlaku Orlich gniazd, oraz wybranych miejscach na szlaku.
 Można tu także obejrzeć galerię zdjęć, a po zalogowaniu również dodawać wybrane pozycje do listy miejsc, które chcielibyśmy odwiedzić, oraz w sekcji "Moje zapiski" dodawać swoje notatki z podróży.
 Aplikacja będzie rozwijana o nowe funkcjonalności.
 ---
 
-###Install:
+### Install:
 
 Projekt zbudowany w oparciu o vite.
 creating vite project
 ```bash
 npm create vite@latest moje-orle-gniazda --template react
 ```
-###installation
+### installation
 ```bash
 npm install
 ```
-###SASS
+### SASS
 ```bash
 npm install -D sass
 ```
-###emailJS
+### emailJS
 ```bash
 npm i emailjs-com
 ```
-###supabase
+### supabase
 ```bash
 npm i @supabase/supabase-js
 ```
-###React router
+### React router
 ```bash
 npm install --save react-router-dom
 ```
-###Toasters and tooltips
+### Toasters and tooltips
 https://evergreen.segment.com/
 ```bash
 npm install evergreen-ui
