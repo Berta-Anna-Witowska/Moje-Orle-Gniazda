@@ -27,6 +27,21 @@ export default function MyTripsAddNew() {
 
     const [title, localization, description] = e.target.elements;
 
+    if (title.value.length < 3) {
+      toaster.warning("Tytuł musi składać się z co najmniej 3 znaków.");
+      return;
+    }
+    if (localization.value.length < 5) {
+      toaster.warning(
+        "Nazwa lokalizacji musi składać się z co najmniej 5 znaków."
+      );
+      return;
+    }
+    if (description.value.length < 10) {
+      toaster.warning("Notatka musi składać się z co najmniej 10 znaków.");
+      return;
+    }
+
     const {data, error} = await supabase.from("post").insert([
       {
         user_id: userId,
@@ -45,24 +60,26 @@ export default function MyTripsAddNew() {
   return (
     <section className="my-trips-add_new">
       <form className="my-trips-form" onSubmit={(e) => addPost(e)}>
-        <input type="text" name="title" placeholder="Tytuł"></input>
+        <input type="text" name="title" placeholder="Tytuł" required></input>
         <input
           type="text"
           name="localization"
           placeholder="Lokalizacja"
+          required
         ></input>
         <textarea
           type="text"
           name="description"
           placeholder="Miejsce na Twoje notatki..."
           rows="8"
+          required
         ></textarea>
         <Tooltip content="Dodaj notatkę" position={Position.RIGHT}>
           <button
             className="circle-medium"
+            name="send"
             type="submit"
-            value="Send"
-            label="Send"
+            value="Submit"
           >
             <i className="fa-solid fa-plus"></i>
           </button>

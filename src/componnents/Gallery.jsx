@@ -1,7 +1,10 @@
 import "../styles/elements/_gallery.scss";
-import ButtonBackToTrail from "../utils/ButtonBackToTrail";
+
 import React, {useState, useEffect} from "react";
+
 import {photos} from "../data/gallery_info";
+
+import ButtonBackToTrail from "../utils/ButtonBackToTrail";
 
 export default function Gallery() {
   const [currentIndex, setCurrentIndex] = useState(null);

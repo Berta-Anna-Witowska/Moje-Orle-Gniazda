@@ -18,17 +18,11 @@
     z-index: 1;
   }
   &-buttons {
-    margin: 20px;
+    margin: 2em;
 
     .circle {
-      margin: 10px;
+      margin: 1em;
       padding: 0;
-      font-size: 0.9em;
-      box-shadow: 0px 0px 20px 0px $color-secondary-shadow;
-
-      &:hover {
-        box-shadow: 0px 0px 20px 0px rgba(206, 217, 230, 0.7);
-      }
     }
   }
   h1 {

@@ -39,7 +39,8 @@
     overflow: hidden;
   }
   .carousel-item {
-    height: 30em;
+    height: 25em;
+    max-height: 25em;
     min-width: 100%;
     width: auto;
     display: flex;
@@ -71,7 +72,7 @@
 }
 
 .sidebar-carousel-wrapper {
-  height: 8.85em;
+  height: 7.9em;
   margin: 2em;
 
   display: flex;

@@ -1,6 +1,9 @@
-import React, {useState} from "react";
 import "../styles/elements/_trail-info.scss";
+
+import React from "react";
+
 import {trail} from "../data/trail-info";
+
 import ButtonBackToTrail from "../utils/ButtonBackToTrail";
 
 export default function TrailInfo() {

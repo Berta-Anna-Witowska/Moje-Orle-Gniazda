@@ -1,6 +1,6 @@
-import {Outlet} from "react-router-dom";
-import {useNavigate} from "react-router-dom";
 import "../styles/elements/_landing-page.scss";
+
+import {Outlet, useNavigate} from "react-router-dom";
 
 export default function LandingPage() {
   const navigate = useNavigate();

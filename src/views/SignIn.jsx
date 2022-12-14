@@ -1,9 +1,11 @@
 import "../styles/elements/_sign-in.scss";
+
 import React, {useState, useEffect} from "react";
 import {useNavigate} from "react-router-dom";
 import supabase from "../services/supabase";
-import {toaster, Tooltip, Position} from "evergreen-ui";
+
 import ButtonBackToTrail from "../utils/ButtonBackToTrail";
+import {toaster, Tooltip, Position} from "evergreen-ui";
 
 export default function SignIn() {
   const navigate = useNavigate();
@@ -12,6 +14,11 @@ export default function SignIn() {
     e.preventDefault();
 
     const [email, password] = e.target.elements;
+
+    if (password.value.length < 6) {
+      toaster.warning("Hasło musi się składać co najmniej z 6 znaków.");
+      return;
+    }
 
     let {
       data: {user},
@@ -26,15 +33,6 @@ export default function SignIn() {
     }
     toaster.success("Logowanie powiodło się!");
     navigate("/trailbaseview");
-  };
-
-  const logoutUser = async () => {
-    let {error} = await supabase.auth.signOut();
-    if (!error) {
-      toaster.notify("Zostałeś wylogowany.");
-      navigate("/");
-    }
-    return;
   };
 
   const [isLogged, setIsLogged] = useState(false);

@@ -1,6 +1,9 @@
-import React, {useState} from "react";
 import "../styles/elements/_region-info.scss";
+
+import React from "react";
+
 import {region} from "../data/region-info";
+
 import ButtonBackToTrail from "../utils/ButtonBackToTrail";
 
 export default function RegionInfo() {

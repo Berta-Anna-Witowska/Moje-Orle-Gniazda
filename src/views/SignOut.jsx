@@ -1,8 +1,10 @@
 import "../styles/elements/_sign-in.scss";
+
 import {useNavigate} from "react-router-dom";
 import supabase from "../services/supabase";
-import {toaster, Tooltip} from "evergreen-ui";
+
 import ButtonBackToTrail from "../utils/ButtonBackToTrail";
+import {toaster, Tooltip} from "evergreen-ui";
 
 export default function SignOut() {
   const navigate = useNavigate();

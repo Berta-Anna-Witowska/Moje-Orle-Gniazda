@@ -14,22 +14,23 @@
 
   display: flex;
   flex-direction: row;
-  align-items: center;
+  align-items: flex-start;
   justify-content: center;
 
   &-list,
   &-description,
   &-info,
   &-add_new {
-    margin: 5em;
     border: 2px solid $color-lightGrey-transparent-light;
     border-radius: 30px;
-    padding: 30px;
     background-color: $color-lightGrey-transparent-light;
   }
   &-description,
   &-info,
   &-add_new {
+    margin: 4em;
+    padding: 30px;
+
     width: 50vw;
     height: 50vh;
     display: flex;
@@ -41,11 +42,22 @@
     p {
       max-height: 60%;
       padding-right: 20px;
+      margin-bottom: 50px;
       overflow-y: scroll;
     }
-    button {
-      margin-top: 10px;
-      align-self: center;
+    section {
+      height: 98%;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      position: relative;
+
+      button {
+        margin-top: 10px;
+        position: absolute;
+        left: calc((50%) - 25px);
+        bottom: -1.5em;
+      }
     }
   }
   &-info {
@@ -66,12 +78,27 @@
     }
   }
   &-list {
-    height: 30vh;
-    margin-top: 10;
-    overflow-y: scroll;
-    li {
-      &:hover {
-        cursor: pointer;
+    height: 35vh;
+    overflow-y: hidden;
+    margin-top: 2.5em;
+    padding: 20px;
+
+    h1 {
+      margin: 0 0 10px 0;
+    }
+    ul {
+      margin: 0;
+      padding-left: 0;
+      height: 80%;
+      overflow-y: scroll;
+      width: 95%;
+      list-style-type: circle;
+      li {
+        &:hover {
+          cursor: pointer;
+          color: $color-blueGrey-dark;
+          text-shadow: -3px 3px 10px $color-lightGrey-transparent-medium;
+        }
       }
     }
   }
@@ -103,7 +130,7 @@
     button {
       @include buttonMedium;
       align-self: center;
-      margin-top: 2em;
+      margin-top: 1em;
       &:hover {
         cursor: pointer;
       }

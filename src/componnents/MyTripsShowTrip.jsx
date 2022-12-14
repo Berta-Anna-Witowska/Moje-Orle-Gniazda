@@ -45,19 +45,19 @@ export default function MyTripsShowTrip() {
   };
 
   return (
-    <>
+    <div className="my-trips-description">
       {post &&
         post.map((el) => (
-          <section className="my-trips-description" key={el.id}>
-            <h2>{el.title}</h2>
-            <h3>{el.localization}</h3>
+          <section key={el.id}>
+            <h3>{el.title}</h3>
+            <h2>{el.localization}</h2>
             <p>{el.description}</p>
             <Tooltip content="Usuń wpis" position={Position.RIGHT}>
               <button
                 className="circle-medium"
-                type="remove"
+                name="remove"
+                type="button"
                 value="Remove"
-                label="Remove"
                 onClick={() => removePost(el.title)}
               >
                 <i className="fa-solid fa-minus"></i>
@@ -65,6 +65,6 @@ export default function MyTripsShowTrip() {
             </Tooltip>
           </section>
         ))}
-    </>
+    </div>
   );
 }

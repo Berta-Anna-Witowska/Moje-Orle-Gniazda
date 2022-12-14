@@ -1,6 +1,8 @@
-import React from "react";
 import "../styles/elements/_nav.scss";
+
+import React from "react";
 import {useNavigate} from "react-router-dom";
+
 import {Tooltip} from "evergreen-ui";
 
 export default function Nav({isUserLogged}) {

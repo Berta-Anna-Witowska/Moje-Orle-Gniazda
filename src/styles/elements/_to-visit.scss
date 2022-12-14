@@ -23,6 +23,7 @@
     .to-visit-place {
       &:hover {
         color: $color-blueGrey-dark;
+        text-shadow: -3px 3px 10px $color-lightGrey-transparent-medium;
         cursor: pointer;
       }
     }

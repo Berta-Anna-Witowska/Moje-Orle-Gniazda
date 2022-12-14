@@ -13,13 +13,15 @@
   color: $color-lightGrey-transparent;
   text-align: center;
   text-transform: uppercase;
-  font-size: 1em;
+  font-size: 0.9em;
   font-weight: 500;
+  text-shadow: 0px 0px 10px $color-secondary-shadow;
 
   &:hover {
     box-shadow: 0px 0px 20px 0px $color-lightGrey-transparent;
     cursor: pointer;
   }
+  @content;
 }
 @mixin buttonMedium {
   width: 50px;
@@ -37,10 +39,13 @@
 
   background-image: url("./src/assets/background02.PNG");
   background-color: $color-background;
+  text-shadow: 0px 0px 10px $color-secondary-shadow;
 
   &:hover {
     cursor: pointer;
+    box-shadow: 0px 0px 20px 0px $color-lightGrey-transparent;
   }
+  @content;
 }
 
 @mixin buttonSmall {
@@ -49,6 +54,10 @@
   margin: 10px;
   border: 2px solid $color-lightGrey-transparent-light;
   border-radius: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 
   background-color: transparent;
   color: $color-lightGrey-transparent;
@@ -59,6 +68,7 @@
     box-shadow: 0px 0px 20px 0px $color-lightGrey-transparent;
     cursor: pointer;
   }
+  @content;
 }
 
 // @mixin notebook {

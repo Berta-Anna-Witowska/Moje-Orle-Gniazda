@@ -1,9 +1,8 @@
-import React, {useState} from "react";
 import "../styles/elements/_sidebar.scss";
-import "../styles/elements/_baseView.scss";
-import "../styles/settings/_colors.scss";
 
+import React, {useState} from "react";
 import {useNavigate} from "react-router-dom";
+
 import {Tooltip} from "evergreen-ui";
 
 export default function SideBar() {
@@ -52,7 +51,7 @@ export default function SideBar() {
       </Tooltip>
       <i
         className="fa-solid fa-chevron-right"
-        onMouseEnter={showSideMenu}
+        onClick={showSideMenu}
         style={{textShadow}}
       />
       <div className="big-circle" style={{display, position, left}}>

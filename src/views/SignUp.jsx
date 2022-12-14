@@ -1,8 +1,10 @@
 import "../styles/elements/_sign-up.scss";
-import supabase from "../services/supabase";
+
 import {useNavigate} from "react-router-dom";
-import {toaster, Tooltip, Position} from "evergreen-ui";
+import supabase from "../services/supabase";
+
 import ButtonBackToTrail from "../utils/ButtonBackToTrail";
+import {toaster, Tooltip, Position} from "evergreen-ui";
 
 export default function SignUp() {
   const navigate = useNavigate();
@@ -12,8 +14,17 @@ export default function SignUp() {
 
     const [email, password, repassword] = e.target.elements;
 
+    if (password.value.length < 6) {
+      toaster.warning("Hasło musi się składać co najmniej z 6 znaków.");
+      return;
+    }
+    if (repassword.value.length < 6) {
+      toaster.warning("Hasło musi się składać co najmniej z 6 znaków.");
+      return;
+    }
+
     if (password.value !== repassword.value) {
-      toaster.notify("Hasła muszą być takie same!");
+      toaster.warning("Hasła muszą być takie same!");
       return;
     }
 
@@ -65,7 +76,6 @@ export default function SignUp() {
               <i className="fa-regular fa-address-card"></i>
             </button>
           </Tooltip>
-          {/* <span style={{textTransform: "uppercase"}}>Zarejestruj</span> */}
         </form>
         <h2 onClick={() => navigate("/signin")}>Wróć do logowania</h2>
       </div>

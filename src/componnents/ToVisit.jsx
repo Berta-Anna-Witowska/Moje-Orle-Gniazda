@@ -26,7 +26,6 @@ export default function ToVisit() {
       }
       setUserId(user.id);
       setIsLogged(true);
-      console.log(user.id);
     };
     isUserLogged();
   }, []);
@@ -43,11 +42,12 @@ export default function ToVisit() {
       if (!error) {
         setPlacesList(placesToVisit);
       }
-      console.log(placesToVisit);
     };
 
-    fetchPost();
-  }, [userId]);
+    if (isLogged) {
+      fetchPost();
+    }
+  }, [isLogged]);
   return (
     <>
       <div className="places-toVisit">

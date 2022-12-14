@@ -1,5 +1,5 @@
-import {Outlet, useNavigate, useParams} from "react-router-dom";
 import {useEffect, useState} from "react";
+import {Outlet} from "react-router-dom";
 import supabase from "../services/supabase";
 
 import Nav from "../componnents/Nav";
@@ -15,17 +15,9 @@ export default function Dashboard() {
         data: {session},
         error,
       } = await supabase.auth.getSession();
-      console.log(session);
       if (error) {
         console.log(error);
       }
-      // const {
-      //   data: {user},
-      // } = await supabase.auth.getUser();
-      // if (!user) {
-      //   setIsLogged(false);
-      //   return;
-      // }
       if (!session) {
         setIsLogged(false);
         return;
@@ -36,27 +28,13 @@ export default function Dashboard() {
   }, []);
 
   return (
-    <>
-      {isLogged === true && (
-        <div>
-          <Nav isUserLogged={isLogged} />
-          <div className="wrapper">
-            <SideBar />
-            <Outlet />
-          </div>
-          <Footer />
-        </div>
-      )}
-      {isLogged !== true && (
-        <div>
-          <Nav isUserLogged={isLogged} />
-          <div className="wrapper">
-            <SideBar />
-            <Outlet />
-          </div>
-          <Footer />
-        </div>
-      )}
-    </>
+    <div>
+      <Nav isUserLogged={isLogged} />
+      <div className="wrapper">
+        <SideBar />
+        <Outlet />
+      </div>
+      <Footer />
+    </div>
   );
 }

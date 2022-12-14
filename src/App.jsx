@@ -16,7 +16,7 @@ import SignUp from "./views/SignUp";
 import SignOut from "./views/SignOut";
 import MyTripsInfoPage from "./componnents/MyTripsInfoPage";
 import MyTripsAddNew from "./componnents/MyTripsAddNew";
-import MyTripsShowTrip from "./componnents/MayTripsShowTrip";
+import MyTripsShowTrip from "./componnents/MyTripsShowTrip";
 
 function App() {
   return (

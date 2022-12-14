@@ -1,11 +1,11 @@
-import React, {useEffect, useState} from "react";
 import "../styles/elements/_places-list.scss";
-import "../styles/settings/_colors.scss";
 
-import ButtonBackToTrail from "../utils/ButtonBackToTrail";
+import React, {useState} from "react";
+import {useNavigate} from "react-router-dom";
 
 import {places} from "../data/places";
-import {useNavigate} from "react-router-dom";
+
+import ButtonBackToTrail from "../utils/ButtonBackToTrail";
 
 export default function PlacesList() {
   const navigate = useNavigate();

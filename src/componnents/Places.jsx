@@ -1,14 +1,16 @@
+import "../styles/elements/_places.scss";
+
 import React, {useState, useEffect} from "react";
 import {useParams} from "react-router-dom";
-
 import supabase from "../services/supabase";
-import "../styles/elements/_places.scss";
+
 import {places} from "../data/places";
+
 import ButtonBackToTrail from "../utils/ButtonBackToTrail";
 import {toaster, Tooltip, Position, Paragraph} from "evergreen-ui";
 
 export default function Places() {
-  const {id} = useParams(); //id dla konkretnego miejsca
+  const {id} = useParams();
 
   const [isLogged, setIsLogged] = useState(false);
   const [userId, setUserId] = useState("");
@@ -41,6 +43,7 @@ export default function Places() {
         .select()
         .eq("user_id", userId)
         .eq("name", name);
+
       if (!data[0]) {
         setIsChecked("fa-regular fa-star");
         return;
@@ -48,9 +51,13 @@ export default function Places() {
         setIsChecked("fa-solid fa-star");
         return;
       }
+      console.log(isChecked);
     };
+    if (isLogged) {
+      isPlaceAdded();
+    }
     isPlaceAdded();
-  }, [userId]);
+  }, [isLogged]);
 
   const addToPlacesToVisit = async () => {
     if (isChecked === "fa-regular fa-star") {
@@ -83,12 +90,7 @@ export default function Places() {
         <div className="places-info scroll">
           <h1>{places[id - 1].name}</h1>
           {isLogged && (
-            <Tooltip
-              content="Chcesz odwiedzić?"
-              // {<Paragraph margin={1}>Chcesz odwiedzić?</Paragraph>}
-              // appearance="card"
-              position={Position.RIGHT}
-            >
+            <Tooltip content="Chcesz odwiedzić?" position={Position.RIGHT}>
               <span>
                 <i className={isChecked} onClick={addToPlacesToVisit}></i>
               </span>

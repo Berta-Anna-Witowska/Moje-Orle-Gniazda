@@ -10,7 +10,7 @@
   background-size: cover;
   background-color: $color-background;
   font-family: $font-raleway;
-  font-size: 14px;
+  font-size: 0.98em;
   line-height: 1.4em;
   font-weight: 400;
   color: $color-lightGrey-transparent;
@@ -21,14 +21,7 @@ body {
   height: 100%;
   margin: 0;
   padding: 0;
-  background: linear-gradient(
-    360deg,
-    #030403d2 10%,
-    #478130a9 32%,
-    hsla(105, 39%, 35%, 0.647) 75%,
-    #2c4857e6 100%,
-    hsla(203, 61%, 68%, 0.729) 100%
-  );
+  background: $background-gradient;
   background-size: cover;
 }
 
@@ -40,7 +33,7 @@ body {
 h1 {
   font-size: 1.5em;
   text-transform: uppercase;
-  margin: 0 10px 10px 10px;
+  margin: 0 1em 1.5em 1em;
 }
 
 h2 {
@@ -54,8 +47,7 @@ a {
   text-shadow: 0px 0px 10px $color-secondary-shadow;
 }
 ul {
-  list-style-type: disc;
-  margin-left: 20px;
+  margin: 0 0 0em 2em;
   color: $color-lightGreen;
   li {
     text-shadow: 0px 0px 10px $color-secondary-shadow;
@@ -147,8 +139,8 @@ select:-webkit-autofill:focus {
 }
 .trail-name {
   position: absolute;
-  top: 1.3em;
-  left: 1.3em;
+  top: 1em;
+  left: 0.5em;
 
   font-family: $font-island-moments;
   text-transform: none;

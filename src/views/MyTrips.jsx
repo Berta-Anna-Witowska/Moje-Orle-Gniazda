@@ -28,8 +28,6 @@ export default function MyTrips() {
       }
       setIsLogged(true);
       setUserId(user.id);
-      // console.log(user.id);
-      // console.log(userId);
     };
     isUserLogged();
   }, []);
@@ -59,28 +57,30 @@ export default function MyTrips() {
             <Tooltip content="Nowy wpis">
               <button
                 className="add-new-description circle"
+                name="new"
+                type="button"
+                value="New"
                 onClick={() => navigate("/mytrips/addnew")}
               >
                 <i className="fa-solid fa-plus"></i>
               </button>
             </Tooltip>
-
-            <ul className="my-trips-list" style={{marginBottom: 30}}>
+            <div className="my-trips-list" style={{marginBottom: 30}}>
               <h1>Moje notatki</h1>
-
-              {post &&
-                post.map((el) => (
-                  <li
-                    key={el.id}
-                    title={`Post#${el.id}`}
-                    onClick={() => {
-                      navigate(`/mytrips/post/${el.id}`);
-                    }}
-                  >
-                    {el.title}
-                  </li>
-                ))}
-            </ul>
+              <ul>
+                {post &&
+                  post.map((el) => (
+                    <li
+                      key={el.id}
+                      onClick={() => {
+                        navigate(`/mytrips/post/${el.id}`);
+                      }}
+                    >
+                      &#8226; {el.title}
+                    </li>
+                  ))}
+              </ul>
+            </div>
           </section>
           <section className="mi-trips-container">
             <Outlet />

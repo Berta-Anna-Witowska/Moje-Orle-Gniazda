@@ -2,6 +2,7 @@ import "../styles/elements/_baseView.scss";
 
 import React, {useState} from "react";
 import {useNavigate} from "react-router-dom";
+
 import {places} from "../data/places";
 
 import TrailName from "../utils/TrailName";
@@ -49,7 +50,8 @@ export default function TrailBaseView() {
     </div>
   );
 }
-export function PlacePreview({id}) {
+
+function PlacePreview({id}) {
   const navigate = useNavigate();
 
   const backgroundImage = places[id - 1].background;
