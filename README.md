@@ -248,4 +248,4 @@ const addPost = async (e) => {
 
 ## License
 
-Copyright [yyyy] [Berta Anna Witowska](https://www.apache.org/licenses/LICENSE-2.0)
+Copyright (c) 2022 [Berta Anna Witowska](LICENSE.md)
