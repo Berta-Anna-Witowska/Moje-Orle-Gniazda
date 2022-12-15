@@ -1,6 +1,6 @@
 # Moje-Orle-Gniazda
 
-**Final project from the JavaScript Developer course**
+**The Final project from the JavaScript Developer course**
 
 ## MOJE ORLE GNIAZDA (My Eagles' Nests)
 
