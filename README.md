@@ -9,7 +9,7 @@ Można tu także obejrzeć galerię zdjęć, a po zalogowaniu również dodawać
 
 Aplikacja będzie rozwijana o nowe funkcjonalności.
 
----
+## ![App Screenshot](src/screenshots/01_LandingPage.png)
 
 ### Install:
 
@@ -19,6 +19,8 @@ creating vite project
 ```bash
 npm create vite@latest moje-orle-gniazda --template react
 ```
+
+To run this project, install it locally using npm:
 
 ### installation
 
@@ -68,11 +70,11 @@ npm install evergreen-ui
 
 ---
 
-## _Logowanie_
+## _Logowanie i rejestracja_
 
 ###
 
-//screenshot
+## ![App Screenshot](src/screenshots/03_SignIn.png)
 
 #### Fragment kodu - **SignIn**
 
@@ -104,7 +106,7 @@ const loginUser = async (e) => {
 
 #### Możliwość wysyłania wiadomości bezpośrednio na skrzynkę pocztową za pomocą emailJS, dostępne dla wszystkich użytkowników.
 
-//screenshot
+## ![App Screenshot](src/screenshots/05_ContactForm.png)
 
 ---
 
@@ -163,15 +165,15 @@ const sendEmail = (e) => {
 
 #### Podgląd całego szlaku z możliwością przeniesienia się do opisu konkretnego miejsca.
 
-//screenshot
+## ![App Screenshot](src/screenshots/06_TrailBaseView.png)
 
 ---
 
 ## _Miejsca na szlaku_
 
-#### Opisy, linki oraz ilustracje pobierane z bazy danych, wyświetlone za pomocą funkcji _map_.
+#### Opisy, linki oraz ilustracje wyświetlone za pomocą funkcji _map_.
 
-//screenshot
+## ![App Screenshot](src/screenshots/10_PlaceDescription.png)
 
 ---
 
@@ -179,7 +181,7 @@ const sendEmail = (e) => {
 
 ### Dodawanie notatek
 
-//screenshot
+## ![App Screenshot](src/screenshots/15_ShowNote.png)
 
 ## SUPABASE API Reference
 
@@ -220,6 +222,8 @@ const addPost = async (e) => {
   e.target.reset();
 };
 ```
+
+## ![App Screenshot](src/screenshots/14_AddNote.png)
 
 ---
 
