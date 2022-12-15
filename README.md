@@ -248,4 +248,4 @@ const addPost = async (e) => {
 
 ## License
 
-[Apache License](https://www.apache.org/licenses/LICENSE-2.0)
+Copyright [yyyy] [Berta Anna Witowska](https://www.apache.org/licenses/LICENSE-2.0)
