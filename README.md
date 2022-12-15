@@ -2,18 +2,26 @@
 
 **Final project from the JavaScript Developer course**
 
-## MOJE ORLE GNIAZDA
+## MOJE ORLE GNIAZDA (My Eagles' Nests)
 
-Jest to projekt prostej aplikacji, która dostarcza podstawowe informacje o Jurze Krakowsko-Częstochowskiej, Szlaku Orlich gniazd, oraz wybranych miejscach na szlaku.
-Można tu także obejrzeć galerię zdjęć, a po zalogowaniu również dodawać wybrane pozycje do listy miejsc, które chcielibyśmy odwiedzić, oraz w sekcji "Moje zapiski" dodawać swoje notatki z podróży.
-
-Aplikacja będzie rozwijana o nowe funkcjonalności.
+It is a project of a simple webb app that provides basic information about the region of Jura Krakowsko-Częstochowska, the Trail of Eagles' Nests, and selected places on the trail.
+You can also view the photo gallery here, and - after logging in, add selected items to the list of places you would like to visit, and add your travel notes in the "My notes" section.
 
 ## ![App Screenshot](src/screenshots/01_LandingPage.png)
 
+## Deployment
+
+#### Project is now live at _Netlify_
+
+```https
+// Link do projektu
+```
+
+---
+
 ### Install:
 
-Projekt zbudowany w oparciu o vite.
+Project build based on Vite.
 creating vite project
 
 ```bash
@@ -66,17 +74,15 @@ npm install evergreen-ui
 
 ---
 
-# OPIS PROJEKTU
+# PROJECT DESCRIPTION
 
 ---
 
-## _Logowanie i rejestracja_
-
-###
+## _Signing in & registration_
 
 ## ![App Screenshot](src/screenshots/03_SignIn.png)
 
-#### Fragment kodu - **SignIn**
+#### Code snippet - **SignIn**
 
 ```javascript
 const loginUser = async (e) => {
@@ -102,9 +108,9 @@ const loginUser = async (e) => {
 
 ---
 
-## _Contact_
+## _Contact form_
 
-#### Możliwość wysyłania wiadomości bezpośrednio na skrzynkę pocztową za pomocą emailJS, dostępne dla wszystkich użytkowników.
+#### The possibility to send messages directly to the mailbox using emailJS, available to all users.
 
 ## ![App Screenshot](src/screenshots/05_ContactForm.png)
 
@@ -138,7 +144,7 @@ https://dashboard.emailjs.com/admin
 
 ---
 
-#### Fragment kodu - **Contact**
+#### Code snippet - **Contact**
 
 ```javascript
 emailjs;
@@ -161,25 +167,25 @@ const sendEmail = (e) => {
 
 ---
 
-## _Widok szlaku_
+## _Trail view_
 
-#### Podgląd całego szlaku z możliwością przeniesienia się do opisu konkretnego miejsca.
+#### The whole trail prewiev, with the possibility to move to the description of a specific place on trail.
 
 ## ![App Screenshot](src/screenshots/06_TrailBaseView.png)
 
 ---
 
-## _Miejsca na szlaku_
+## _Places on trail_
 
-#### Opisy, linki oraz ilustracje wyświetlone za pomocą funkcji _map_.
+#### Descriptions, links & illustrations displayed by _map_ function.
 
 ## ![App Screenshot](src/screenshots/10_PlaceDescription.png)
 
 ---
 
-## _Zapiski z podróży_
+## _Notes from trips_
 
-### Dodawanie notatek
+### Adding & fetching notes (Supabase).
 
 ## ![App Screenshot](src/screenshots/15_ShowNote.png)
 
@@ -199,7 +205,7 @@ const sendEmail = (e) => {
 
 ---
 
-#### Fragment kodu - **MyTripsAddNew**
+#### Code snippet - **MyTripsAddNew**
 
 ```javascript
 const addPost = async (e) => {
@@ -227,19 +233,16 @@ const addPost = async (e) => {
 
 ---
 
-##Fonts and icons
+## Fonts and icons
 
 - [Fontawesome](https://fontawesome.com/icons)
 
 ---
 
-##Deployment
+## To-do
 
-#### Project is now live at _Netlify_
-
-```https
-// Link do projektu
-```
+- Adding the ability to edit notes.
+- Adding weather forecast.
 
 ---
 
