@@ -40,45 +40,16 @@ export default function Contact() {
   return (
     <div className="contact">
       <h1>Kontakt</h1>
-      <div
-        className="contact-form"
-        style={{
-          display: "flex",
-          flexDirection: "column",
-          alignItems: "center",
-        }}
-      >
-        <div
-          className="contact-mail"
-          style={{
-            display: "flex",
-            flexDirection: "column",
-            alignItems: "center",
-          }}
-        >
+      <div className="contact-form">
+        <div className="contact-mail">
           <h2>Dane kontaktowe</h2>
           <a style={{color: "rgba(206, 217, 230, 0.9)"}}>
             moje.orle.gniazda@gmail.com
           </a>
         </div>
-        <div
-          className="contact-message"
-          style={{
-            display: "flex",
-            flexDirection: "column",
-            alignItems: "center",
-          }}
-        >
+        <div className="contact-message">
           <h2>Wyślij wiadomość</h2>
-          <form
-            style={{
-              display: "flex",
-              flexDirection: "column",
-              alignItems: "center",
-            }}
-            ref={form}
-            onSubmit={sendEmail}
-          >
+          <form ref={form} onSubmit={sendEmail}>
             <input
               type="email"
               name="user_email"
@@ -101,19 +72,10 @@ export default function Contact() {
             />
             <Tooltip content="Wyślij" position={Position.RIGHT}>
               <button
-                className="circle"
+                className="circle-medium"
                 name="send"
                 type="submit"
                 value="Submit"
-                style={{
-                  width: 50,
-                  height: 50,
-                  display: "flex",
-                  flexDirection: "column",
-                  alignItems: "center",
-                  justifyContent: "center",
-                  marginBottom: "5px",
-                }}
               >
                 <i className="fa-solid fa-envelope-open-text"></i>
               </button>
@@ -122,6 +84,11 @@ export default function Contact() {
         </div>
       </div>
       <ButtonBackToTrail />
+      <img
+        className="drawing-rock"
+        src=".\src\assets\pics\drawings\01_Skala.png"
+        alt="Rysunek skały Okiennik Wielki"
+      ></img>
     </div>
   );
 }

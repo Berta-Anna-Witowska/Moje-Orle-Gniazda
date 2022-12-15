@@ -65,7 +65,7 @@ export default function MyTrips() {
                 <i className="fa-solid fa-plus"></i>
               </button>
             </Tooltip>
-            <div className="my-trips-list" style={{marginBottom: 30}}>
+            <div className="my-trips-list">
               <h1>Moje notatki</h1>
               <ul>
                 {post &&

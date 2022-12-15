@@ -83,7 +83,7 @@ export default function Places() {
   };
 
   const img = places[id - 1].img;
-
+  console.log(places[id - 1].name);
   return (
     <>
       <div className="places-descriptions">
@@ -111,7 +111,7 @@ export default function Places() {
       <img
         className="drawing-place"
         src={img}
-        alt="Rysunek miejsca"
+        alt={`Rysunek ${places[id - 1].name}`}
         height="30%"
       ></img>
     </>

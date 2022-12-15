@@ -1,8 +1,7 @@
 @import "../settings/colors";
+@import "../settings/mixins";
 
 .contact {
-  //   max-height: 80vh;
-  //   max-width: 800px;
   height: 70vh;
   width: 800px;
 
@@ -33,5 +32,15 @@
       flex-direction: column;
       justify-content: center;
     }
+  }
+}
+form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  button {
+    display: flex;
+    align-self: center;
+    margin-top: 1.5em;
   }
 }

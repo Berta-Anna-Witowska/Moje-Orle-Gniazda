@@ -56,74 +56,26 @@ export default function SignIn() {
       <div className="sign-in">
         <h1>Logowanie</h1>
 
-        <div
-          className="sign-in-form"
-          style={{
-            display: "flex",
-            flexDirection: "column",
-            alignItems: "center",
-          }}
-        >
+        <div className="sign-in-form">
           {!isLogged && (
             <>
               <div>
-                <form
-                  onSubmit={(e) => loginUser(e)}
-                  style={{
-                    display: "flex",
-                    flexDirection: "column",
-                    alignItems: "center",
-                  }}
-                >
+                <form onSubmit={(e) => loginUser(e)}>
                   <input type="email" placeholder="Adres email" />
                   <input type="password" placeholder="Hasło" />
-                  <div
-                    style={{
-                      display: "flex",
-                      flexDirection: "column",
-                      alignItems: "center",
-                    }}
-                  >
+                  <div>
                     <Tooltip content="Zaloguj" position={Position.RIGHT}>
-                      <button
-                        label="Signin"
-                        className="circle"
-                        style={{
-                          width: 50,
-                          height: 50,
-                          display: "flex",
-                          flexDirection: "column",
-                          alignItems: "center",
-                          justifyContent: "center",
-                          margin: "10px",
-                          marginBottom: "5px",
-                        }}
-                      >
+                      <button label="Signin" className="circle-medium">
                         <i className="fa-solid fa-right-to-bracket"></i>
                       </button>
                     </Tooltip>
                   </div>
                 </form>
               </div>
-              <div
-                style={{
-                  display: "flex",
-                  flexDirection: "column",
-                  alignItems: "center",
-                  justifyContent: "center",
-                }}
-              >
+              <div>
                 <h2>Nie masz jeszcze konta? Zarejestruj się:</h2>
                 <button
-                  className="circle"
-                  style={{
-                    width: 50,
-                    height: 50,
-                    display: "flex",
-                    flexDirection: "column",
-                    alignItems: "center",
-                    justifyContent: "center",
-                  }}
+                  className="circle-medium"
                   onClick={() => navigate("/signup")}
                   label="Create account"
                 >

@@ -56,16 +56,7 @@ function PlacePreview({id}) {
 
   const backgroundImage = places[id - 1].background;
   return (
-    <div
-      className="place-circle"
-      style={{
-        position: "absolute",
-        top: "0",
-        right: "-600px",
-        height: "200px",
-        width: "200px",
-      }}
-    >
+    <div className="place-circle">
       <div className="half-circle-img" style={{backgroundImage}}></div>
       <h1>{places[id - 1].name}</h1>
       <h2 onClick={() => navigate(`/trailplacesdescriptions/${id}`)}>

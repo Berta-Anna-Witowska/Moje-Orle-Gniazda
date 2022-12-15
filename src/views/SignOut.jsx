@@ -23,28 +23,11 @@ export default function SignOut() {
       <div className="sign-in">
         <h1>Chcesz się wylogować?</h1>
 
-        <div
-          className="sign-in-form"
-          style={{
-            display: "flex",
-            flexDirection: "column",
-            alignItems: "center",
-          }}
-        >
+        <div className="sign-in-form">
           <Tooltip content="Wyloguj">
             <button
               label="Logout"
-              className="circle"
-              style={{
-                width: 50,
-                height: 50,
-                display: "flex",
-                flexDirection: "column",
-                alignItems: "center",
-                justifyContent: "center",
-                margin: "10px",
-                marginBottom: "5px",
-              }}
+              className="circle-medium"
               onClick={(e) => logoutUser(e)}
             >
               <i className="fa-solid fa-right-from-bracket"></i>

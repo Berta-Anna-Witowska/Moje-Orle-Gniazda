@@ -31,16 +31,7 @@ export default function Gallery() {
     <div className="gallery">
       <h1>Galeria zdjęć</h1>
       <div className="gallery-container">
-        <div
-          className="gallery-sidebar"
-          style={{
-            flexGrow: 0,
-            borderRight: "1px solid rgba(181, 181, 198, 0.25)",
-            display: "flex",
-            flexDirection: "column",
-            alignItems: "center",
-          }}
-        >
+        <div className="gallery-sidebar">
           <button className="prev circle-small" onClick={carouselPrev}>
             <i className="fa-solid fa-chevron-up"></i>
           </button>

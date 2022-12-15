@@ -48,31 +48,12 @@ export default function SignUp() {
     <div className="sign-up">
       <h1>Rejestracja</h1>
       <div className="sign-up-form">
-        <form
-          onSubmit={(e) => signupUser(e)}
-          style={{
-            display: "flex",
-            flexDirection: "column",
-            alignItems: "center",
-          }}
-        >
+        <form onSubmit={(e) => signupUser(e)}>
           <input type="email" placeholder="Adres email" />
           <input type="password" placeholder="Hasło" />
           <input type="password" placeholder="Powtórz hasło" />
           <Tooltip content="Zarejestruj użytkownika" position={Position.RIGHT}>
-            <button
-              label="Signup"
-              className="circle"
-              style={{
-                width: 50,
-                height: 50,
-                display: "flex",
-                flexDirection: "column",
-                alignItems: "center",
-                justifyContent: "center",
-                marginBottom: "5px",
-              }}
-            >
+            <button label="Signup" className="circle-medium">
               <i className="fa-regular fa-address-card"></i>
             </button>
           </Tooltip>
