@@ -13,9 +13,7 @@ You can also view the photo gallery here, and - after logging in, add selected i
 
 #### Project is now live at _Netlify_
 
-```https
 https://mojeorlegniazda.netlify.app/
-```
 
 ---
 
