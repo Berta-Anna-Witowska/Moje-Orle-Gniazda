@@ -5,6 +5,8 @@ import React, {useRef} from "react";
 import emailjs from "@emailjs/browser";
 import {publicKEY, emailJS_serviceKEY, template} from "../services/emailjs";
 
+import rock1Drawing from "../assets/pics/drawings/01_Skala.png?url";
+
 import ButtonBackToTrail from "../utils/ButtonBackToTrail";
 import {toaster, Tooltip, Position} from "evergreen-ui";
 
@@ -67,7 +69,7 @@ export default function Contact() {
               name="message"
               placeholder="Co chciałbyś mi powiedzieć...?"
               rows="4"
-              autocomplete="off"
+              autoComplete="off"
               required
             />
             <Tooltip content="Wyślij" position={Position.RIGHT}>
@@ -86,7 +88,7 @@ export default function Contact() {
       <ButtonBackToTrail />
       <img
         className="drawing-rock"
-        src=".\src\assets\pics\drawings\01_Skala.png"
+        src={rock1Drawing}
         alt="Rysunek skały Okiennik Wielki"
       ></img>
     </div>

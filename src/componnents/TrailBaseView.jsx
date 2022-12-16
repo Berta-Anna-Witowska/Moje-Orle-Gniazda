@@ -4,6 +4,8 @@ import React, {useState} from "react";
 import {useNavigate} from "react-router-dom";
 
 import {places} from "../data/places";
+import rock1Drawing from "../assets/pics/drawings/01_Skala.png?url";
+import mapDrawing from "../assets/pics/Mapa_3.svg?url";
 
 import TrailName from "../utils/TrailName";
 import {Tooltip, Position} from "evergreen-ui";
@@ -22,7 +24,7 @@ export default function TrailBaseView() {
         <div className="trail-map-container">
           <img
             className="trail-map"
-            src=".\src\assets\pics\Mapa_3.svg"
+            src={mapDrawing}
             alt="Rysunek szlaku"
           ></img>
           {places.map((element) => {
@@ -44,7 +46,7 @@ export default function TrailBaseView() {
       </div>
       <img
         className="drawing-rock"
-        src=".\src\assets\pics\drawings\01_Skala.png"
+        src={rock1Drawing}
         alt="Rysunek skały Okiennik Wielki"
       ></img>
     </div>

@@ -3,6 +3,7 @@ import "../styles/elements/_trail-info.scss";
 import React from "react";
 
 import {trail} from "../data/trail-info";
+import rock1Drawing from "../assets/pics/drawings/01_Skala.png?url";
 
 import ButtonBackToTrail from "../utils/ButtonBackToTrail";
 
@@ -26,7 +27,7 @@ export default function TrailInfo() {
       <ButtonBackToTrail />
       <img
         className="drawing-rock"
-        src=".\src\assets\pics\drawings\01_Skala.png"
+        src={rock1Drawing}
         alt="Rysunek skały Okiennik Wielki"
       ></img>
     </>

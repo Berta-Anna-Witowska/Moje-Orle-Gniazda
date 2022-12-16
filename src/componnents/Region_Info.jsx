@@ -3,6 +3,7 @@ import "../styles/elements/_region-info.scss";
 import React from "react";
 
 import {region} from "../data/region-info";
+import rock1Drawing from "../assets/pics/drawings/01_Skala.png?url";
 
 import ButtonBackToTrail from "../utils/ButtonBackToTrail";
 
@@ -26,7 +27,7 @@ export default function RegionInfo() {
       <ButtonBackToTrail />
       <img
         className="drawing-rock"
-        src=".\src\assets\pics\drawings\01_Skala.png"
+        src={rock1Drawing}
         alt="Rysunek skały Okiennik Wielki"
       ></img>
     </>

@@ -2,6 +2,8 @@ import "../styles/elements/_landing-page.scss";
 
 import {Outlet, useNavigate} from "react-router-dom";
 
+import rock1Drawing from "../assets/pics/drawings/01_Skala.png?url";
+
 export default function LandingPage() {
   const navigate = useNavigate();
 
@@ -20,7 +22,7 @@ export default function LandingPage() {
       </div>
       <img
         className="drawing-rock"
-        src=".\src\assets\pics\drawings\01_Skala.png"
+        src={rock1Drawing}
         alt="Rysunek skały Okiennik Wielki"
         height="50%"
       ></img>

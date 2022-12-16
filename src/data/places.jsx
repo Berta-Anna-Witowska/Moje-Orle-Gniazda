@@ -1,3 +1,21 @@
+import picJasnaGoraString from "../assets/pics/drawings/places/01_Jasna_Gora.PNG?url";
+import picOlsztynString from "../assets/pics/drawings/places/02_Olsztyn.PNG?url";
+import picPalacRaczynskichString from "../assets/pics/drawings/places/03_Palac_Raczynskich.PNG?url";
+import picOstreznikString from "../assets/pics/drawings/places/04_Ostreznik.PNG?url";
+import picMirowString from "../assets/pics/drawings/places/05_Mirow.PNG?url";
+import picBoboliceString from "../assets/pics/drawings/places/06_Bobolice.PNG?url";
+import picBakowiecString from "../assets/pics/drawings/places/07_Bakowiec.PNG?url";
+import picBirowString from "../assets/pics/drawings/places/08_Birow.PNG?url";
+import picOgrodzieniecString from "../assets/pics/drawings/places/09_Ogrodzieniec.PNG?url";
+import picPalacPadniewskichString from "../assets/pics/drawings/places/10_Palac_Padniewskich.PNG?url";
+import picPilczaString from "../assets/pics/drawings/places/11_Pilcza.PNG?url";
+import picBydlinString from "../assets/pics/drawings/places/12_Bydlin.PNG?url";
+import picRabsztynString from "../assets/pics/drawings/places/13_Rabsztyn.PNG?url";
+import picPieskowaSkalaString from "../assets/pics/drawings/places/14_Pieskowa_Skala.PNG?url";
+import picOjcowString from "../assets/pics/drawings/places/15_Ojcow.PNG?url";
+import picKorzkiewString from "../assets/pics/drawings/places/16_Korzkiew.PNG?url";
+import picWawelString from "../assets/pics/drawings/places/17_Wawel.PNG?url";
+
 export const places = [
   {
     ID: 1,
@@ -25,8 +43,8 @@ export const places = [
         name: "wikipedia",
       },
     ],
-    background: `url("src/assets/pics/drawings/places/01_Jasna_Gora.png")`,
-    img: `../src/assets/pics/drawings/places/01_Jasna_Gora.PNG`,
+    background: `url(${picJasnaGoraString})`,
+    img: `${picJasnaGoraString}`,
   },
   {
     ID: 2,
@@ -54,8 +72,8 @@ export const places = [
         name: "wikipedia",
       },
     ],
-    background: `url("src/assets/pics/drawings/places/02_Olsztyn.png")`,
-    img: `../src/assets/pics/drawings/places/02_Olsztyn.PNG`,
+    background: `url(${picOlsztynString})`,
+    img: `${picOlsztynString}`,
   },
   {
     ID: 3,
@@ -79,8 +97,8 @@ export const places = [
         name: "wikipedia",
       },
     ],
-    background: `url("src/assets/pics/drawings/places/03_Palac_Raczynskich.png")`,
-    img: `../src/assets/pics/drawings/places/03_Palac_Raczynskich.PNG`,
+    background: `url(${picPalacRaczynskichString})`,
+    img: `${picPalacRaczynskichString}`,
   },
   {
     ID: 4,
@@ -104,8 +122,8 @@ export const places = [
         name: "wikipedia",
       },
     ],
-    background: `url("src/assets/pics/drawings/places/04_Ostreznik.png")`,
-    img: `../src/assets/pics/drawings/places/04_Ostreznik.PNG`,
+    background: `url(${picOstreznikString})`,
+    img: `${picOstreznikString}`,
   },
   {
     ID: 5,
@@ -133,8 +151,8 @@ export const places = [
         name: "wikipedia",
       },
     ],
-    background: `url("src/assets/pics/drawings/places/05_Mirow.png")`,
-    img: `../src/assets/pics/drawings/places/05_Mirow.PNG`,
+    background: `url(${picMirowString})`,
+    img: `${picMirowString}`,
   },
   {
     ID: 6,
@@ -162,8 +180,8 @@ export const places = [
         name: "wikipedia",
       },
     ],
-    background: `url("src/assets/pics/drawings/places/06_Bobolice.png")`,
-    img: `../src/assets/pics/drawings/places/06_Bobolice.PNG`,
+    background: `url(${picBoboliceString})`,
+    img: `${picBoboliceString}`,
   },
   {
     ID: 7,
@@ -187,8 +205,8 @@ export const places = [
         name: "wikipedia",
       },
     ],
-    background: `url("src/assets/pics/drawings/places/07_Bakowiec.PNG")`,
-    img: `../src/assets/pics/drawings/places/07_Bakowiec.PNG`,
+    background: `url(${picBakowiecString})`,
+    img: `${picBakowiecString}`,
   },
   {
     ID: 8,
@@ -212,8 +230,8 @@ export const places = [
         name: "wikipedia",
       },
     ],
-    background: `url("src/assets/pics/drawings/places/08_Birow.PNG")`,
-    img: `../src/assets/pics/drawings/places/08_Birow.PNG`,
+    background: `url(${picBirowString})`,
+    img: `${picBirowString}`,
   },
   {
     ID: 9,
@@ -241,8 +259,8 @@ export const places = [
         name: "wikipedia",
       },
     ],
-    background: `url("src/assets/pics/drawings/places/09_Ogrodzieniec.PNG")`,
-    img: `../src/assets/pics/drawings/places/09_Ogrodzieniec.PNG`,
+    background: `url(${picOgrodzieniecString})`,
+    img: `${picOgrodzieniecString}`,
   },
   {
     ID: 10,
@@ -266,8 +284,8 @@ export const places = [
         name: "wikipedia",
       },
     ],
-    background: `url("src/assets/pics/drawings/places/10_Palac_Padniewskich.PNG")`,
-    img: `../src/assets/pics/drawings/places/10_Palac_Padniewskich.PNG`,
+    background: `url(${picPalacPadniewskichString})`,
+    img: `${picPalacPadniewskichString}`,
   },
   {
     ID: 11,
@@ -291,8 +309,8 @@ export const places = [
         name: "wikipedia",
       },
     ],
-    background: `url("src/assets/pics/drawings/places/11_Pilcza.PNG")`,
-    img: `../src/assets/pics/drawings/places/11_Pilcza.PNG`,
+    background: `url(${picPilczaString})`,
+    img: `${picPilczaString}`,
   },
   {
     ID: 12,
@@ -316,8 +334,8 @@ export const places = [
         name: "wikipedia",
       },
     ],
-    background: `url("src/assets/pics/drawings/places/12_Bydlin.PNG")`,
-    img: `../src/assets/pics/drawings/places/12_Bydlin.PNG`,
+    background: `url(${picBydlinString})`,
+    img: `${picBydlinString}`,
   },
   {
     ID: 13,
@@ -345,8 +363,8 @@ export const places = [
         name: "wikipedia",
       },
     ],
-    background: `url("src/assets/pics/drawings/places/13_Rabsztyn.PNG")`,
-    img: `../src/assets/pics/drawings/places/13_Rabsztyn.PNG`,
+    background: `url(${picRabsztynString})`,
+    img: `${picRabsztynString}`,
   },
   {
     ID: 14,
@@ -374,8 +392,8 @@ export const places = [
         name: "wikipedia",
       },
     ],
-    background: `url("src/assets/pics/drawings/places/14_Pieskowa_Skala.PNG")`,
-    img: `../src/assets/pics/drawings/places/14_Pieskowa_Skala.PNG`,
+    background: `url(${picPieskowaSkalaString})`,
+    img: `${picPieskowaSkalaString}`,
   },
   {
     ID: 15,
@@ -411,8 +429,8 @@ export const places = [
         name: "wikipedia",
       },
     ],
-    background: `url("src/assets/pics/drawings/places/15_Ojcow.PNG")`,
-    img: `../src/assets/pics/drawings/places/15_Ojcow.PNG`,
+    background: `url(${picOjcowString})`,
+    img: `${picOjcowString}`,
   },
   {
     ID: 16,
@@ -440,8 +458,8 @@ export const places = [
         name: "wikipedia",
       },
     ],
-    background: `url("src/assets/pics/drawings/places/16_Korzkiew.PNG")`,
-    img: `../src/assets/pics/drawings/places/16_Korzkiew.PNG`,
+    background: `url(${picKorzkiewString})`,
+    img: `${picKorzkiewString}`,
   },
   {
     ID: 17,
@@ -469,7 +487,7 @@ export const places = [
         name: "wikipedia",
       },
     ],
-    background: `url("src/assets/pics/drawings/places/17_Wawel.PNG")`,
-    img: `../src/assets/pics/drawings/places/17_Wawel.PNG`,
+    background: `url(${picWawelString})`,
+    img: `${picWawelString}`,
   },
 ];

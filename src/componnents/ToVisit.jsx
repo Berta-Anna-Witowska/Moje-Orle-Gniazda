@@ -4,6 +4,8 @@ import React, {useState, useEffect} from "react";
 import {useNavigate} from "react-router-dom";
 import supabase from "../services/supabase";
 
+import rock1Drawing from "../assets/pics/drawings/01_Skala.png?url";
+
 import ButtonBackToTrail from "../utils/ButtonBackToTrail";
 import {toaster} from "evergreen-ui";
 
@@ -70,7 +72,7 @@ export default function ToVisit() {
       <ButtonBackToTrail />
       <img
         className="drawing-rock"
-        src=".\src\assets\pics\drawings\01_Skala.png"
+        src={rock1Drawing}
         alt="Rysunek skały Okiennik Wielki"
       ></img>
     </>

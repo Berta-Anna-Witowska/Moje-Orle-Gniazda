@@ -4,6 +4,7 @@ import React, {useState} from "react";
 import {useNavigate} from "react-router-dom";
 
 import {places} from "../data/places";
+import rock1Drawing from "../assets/pics/drawings/01_Skala.png?url";
 
 import ButtonBackToTrail from "../utils/ButtonBackToTrail";
 
@@ -34,7 +35,7 @@ export default function PlacesList() {
       <ButtonBackToTrail />
       <img
         className="drawing-rock"
-        src=".\src\assets\pics\drawings\01_Skala.png"
+        src={rock1Drawing}
         alt="Rysunek skały Okiennik Wielki"
       ></img>
     </>
