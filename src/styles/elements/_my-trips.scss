@@ -129,7 +129,6 @@
       width: 90%;
     }
     button {
-      @include buttonMedium;
       align-self: center;
       margin-top: 1em;
       &:hover {
