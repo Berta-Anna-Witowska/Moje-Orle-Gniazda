@@ -89,7 +89,7 @@ export default function Places() {
   useEffect(() => {
     const fetchWeather = async () => {
       let response = await fetch(
-        `http://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&units=metric&APPID=${WEATHER_API}`
+        `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&units=metric&APPID=${WEATHER_API}`
       );
       let data = await response.json();
 
