@@ -17,6 +17,12 @@
     font-family: $font-raleway;
     font-size: 1.1em;
     text-shadow: 1px 1px 1px $color-secondary-shadow;
+    position: relative;
+    .github {
+      position: absolute;
+      bottom: 0;
+      left: -3em;
+    }
   }
   .container {
     display: flex;

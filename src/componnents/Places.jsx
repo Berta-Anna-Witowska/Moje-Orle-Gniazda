@@ -135,7 +135,6 @@ export default function Places() {
       }
 
       setTemperature(data.main.temp);
-      console.log(data.weather[0].description);
     };
     fetchWeather();
   }, []);
