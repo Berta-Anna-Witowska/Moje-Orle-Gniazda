@@ -7,7 +7,7 @@ import supabase from "../services/supabase";
 import rock1Drawing from "../assets/pics/drawings/01_Skala.png?url";
 
 import ButtonBackToTrail from "../utils/ButtonBackToTrail";
-import {toaster} from "evergreen-ui";
+import {toaster, Tooltip, Position} from "evergreen-ui";
 
 export default function ToVisit() {
   const navigate = useNavigate();
@@ -33,6 +33,7 @@ export default function ToVisit() {
   }, []);
 
   const [placesList, setPlacesList] = useState(null);
+  const [isChecked, setIsChecked] = useState(true);
 
   useEffect(() => {
     const fetchPost = async () => {
@@ -50,22 +51,53 @@ export default function ToVisit() {
       fetchPost();
     }
   }, [isLogged]);
+
+  // const removeFromPlacesToVisit = async (i) => {
+  //   const name = placesList[i].name;
+
+  //   const {data, error} = await supabase
+  //     .from("placesToVisit")
+  //     .delete()
+  //     .eq("user_id", userId)
+  //     .eq("name", name);
+  //   toaster.notify("Usunięto z listy!");
+  //   setIsChecked(false);
+
+  //   console.log(data.placesToVisit);
+
+  //   if (error) {
+  //     toaster.danger("Coś poszło nie tak!");
+  //   }
+  // };
+
   return (
     <>
       <div className="places-toVisit">
         <h1>Chcę odwiedzić</h1>
         <ul>
           {placesList &&
-            placesList.map((el) => (
-              <li
-                className="to-visit-place"
-                key={el.place_id}
-                onClick={() =>
-                  navigate(`/trailplacesdescriptions/${el.place_id}`)
-                }
-              >
-                {el.name}
-              </li>
+            placesList.map((el, idx) => (
+              <span className="to-visit-place" key={el.place_id}>
+                <span>
+                  {/* <Tooltip
+                    content="Chcesz odwiedzić?"
+                    position={Position.RIGHT}
+                  >
+                    <i
+                      className="fa-solid fa-star"
+                      onClick={removeFromPlacesToVisit(idx)}
+                    ></i>
+                  </Tooltip> */}
+
+                  <li
+                    onClick={() =>
+                      navigate(`/trailplacesdescriptions/${el.place_id}`)
+                    }
+                  >
+                    {el.name}
+                  </li>
+                </span>
+              </span>
             ))}
         </ul>
       </div>

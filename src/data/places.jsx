@@ -115,7 +115,7 @@ export const places = [
     longitude: 19.24,
     mapLink: "https://goo.gl/maps/SP8AethjWY6z5JgV6",
     description:
-      "Leśny rezerwat przyrody „Ostrężnik” położony jest w pobliżu osady o tej samej nazwie. Jego obszar, utworzony w 1960 r., jest niewielki - wynosi 4,1 ha. Tutejsze wapienne wzniesienia kryją kilka jaskiń (m.in. Ostrężnicką, Wierną, Wiercicę), które jednak nie są udostępnione do masowego zwiedzania. Jaskinie te były wykorzystywane przez partyzantów w czasie II wojny. U stóp wzgórza znajdują się także okresowe wywierzyska, czyli źródła krasowe zwane Źródłami Zdarzeń. Las rosnący w\u00A0rezerwacie tworzą przede wszystkim drzewostany bukowo-grabowe. Tajemnicze i dość nikłe ruiny warowni, pochodzącej najprawdopodobniej z\u00A0XIV\u00A0w., to jeden z najsłabiej poznanych obiektów obronnych na Wyżynie Krakowsko-Częstochowskiej. Przypuszcza się, że\u00A0tutejszy zamek wzniesiony został z inicjatywy Władysława Opolczyka, jako jedno z ogniw zaplanowanego z rozmachem systemu obronnego ówczesnej granicy polskiej. Budowla ta może mieć jednak inną genezę. Zarys murów obiektu zachował się w stanie bardzo słabym. Również słabo czytelny jest obecnie układ zamku, który dzielił się na górny, dolny oraz podzamcze. Od\u00A0strony południowej dostrzec można resztki baszty, która być może pełniła rolę bramy wjazdowej. Nie wiadomo, kiedy zamek został opuszczony, w\u00A0każdym razie w wiekach XVIII i XIX coraz bardziej popadający w ruinę obiekt po\u00A0prostu rozebrano. Przez Ostrężnik przebiega kilka tras turystycznych, m.in.\u00A0Szlak Orlich Gniazd oraz Szlak Warowni Jurajskich. Teren poznać można dokładniej, przemierzając go ścieżką przyrodniczo-dydaktyczną „Tropem tajemnic” o długości 1,5 km.",
+      "Leśny rezerwat przyrody „Ostrężnik” położony jest w\u00A0pobliżu osady o\u00A0tej samej nazwie. Jego obszar, utworzony w\u00A01960\u00A0r., jest niewielki - wynosi 4,1\u00A0ha. Tutejsze wapienne wzniesienia kryją kilka jaskiń (m.in. Ostrężnicką, Wierną, Wiercicę), które jednak nie są udostępnione do\u00A0masowego zwiedzania. Jaskinie te były wykorzystywane przez partyzantów w\u00A0czasie II\u00A0Wojny Światowej. U\u00A0stóp wzgórza znajdują się także okresowe wywierzyska, czyli źródła krasowe zwane Źródłami Zdarzeń. Las rosnący w\u00A0rezerwacie tworzą przede wszystkim drzewostany bukowo-grabowe. Tajemnicze i\u00A0dość nikłe ruiny warowni, pochodzącej najprawdopodobniej z\u00A0XIV\u00A0w., to jeden z\u00A0najsłabiej poznanych obiektów obronnych na\u00A0Wyżynie Krakowsko-Częstochowskiej. Przypuszcza się, że\u00A0tutejszy zamek wzniesiony został z\u00A0inicjatywy Władysława Opolczyka, jako jedno z\u00A0ogniw zaplanowanego z\u00A0rozmachem systemu obronnego ówczesnej granicy polskiej. Budowla ta może mieć jednak inną genezę. Zarys murów obiektu zachował się w\u00A0stanie bardzo słabym. Również słabo czytelny jest obecnie układ zamku, który dzielił się na górny, dolny oraz podzamcze. Od\u00A0strony południowej dostrzec można resztki baszty, która być może pełniła rolę bramy wjazdowej. Nie wiadomo, kiedy zamek został opuszczony, w\u00A0każdym razie w\u00A0wiekach XVIII i\u00A0XIX coraz bardziej popadający w\u00A0ruinę obiekt po\u00A0prostu rozebrano. Przez Ostrężnik przebiega kilka tras turystycznych, m.in.\u00A0Szlak Orlich Gniazd oraz Szlak Warowni Jurajskich. Teren poznać można dokładniej, przemierzając go\u00A0ścieżką przyrodniczo-dydaktyczną „Tropem tajemnic” o\u00A0długości 1,5\u00A0km.",
     links: [
       {
         link: "https://www.orlegniazda.pl/nature/3887/zamek-ostreznik-w-rezerwacie-przyrody",
@@ -142,7 +142,7 @@ export const places = [
     longitude: 19.28,
     mapLink: "https://goo.gl/maps/4sDpLF4WbZYfMXxa9",
     description:
-      "Jest to bez wątpienia jeden z najpiękniejszych obiektów na szlaku Orlich Gniazd. Leżąca na\u00A0wzniesieniu, monumentalna bryła zamku, przywodząca niektórym na\u00A0myśl okręt, pomimo pozostawania przez wiele lat w ruinie robi spore wrażenie. Mirowska twierdza stanowi jedną z\u00A0najstarszych budowli obronnych Wyżyny Krakowsko-Częstochowskiej. Wiemy, iż murowana strażnica powstała tu około połowy XIV wieku, w czasach Kazimierza Wielkiego. ",
+      "Jest to bez wątpienia jeden z\u00A0najpiękniejszych obiektów na\u00A0szlaku Orlich Gniazd. Leżąca na\u00A0wzniesieniu, monumentalna bryła zamku, przywodząca niektórym na\u00A0myśl okręt, pomimo pozostawania przez wiele lat w\u00A0ruinie robi spore wrażenie. Mirowska twierdza stanowi jedną z\u00A0najstarszych budowli obronnych Wyżyny Krakowsko-Częstochowskiej. Wiemy, iż\u00A0murowana strażnica powstała tu\u00A0około połowy XIV\u00A0wieku, w\u00A0czasach Kazimierza Wielkiego. ",
     links: [
       {
         link: "https://www.zamekbobolice.pl/zamek-mirow.html",
@@ -173,7 +173,7 @@ export const places = [
     longitude: 19.29,
     mapLink: "https://goo.gl/maps/iSDKjhufTR5t7SBC6",
     description:
-      "Położony na malowniczym, skalistym wzgórzu zamek Bobolice to jedna z\u00A0bardziej znanych warowni leżących na Szlaku Orlich Gniazd, w środkowej części Wyżyny Krakowsko-Częstochowskiej. Dzieli go niespełna pół godziny spaceru od bliźniaczej twierdzy w Mirowie. Sieć szlaków turystycznych umożliwia także dłuższe wędrówki w rejon Skał Kroczyckich i Rzędkowickich oraz w inne atrakcyjne zakątki Jury. Zamek stanowi ciekawy przykład budowli, która po wiekach bycia ruiną została odbudowana w czasach obecnych.",
+      "Położony na\u00A0malowniczym, skalistym wzgórzu zamek Bobolice to\u00A0jedna z\u00A0bardziej znanych warowni leżących na\u00A0Szlaku Orlich Gniazd, w\u00A0środkowej części Wyżyny Krakowsko-Częstochowskiej. Dzieli go\u00A0niespełna pół godziny spaceru od\u00A0bliźniaczej twierdzy w\u00A0Mirowie. Sieć szlaków turystycznych umożliwia także dłuższe wędrówki w\u00A0rejon Skał Kroczyckich i\u00A0Rzędkowickich oraz w\u00A0inne atrakcyjne zakątki Jury. Zamek stanowi ciekawy przykład budowli, która po\u00A0wiekach bycia ruiną została odbudowana w\u00A0czasach obecnych.",
     links: [
       {
         link: "https://www.zamekbobolice.pl/",
@@ -204,7 +204,7 @@ export const places = [
     longitude: 19.31,
     mapLink: "https://goo.gl/maps/ECnUf9ETaW4kbiF68",
     description:
-      "Ruiny zamku rycerskiego „Bąkowiec” pochodzącego z XIV–XV w. znajdują się na\u00A0terenie wypoczynkowego ośrodka „Morsko Plus”. Obok obiektu przechodzą dwie najważniejsze, piesze trasy jurajskie: czerwono znakowany Szlak Orlich Gniazd oraz niebieski Szlak Warowni Jurajskich. Wycieczkę do ruin zamku połączyć można ze zwiedzaniem pobliskich Skał Rzędkowickich i\u00A0Kroczyckich.",
+      "Ruiny zamku rycerskiego „Bąkowiec” pochodzącego z\u00A0XIV–XV\u00A0w. znajdują się na\u00A0terenie wypoczynkowego ośrodka „Morsko Plus”. Obok obiektu przechodzą dwie najważniejsze, piesze trasy jurajskie: czerwono znakowany Szlak Orlich Gniazd oraz niebieski Szlak Warowni Jurajskich. Wycieczkę do ruin zamku połączyć można ze zwiedzaniem pobliskich Skał Rzędkowickich i\u00A0Kroczyckich.",
     links: [
       {
         link: "https://www.morsko.com.pl/kategorie/zamek-bakowiec",
@@ -231,7 +231,7 @@ export const places = [
     longitude: 19.33,
     mapLink: "https://goo.gl/maps/NG4V7iBfqqdmw6Jf6",
     description:
-      "Góra Birów, wznosząca się 461 m n.p.m., stanowi jedno z charakterystycznych wzniesień na Szlaku Orlich Gniazd w rejonie Podzamcza i Ogrodzieńca. Skaliste, malownicze wzgórze, dające dobry widok na okolicę było już od czasów neolitu miejscem osadnictwa. Szczególnie partie wierzchołkowe wzniesienia, tworzące nieckę otoczoną wapiennymi ostańcami, dodawały temu miejscu istotnych walorów obronnych. Obecnie możemy tu oglądać rekonstrukcję grodziska słowiańskiego.",
+      "Góra Birów, wznosząca się 461\u00A0m\u00A0n.p.m., stanowi jedno z\u00A0charakterystycznych wzniesień na\u00A0Szlaku Orlich Gniazd w\u00A0rejonie Podzamcza i Ogrodzieńca. Skaliste, malownicze wzgórze, dające dobry widok na okolicę było już od czasów neolitu miejscem osadnictwa. Szczególnie partie wierzchołkowe wzniesienia, tworzące nieckę otoczoną wapiennymi ostańcami, dodawały temu miejscu istotnych walorów obronnych. Obecnie możemy tu oglądać rekonstrukcję grodziska słowiańskiego.",
     links: [
       {
         link: "https://www.zamek-ogrodzieniec.pl/kategorie/grod-na-gorze-birow",

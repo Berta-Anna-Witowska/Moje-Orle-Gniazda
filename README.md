@@ -233,14 +233,14 @@ const addPost = async (e) => {
 
 ## Fonts and icons
 
-- [Fontawesome](https://fontawesome.com/icons)
+- [FontAwesome](https://fontawesome.com/icons)
 
 ---
 
 ## To-do
 
-- Adding the ability to edit notes.
-- Adding weather forecast.
+- Adding the possibility to edit notes.
+- RWD
 
 ---
 

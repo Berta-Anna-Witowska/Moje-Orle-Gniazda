@@ -1,7 +1,7 @@
 import "../styles/elements/_places.scss";
 
 import React, {useState, useEffect} from "react";
-import {useParams} from "react-router-dom";
+import {useParams, useNavigate} from "react-router-dom";
 import supabase from "../services/supabase";
 import {WEATHER_API} from "../services/weatherApi";
 
@@ -155,14 +155,42 @@ export default function Places() {
   //<i class="fa-solid fa-tornado"></i>
   //<i className="fa-solid fa-smog"></i>
 
+  const [currentIndex, setCurrentIndex] = useState(place_id);
+  const [idx, setIdx] = useState(1);
+  console.log(currentIndex);
+
+  const navigate = useNavigate();
+
+  const carouselNext = () => {
+    if (currentIndex >= places.length) {
+      navigate(`/trailplacesdescriptions/${1}`);
+      setCurrentIndex(0);
+      return;
+    }
+    navigate(`/trailplacesdescriptions/${place_id + 1}`);
+
+    setCurrentIndex(currentIndex + 1);
+    return;
+  };
+
+  const carouselPrev = () => {
+    if (currentIndex <= 1) {
+      navigate(`/trailplacesdescriptions/${places.length}`);
+      setCurrentIndex(places.length);
+      return;
+    }
+    navigate(`/trailplacesdescriptions/${place_id - 1}`);
+    setCurrentIndex(currentIndex - 1);
+    return;
+  };
+
   const img = places[id - 1].img;
 
   return (
     <>
       <div className="places-descriptions">
-        <div className="places-info scroll">
+        <div className="places-info">
           <h1>{places[id - 1].name}</h1>
-
           {isLogged && (
             <>
               <Tooltip content="Chcesz odwiedzić?" position={Position.RIGHT}>
@@ -178,15 +206,25 @@ export default function Places() {
               </Tooltip>
             </>
           )}
-          <p>{places[id - 1].description}</p>
-          <ul>
-            <h2>Więcej</h2>
-            {places[id - 1].links.map((el, idx) => (
-              <li key={idx}>
-                <a href={el.link}>{el.name}</a>
-              </li>
-            ))}
-          </ul>
+          <div className="places-info-description scroll">
+            <p>{places[id - 1].description}</p>
+            <ul>
+              <h2>Więcej</h2>
+              {places[id - 1].links.map((el, idx) => (
+                <li key={idx}>
+                  <a href={el.link}>{el.name}</a>
+                </li>
+              ))}
+            </ul>
+          </div>
+          <span className="prev-next-btns">
+            <button className="prev circle-small" onClick={carouselPrev}>
+              <i className="fa-solid fa-chevron-left"></i>
+            </button>
+            <button className="next circle-small" onClick={carouselNext}>
+              <i className="fa-solid fa-chevron-right"></i>
+            </button>
+          </span>
         </div>
       </div>
       <ButtonBackToTrail />
